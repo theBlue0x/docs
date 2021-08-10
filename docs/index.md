@@ -8,7 +8,7 @@ The Blue0x API allows interaction with Blue0x nodes using HTTP requests to port 
 
 Each API call is documented below, with definitions given for HTTP request parameters and JSON response fields, followed by an example:
 
-*   The JSON response fields are each followed by one of -s_ for string, -a_ for array, -o_ for object, _N_ for number or -b_ for boolean.
+*   The JSON response fields are each followed by one of _s_ for string, _a_ for array, _o_ for object, _N_ for number or _b_ for boolean.
 *   In the examples, the Blue0x node is represented as -localhost_ and requests and responses are formatted for easy reading; line breaks and spaces are not actually used except in some parameter values. All requests are in URL format which implies the HTTP GET method. When GET is allowed, the URL can be entered into a browser URL field but proper URL encoding is usually required (e.g., spaces in a parameter value must be replaced by _+_ or _%20_). Otherwise, the URL should be used as a guide to preparing an HTTP POST request using cURL, for example.
 
 All API calls can be viewed and tested at [https://localhost:2022/test](https://localhost:2022/test) while the local server node is running. For specific API calls, use [https://localhost:2022/test?requestType=](https://localhost:2022/test?requestType=)_specificRequestType_.
@@ -40,7 +40,7 @@ Categories
     *   [Get Account Id](#get-account-id)
     *   [Get Account Ledger](#get-account-ledger)
     *   [Get Account Ledger Entry](#get-account-ledger-entry)
-    *   [Get Account Lessors](#get-account-lessors)
+    *   [Get Account Lessors](#get-account_lessors)
     *   [Get Account Properties](#get-account-properties)
     *   [Get Account Public Key](#get-account-public-key)
     *   [Get Balance](#get-balance)
@@ -416,7 +416,7 @@ The following API calls create Blue0x transactions using HTTP POST requests. Fol
 *   _[Issue Asset](#issue-asset "The Blue0x API")_
 *   _[Place Order](#place-order "The Blue0x API")_
 *   _[Transfer Asset](#transfer-asset "The Blue0x API")_
-*   _[DGS Delisting](#dgs-delisting "The Blue0x API")
+*   _[DGS Delisting](#dgs-delisting "The Blue0x API")_
 *   [DGS Delivery](#dgs-delivery "The Blue0x API")
 *   [DGS Feedback](#dgs-feedback "The Blue0x API")
 *   _[DGS Listing](#dgs-listing "The Blue0x API")_
@@ -507,7 +507,7 @@ Get account information given an account ID.
 
 *   _requestType_ is _getAccount_
 *   _account_ is the account ID
-*   _includeLessors_ is _true_ to include -lessors_, -lessorsRS_ and -lessorsInfo_ (optional)
+*   _includeLessors_ is _true_ to include _lessors_, _lessorsRS_ and _lessorsInfo_ (optional)
 *   _includeAssets_ is _true_ to include _assetBalances_ and _unconfirmedAssetBalances_ (optional)
 *   _includeCurrencies_ is _true_ to include _accountCurrencies_ (optional)
 *   _includeEffectiveBalance_ is _true_ to include _effectiveBalanceNXT_ and _guaranteedBalanceNQT_ (optional)
@@ -518,7 +518,7 @@ Get account information given an account ID.
 
 *   _unconfirmedBalanceNQT_ (S) is _balanceNQT_ less unconfirmed outgoing transactions, the balance displayed in the client
 *   _effectiveBalanceNXT_ (N) is the balance (in BLX) of the account available for forging: the unleased guaranteedBalance of this account plus the leased guaranteedBalance of all lessors to this account
-*   -lessorsInfo_ (A) is an array of lessor objects including the fields:
+*   _lessorsInfo_ (A) is an array of lessor objects including the fields:
     *   _currentHeightTo_ (S)
     *   _nextHeightFrom_ (S)
     *   _effectiveBalanceNXT_ (S)
@@ -526,7 +526,7 @@ Get account information given an account ID.
     *   _currentLesseeRS_ (S)
     *   _currentHeightFrom_ (S)
     *   _nextHeightTo_ (S)
-*   -lessors_ (A) is an array of lessor account IDs
+*   _lessors_ (A) is an array of lessor account IDs
 *   _currentLessee_ (S) is the account number of the lessee, if applicable
 *   _currentLeasingHeightTo_ (N) is the block height when the lease completes, if applicable
 *   _forgedBalanceNQT_ (S) is the balance (in NQT) that the account has forged
@@ -538,13 +538,13 @@ Get account information given an account ID.
 *   _unconfirmedAssetBalances_ (A) is an array of asset objects including the fields _unconfirmedBalanceQNT_ (S) and _asset_ (S) ID
 *   _currentLesseeRS_ (S) is the Reed-Solomon address of the lessee account
 *   _accountRS_ (S) is the Reed-Solomon address of the account
-*   -lessorsRS_ (A) is an array of Reed-Solomon lessor account addresses
+*   _lessorsRS_ (A) is an array of Reed-Solomon lessor account addresses
 *   _accountCurrencies_ (A) is an array of currency objects (refer to [Get Account Currencies](#get-account-currencies "The Blue0x API") for details)
 *   _name_ (S) is the name associated with the account, if applicable
 *   _description_ (S) is the description of the account, if applicable
 *   _account_ (S) is the account number
 *   _currentLeasingHeightFrom_ (N) is the block height when the lease starts, if applicable
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 
 **Example:** Refer to [Get Account](API_Examples.md#get-account "The Blue0x API Examples") example.
 
@@ -562,7 +562,7 @@ Get the number of blocks forged by an account.
 **Response:**
 
 *   _numberOfBlocks_ (N) is the number of blocks forged by the account
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Block Count](API_Examples.md#get-account-block-count "The Blue0x API Examples") example.
@@ -577,14 +577,14 @@ Get the block IDs of all blocks forged (generated) by an account in reverse bloc
 *   _account_ is the account ID
 *   _timestamp_ is the earliest block (in seconds since the genesis block) to retrieve (optional)
 *   _firstIndex_ is a zero-based index to the first block ID to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last block ID to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last block ID to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _blockIds_ (A) is an array of block IDs
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millsec)
 
 **Example:** Refer to [Get Account Block Ids](API_Examples.md#get-account-block-ids "The Blue0x API Examples") example.
@@ -599,7 +599,7 @@ Get all blocks forged (generated) by an account in reverse block height order.
 *   _account_ is the account ID
 *   _timestamp_ is the earliest block (in seconds since the genesis block) to retrieve (optional)
 *   _firstIndex_ is a zero-based index to the first block to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last block to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last block to retrieve (optional)
 *   _includeTransactions_ is _true_ to retrieve transaction details, otherwise only transaction IDs are retrieved (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -607,7 +607,7 @@ Get all blocks forged (generated) by an account in reverse block height order.
 **Response:**
 
 *   _blocks_ (A) is an array of blocks (refer to [Get Block](#get-block "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Blocks](API_Examples.md#get-account-blocks "The Blue0x API Examples") example.
@@ -640,7 +640,7 @@ Get multiple account ledger entries.
 *   _requestType_ is _getAccountLedger_
 *   _account_ is the account ID (optional)
 *   _firstIndex_ is a zero-based index to the first block to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last block to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last block to retrieve (optional)
 *   _event_ is the event ID (optional)
 *   _eventType_ is a string representing the event type (optional)
 *   _holdingType_ is a string representing the holding type (optional)
@@ -655,7 +655,7 @@ Get multiple account ledger entries.
 *   _entries_ (A) is an array of ledger objects including the fields:
     *   _change_ (S) is the change in the balance for the holding identified by 'holdingType'
     *   _eventType_ (S) is the event type causing the account change
-    *   -ledgerId_ (S) is the ledger entry ID
+    *   _ledgerId_ (S) is the ledger entry ID
     *   _holding_ (S) is the item identifier for an asset or currency balance
     *   _isTransactionEvent_ (B) is true if the event is associated with a transaction and false if it is associated with a block.
     *   _balance_ (S) is the balance for the holding identified by 'holdingType'
@@ -677,7 +677,7 @@ Get a specific account ledger entry.
 **Request:**
 
 *   _requestType_ is _getAccountLedgerEntry_
-*   -ledgerId_ is the ledger ID
+*   _ledgerId_ is the ledger ID
 *   _includeTransactions_ is true to retrieve transaction details, otherwise only transaction IDs are retrieved (optional)
 *   _includeHoldingInfo_ is _true_ to retrieve asset or currency info (optional) with the ledger entry. The default is false.
 
@@ -685,7 +685,7 @@ Get a specific account ledger entry.
 
 *   _change_ (S) is the change in the balance for the holding identified by 'holdingType'
 *   _eventType_ (S) is the event type causing the account change
-*   -ledgerId_ (S) is the ledger entry ID
+*   _ledgerId_ (S) is the ledger entry ID
 *   _holding_ (S) is the item identifier for an asset or currency balance
 *   _isTransactionEvent_ (B) is true if the event is associated with a transaction and false if it is associated with a block.
 *   _balance_ (S) is the balance for the holding identified by 'holdingType'
@@ -719,14 +719,14 @@ Get the lessors to an account.
 *   _accountRS_ (S) is the Reed-Solomon address of the account
 *   _account_ (S) is the account number
 *   _height_ (N) is the height of the blockchain
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
-*   -lessors_ (A) is an array of lessor objects including the fields:
-    *   -lessorRS_ (S)
-    *   -lessor_ (S)
+*   _lessors_ (A) is an array of lessor objects including the fields:
+    *   _lessorRS_ (S)
+    *   _lessor_ (S)
     *   _guaranteedBalanceNQT_ (S)
 
-**Example:** Refer to [Get Account Lessors](API_Examples.md#get-account-lessors "The Blue0x API Examples") example.
+**Example:** Refer to [Get Account Lessors](API_Examples.md#get-account_lessors "The Blue0x API Examples") example.
 
 ### Get Account Properties
 
@@ -739,7 +739,7 @@ Get the Account properties for a specific account or setter.
 *   _setter_ is the account ID who set the property (optional if _recipient_ provided)
 *   _property_ is the property key (optional)
 *   _firstIndex_ is a zero-based index to the first block to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last block to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last block to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -774,7 +774,7 @@ Get the public key associated with an account ID.
 **Response:**
 
 *   _publicKey_ (S) is the 32-byte public key associated with the account, returned as a hex string
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Public Key](API_Examples.md#get-account-public-key "The Blue0x API Examples") example.
@@ -799,7 +799,7 @@ Get the balance of an account.
 *   _effectiveBalanceNXT_ (N) is the balance (in Blue0x) of the account available for forging: the unleased guaranteedBalance of this account plus the leased guaranteedBalance of all lessors to this account
 *   _forgedBalanceNQT_ (S) is the balance (in NQT) that the account has forged
 *   _balanceNQT_ (S) is the minimally confirmed basic balance (in NQT) of the account
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Balance](API_Examples.md#get-balance "The Blue0x API Examples") example.
@@ -817,7 +817,7 @@ Get the transactions associated with an account in reverse block timestamp order
 *   _type_ is the type of transactions to retrieve (optional)
 *   _subtype_ is the subtype of transactions to retrieve (optional)
 *   _firstIndex_ is a zero-based index to the first transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last transaction to retrieve (optional)
 *   _numberOfConfirmations_ is the required number of confirmations per transaction (optional)
 *   _withMessage_ is _true_ to retrieve only only transactions having a message attachment, either non-encrypted or decryptable by the account (optional)
 *   _phasedOnly_ is _true_ to retrieve only phased transactions (optional unless _nonPhasedOnly_ provided)
@@ -833,7 +833,7 @@ Get the transactions associated with an account in reverse block timestamp order
 **Response:**
 
 *   _transactions_ (A) is an array of transactions (refer to [Get Transaction](#get-transaction "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Blockchain Transactions](API_Examples.md#get-blockchain-transactions "The Blue0x API Examples") example.
@@ -853,7 +853,7 @@ Get the balance of an account that is confirmed at least a specified number of t
 **Response:**
 
 *   _guaranteedBalanceNQT_ (S) is the balance (in NQT) of the account with at least _numberOfConfirmations_ confirmations
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Guaranteed Balance](API_Examples.md#get-guaranteed-balance "The Blue0x API Examples") example.
@@ -872,12 +872,12 @@ Get a list of unconfirmed transaction IDs associated with an account.
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 *   _firstIndex_ is a zero-based index to the first transaction ID to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last transaction ID to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last transaction ID to retrieve (optional)
 
 **Response:**
 
 *   _unconfirmedTransactionIds_ (A) is an array of unconfirmed transaction IDs
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Unconfirmed Transaction Ids](API_Examples.md#get-unconfirmed-transaction-ids "The Blue0x API Examples") example.
@@ -897,12 +897,12 @@ Get a list of unconfirmed transactions associated with an account.
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 *   _firstIndex_ is a zero-based index to the first unconfirmed transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last unconfirmed transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last unconfirmed transaction to retrieve (optional)
 
 **Response:**
 
 *   _unconfirmedTransactions_ (A) is an array of unconfirmed transactions (refer to [Get Transaction](#get-transaction "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Unconfirmed Transactions](API_Examples.md#get-unconfirmed-transactions "The Blue0x API Examples") example.
@@ -916,7 +916,7 @@ Get accounts having a name or description that match a given query in reverse re
 *   _requestType_ is _searchAccounts_
 *   _query_ is a full text query on the account fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
 *   _firstIndex_ is a zero-based index to the first account to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last account to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last account to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -927,7 +927,7 @@ Get accounts having a name or description that match a given query in reverse re
     *   _accountRS_ (S) is the Reed-Solomon address of the account
     *   _name_ (S) is the name of the account
     *   _description_ (S) is the description of the account (if applicable)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Search Accounts](API_Examples.md#search-accounts "The Blue0x API Examples") example.
@@ -1042,7 +1042,7 @@ Retrieve all accounts subject to phasing control with their respective restricti
 
 *   _requestType_ is _getAllPhasingOnlyControls_
 *   _firstIndex_ is a zero-based index to the first block ID to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last block ID to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last block ID to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -1186,7 +1186,7 @@ Get information about a given alias
 *   _alias_ (S) is the alias ID
 *   _priceNQT_ (S) is the asking price (in NQT) of the alias if it is for sale
 *   _buyer_ (S) is the account number of the buyer if the alias is for sale and a buyer is specified
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Alias](API_Examples.md#get-alias "The Blue0x API Examples") example.
@@ -1205,7 +1205,7 @@ Get the number of aliases owned by an account given the account ID.
 **Response:**
 
 *   _numberOfAliases_ (N) is the number of aliases owned by the account
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Alias Count](API_Examples.md#get-alias-count "The Blue0x API Examples") example.
@@ -1220,14 +1220,14 @@ Get information on aliases owned by a given account in alias name order.
 *   _account_ is the ID of the account that owns the aliases
 *   _timestamp_ is the earliest creation time (in seconds since the genesis block) of the aliases (optional)
 *   _firstIndex_ is a zero-based index to the first alias to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last alias to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last alias to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _aliases_ (A) is an array of alias objects (refer to [Get Alias](#get-alias "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Aliases](API_Examples.md#get-aliases "The Blue0x API Examples") example.
@@ -1241,14 +1241,14 @@ Get all aliases starting with a given prefix in alias name order.
 *   _requestType_ is _getAliasesLike_
 *   _aliasPrefix_ is the prefix (at least 2 characters long) of the _aliasName_
 *   _firstIndex_ is a zero-based index to the first alias to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last alias to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last alias to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _aliases_ (A) is an array of alias objects (refer to [Get Alias](#get-alias "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Aliases Like](API_Examples.md#get-aliases-like "The Blue0x API Examples") example.
@@ -1325,14 +1325,14 @@ Get all available prunable messages in reverse block timestamp order.
 *   _requestType_ is _getAllPrunableMessages_
 *   _timestamp_ is the earliest message (in seconds since the genesis block) to retrieve (optional)
 *   _firstIndex_ is a zero-based index to the first prunable message to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last prunable message to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last prunable message to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _prunableMessages_ (A) is an array of prunable messages (refer to [Get Prunable Message](#get-prunable-message "The Blue0x API"))
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millsec)
 
 **Example:** Refer to [Get All Prunable Messages](API_Examples.md#get-all-prunable-messages "The Blue0x API Examples") example.
@@ -1366,7 +1366,7 @@ Get the prunable message given a transaction ID, optionally decrypting it if enc
 *   _transaction_ (S) is the transaction ID
 *   _transactionTimestamp_ (N) is the transaction timestamp (in seconds since the genesis block)
 *   _blockTimestamp_ (N) is the block timestamp (in seconds since the genesis block)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millsec)
 
 **Example:** Refer to [Get Prunable Message](API_Examples.md#get-prunable-message "The Blue0x API Examples") example.
@@ -1383,14 +1383,14 @@ Get all still-available prunable messages given an account id, optionally limiti
 *   _secretPhrase_ is the secret phrase needed for decryption (optional)
 *   _timestamp_ is the earliest prunable message (in seconds since the genesis block) to retrieve (optional)
 *   _firstIndex_ is a zero-based index to the first prunable message to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last prunable message to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last prunable message to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _prunableMessages_ (A) is an array of prunable message objects (refer to [Get Prunable Message](#get-prunable-message "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millsec)
 
 **Example:** Refer to [Get Prunable Messages](API_Examples.md#get-prunable-messages "The Blue0x API Examples") example.
@@ -1434,7 +1434,7 @@ Get a message given a transaction ID.
 *   _encryptedMessageIsPrunable_ (B) is _true_ if there is an encrypted message and it is prunable, _false_ if it is not prunable
 *   _decryptedMessage_ (S) is the decrypted message, if applicable and only if the provided _secretPhrase_ belongs to either the sender or receiver of the transaction
 *   _decryptedMessageToSelf_ (S) is the decrypted message sent to self, if applicable and only if the provided _secretPhrase_ belongs to the sender of transaction
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Read Message](API_Examples.md#read-message "The Blue0x API Examples") example.
@@ -1500,7 +1500,7 @@ Verify that a prunable message obtained from any source, when hashed, matches th
     *   _isCompressed_ (B)
 *   _messageIsText_ (B) is _true_ if the plain message is text, _false_ if it is a hex string, if applicable
 *   _messageHash_ or _encryptedMessageHash_ (S) is the hash
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millsec)
 
 **Example:** Refer to [Verify Prunable Message](API_Examples.md#verify-prunable-message "The Blue0x API Examples") example.
@@ -1575,7 +1575,7 @@ Get the number of assets owned by an account given the account ID.
 **Response:**
 
 *   _numberOfAssets_ (N) is the number of assets owned by the account
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Asset Count](API_Examples.md#get-account-asset-count "The Blue0x API Examples") example.
@@ -1604,7 +1604,7 @@ Get the assets owned by a given account in reverse quantity order.
     *   _decimals_ (N) is the number of decimal places used by the asset (if _includeAssetInfo_ is _true_)
     *   _name_ (S) is the asset name (if _includeAssetInfo_ is _true_)
     *   _asset_ (S) is the asset ID
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Assets](API_Examples.md#get-account-assets "The Blue0x API Examples") example.
@@ -1619,14 +1619,14 @@ Get current asset order IDs given an account ID in reverse block height order.
 *   _account_ is the account ID
 *   _asset_ is an asset ID filter (optional)
 *   _firstIndex_ is a zero-based index to the first order ID to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last order ID to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last order ID to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _bidOrderIds_ or _askOrderIds_ (A) is an array of order IDs
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Current Order Ids](API_Examples.md#get-account-current-order-ids "The Blue0x API Examples") example.
@@ -1649,14 +1649,14 @@ Get current asset orders given an account ID in reverse block height order.
 *   _account_ is the account ID
 *   _asset_ is an asset ID filter (optional)
 *   _firstIndex_ is a zero-based index to the first order to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last order to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last order to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _bidOrders_ or _askOrders_ (A) is an array of order objects (refer to [Get Order](#get-order "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Current Orders](API_Examples.md#get-account-current-orders "The Blue0x API Examples") example.
@@ -1677,7 +1677,7 @@ Get all assets in the exchange in reverse block height of creation order.
 
 *   _requestType_ is _getAllAssets_
 *   _firstIndex_ is a zero-based index to the first asset to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last asset to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last asset to retrieve (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -1685,7 +1685,7 @@ Get all assets in the exchange in reverse block height of creation order.
 **Response:**
 
 *   _assets_ (A) is an array of asset objects (refer to [Get Asset](#get-asset "The Blue0x API"))
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Assets](API_Examples.md#get-all-assets "The Blue0x API Examples") example.
@@ -1698,14 +1698,14 @@ Get all open bid/ask orders in reverse block height order.
 
 *   _requestType_ is either _getAllOpenBidOrders_ or _getAllOpenAskOrders_
 *   _firstIndex_ is a zero-based index to the first order to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last order to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last order to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _openOrders_ (A) is an array of order objects (refer to [Get Order](#get-order "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Open Orders](API_Examples.md#get-all-open-orders "The Blue0x API Examples") example.
@@ -1727,7 +1727,7 @@ Get all trades since a given timestamp in reverse block height order.
 *   _requestType_ is _getAllTrades_
 *   _timestamp_ is the timestamp (in seconds since the genesis block) to begin retrieving trades (optional, default 0)
 *   _firstIndex_ is a zero-based index to the first trade to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last trade to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last trade to retrieve (optional)
 *   _includeAssetInfo_ is _true_ if asset information is to be included in the result (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -1737,7 +1737,7 @@ Get all trades since a given timestamp in reverse block height order.
 **Response:**
 
 *   _trades_ (A) is an array of trade objects (refer to [Get Trades](#get-trades "The Blue0x API"))
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Trades](API_Examples.md#get-all-trades "The Blue0x API Examples") example.
@@ -1766,7 +1766,7 @@ Get asset information given an asset ID.
 *   _numberOfAccounts_ (N) is the number of accounts that own the asset
 *   _numberOfTrades_ (N) is the number of trades of this asset
 *   _numberOfTransfers_ (N) is the number of transfers of this asset
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Asset](API_Examples.md#get-asset "The Blue0x API Examples") example.
@@ -1788,7 +1788,7 @@ Get the number of accounts that own an asset given the asset ID.
 **Response:**
 
 *   _numberOfAccounts_ (N) is the number of accounts that own the asset
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Asset Account Count](API_Examples.md#get-asset-account-count "The Blue0x API Examples") example.
@@ -1803,7 +1803,7 @@ Get the accounts that own an asset given the asset ID in reverse quantity order.
 *   _asset_ is the asset ID
 *   _height_ is the height of the blockchain to determine the accounts (optional, default is last block)
 *   _firstIndex_ is a zero-based index to the first account to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last account to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last account to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -1817,7 +1817,7 @@ Get the accounts that own an asset given the asset ID in reverse quantity order.
     *   _unconfirmedQuantityQNT_ (S) is the unconfirmed quantity (in QNT) of the asset
     *   _asset_ (S) is the asset ID
     *   _account_ (S) is the number of the account that owns the asset
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Asset Accounts](API_Examples.md#get-asset-accounts "The Blue0x API Examples") example.
@@ -1832,7 +1832,7 @@ Get asset deletions for a specific asset or account.
 *   _asset_ is the asset ID (optional if account is provided)
 *   _account_ is the account ID (optional if asset is provided)
 *   _firstIndex_ is a zero-based index to the first phased transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
 *   _timestamp_ is the earliest deletion (in seconds since the genesis block) to retrieve (optional)
 *   _includeAssetInfo_ is _true_ if asset information is to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -1862,7 +1862,7 @@ Get the dividend payment history for a specific asset.
 *   _requestType_ is _getAssetDividends_
 *   _asset_ is the asset ID
 *   _firstIndex_ is a zero-based index to the first dividend payment to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last dividend payment to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last dividend payment to retrieve (optional)
 *   _timestamp_ is the earliest dividend payment (in seconds since the genesis block) to retrieve (optional)
 *   _adminPassword_ is a string with the admin password (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -1890,14 +1890,14 @@ Get the IDs of all assets in the exchange in reverse block height of creation or
 
 *   _requestType_ is _getAssetIds_
 *   _firstIndex_ is a zero-based index to the first asset ID to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last asset ID to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last asset ID to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _assets_ (A) is an array of asset IDs
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Asset Ids](API_Examples.md#get-asset-ids "The Blue0x API Examples") example.
@@ -1913,7 +1913,7 @@ Get transfers associated with a given asset and/or account in reverse block heig
 *   _account_ is the account ID (optional if _asset_ provided)
 *   _timestamp_ is the earliest transfer (in seconds since the genesis block) to retrieve (optional, does not apply to expected transfers)
 *   _firstIndex_ is a zero-based index to the first transfer to retrieve (optional, does not apply to expected transfers)
-*   -lastIndex_ is a zero-based index to the last transfer to retrieve (optional, does not apply to expected transfers)
+*   _lastIndex_ is a zero-based index to the last transfer to retrieve (optional, does not apply to expected transfers)
 *   _includeAssetInfo_ is _true_ if the _decimals_ and _name_ fields are to be included (optional, does not apply to expected transfers)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -1933,7 +1933,7 @@ Get transfers associated with a given asset and/or account in reverse block heig
     *   _height_ (N) is the height of the transfer block
     *   _timestamp_ (N) is the timestamp (in seconds since the genesis block) of the transfer block, does not apply to an expected transfer
     *   _phased_ (B) is _true_ if the transaction is phased, _false_ otherwise, applies only to an expected transfer
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Asset Transfers](API_Examples.md#get-asset-transfers "The Blue0x API Examples") example.
@@ -1958,7 +1958,7 @@ Get asset information given multiple asset IDs
 **Response:**
 
 *   _assets_ (A) is an array of asset objects (refer to [Get Asset](#get-asset "The Blue0x API"))
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Assets](API_Examples.md#get-assets "The Blue0x API Examples") example.
@@ -1973,7 +1973,7 @@ Get asset information given multiple creation account IDs in reverse block heigh
 *   _account_ is one of the multiple account IDs
 *   _account_ is one of the multiple account IDs
 *   _firstIndex_ is a zero-based index to the first asset to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last asset to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last asset to retrieve (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -1981,7 +1981,7 @@ Get asset information given multiple creation account IDs in reverse block heigh
 **Response:**
 
 *   _assets_ (A) is an array of asset objects (refer to [Get Asset](#get-asset "The Blue0x API"))
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Assets By Issuer](API_Examples.md#get-assets-by-issuer "The Blue0x API Examples") example.
@@ -1996,7 +1996,7 @@ Gets asset deletes which are expected to be executed in the next block.
 *   _asset_ is the asset ID (optional)
 *   _account_ is the account ID (optional)
 *   _firstIndex_ is a zero-based index to the first phased transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
 *   _timestamp_ is the earliest deletion (in seconds since the genesis block) to retrieve (optional)
 *   _includeAssetInfo_ is _true_ if asset information is to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -2039,7 +2039,7 @@ Get a bid/ask order given an order ID.
 *   _transactionIndex_ (N) is a zero-based index giving the order of the transaction in its block
 *   _order_ (S) is the ID of the order
 *   _type_ (S) is the type of order (_bid_ or _ask_)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Order](API_Examples.md#get-order "The Blue0x API Examples") example.
@@ -2061,14 +2061,14 @@ Get bid/ask order IDs given an asset ID, in order of decreasing bid price or inc
 *   _requestType_ is either _getBidOrderIds_ or _getAskOrderIds_
 *   _asset_ is the asset ID
 *   _firstIndex_ is a zero-based index to the first order ID to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last order ID to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last order ID to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _bidOrderIds_ or _askOrderIds_ (A) is an array of order IDs
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Order Ids](API_Examples.md#get-order-ids "The Blue0x API Examples") example.
@@ -2092,7 +2092,7 @@ Get bid/ask orders given an asset ID, in order of decreasing bid price or increa
 *   _sortByPrice_ is _true_ to sort by price (optional, applies only to expected orders, which are returned in expected order of execution by default)
 *   _showExpectedCancellations_ is _true_ to include orders that are expected to be cancelled in the next block, based on the content of the unconfirmed transactions pool and the phased transactions expected to finish in the next block (optional, does not apply to expected orders)
 *   _firstIndex_ is a zero-based index to the first order to retrieve (optional, does not apply to expected orders)
-*   -lastIndex_ is a zero-based index to the last order to retrieve (optional, does not apply to expected orders)
+*   _lastIndex_ is a zero-based index to the last order to retrieve (optional, does not apply to expected orders)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -2100,7 +2100,7 @@ Get bid/ask orders given an asset ID, in order of decreasing bid price or increa
 
 *   _bidOrders_ or _askOrders_ (A) is an array of order objects (refer to [Get Order](#get-order "The Blue0x API") for details) with the following additional field only for an expected order:
     *   _phased_ (B) is _true_ if the order is phased, _false_ otherwise
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Orders](API_Examples.md#get-orders "The Blue0x API Examples") example.
@@ -2139,7 +2139,7 @@ Get all expected order cancellations in the order in which they are expected to 
     *   _order_ (S) is the ID of the order to be cancelled
     *   _height_ (N) is the block height of the order cancellation transaction
     *   _phased_ (B) is _true_ if the order cancellation transaction is phased
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Expected Order Cancellations](API_Examples.md#get-expected-order-cancellations "The Blue0x API Examples") example.
@@ -2161,7 +2161,7 @@ Get the last trade of each of multiple assets.
 *   _trades_ (A) is an array of trade objects (refer to [Get Trades](#get-trades "The Blue0x API") without _name_ and _decimals_ for details)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Get Last Trades](API_Examples.md#get-last-trades "The Blue0x API Examples") example.
+**Example:** Refer to [Get Last Trades](API_Examples.md#get_last-trades "The Blue0x API Examples") example.
 
 ### Get Order Trades
 
@@ -2173,7 +2173,7 @@ Get all trades that were executed as a result of a given _askOrder_ and/or _bidO
 *   _askOrder_ is an ask order ID (optional)
 *   _bidOrder_ is a bid order ID (optional if _askOrder_ provided)
 *   _firstIndex_ is a zero-based index to the first trade to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last trade to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last trade to retrieve (optional)
 *   _includeAssetInfo_ is _true_ if the _decimals_ and _name_ fields are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -2192,7 +2192,7 @@ Get trades associated with a given asset and/or account in reverse block height 
 *   _asset_ is the asset ID (optional)
 *   _account_ is the account ID (optional if _asset_ provided)
 *   _firstIndex_ is a zero-based index to the first trade to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last trade to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last trade to retrieve (optional)
 *   _timestamp_ is the earliest block (in seconds since the genesis block) to retrieve (optional)
 *   _includeAssetInfo_ is _true_ if the _decimals_ and _name_ fields are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -2218,7 +2218,7 @@ Get trades associated with a given asset and/or account in reverse block height 
     *   _tradeType_ (S) is the trade type (_sell_ or _buy_, where _buy_ implies that the bid occurred after the ask, or if in the same block, has a greater order ID)
     *   _timestamp_ (N) is the timestamp (in seconds since the genesis block) of the trade block
     *   _height_ (N) is the height of the trade block
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Trades](API_Examples.md#get-trades "The Blue0x API Examples") example.
@@ -2271,7 +2271,7 @@ Get assets having a name or description that match a given query in reverse rele
 *   _requestType_ is _searchAssets_
 *   _query_ is a full text query on the asset fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
 *   _firstIndex_ is a zero-based index to the first asset to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last asset to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last asset to retrieve (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -2279,7 +2279,7 @@ Get assets having a name or description that match a given query in reverse rele
 **Response:**
 
 *   _assets_ (A) is an array of asset objects (refer to [Get Asset](#get-asset "The Blue0x API"))
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Search Assets](API_Examples.md#search-assets "The Blue0x API Examples") example.
@@ -2343,7 +2343,7 @@ Get a block object given a block ID or block height.
 *   _block_ (S) is the block ID
 *   _height_ (N) is the zero-based block height
 *   _timestamp_ (N) is the timestamp (in seconds since the genesis block) of the block
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Block](API_Examples.md#get-block "The Blue0x API Examples") example.
@@ -2362,7 +2362,7 @@ Get a block ID given a block height.
 **Response:**
 
 *   _block_ (S) is the block ID
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Block Id](API_Examples.md#get-block-id "The Blue0x API Examples") example.
@@ -2376,7 +2376,7 @@ Get blocks from the blockchain in reverse block height order.
 *   _requestType_ is _getBlocks_
 *   _timestamp_ is the earliest block (in seconds since the genesis block) to retrieve (optional)
 *   _firstIndex_ is first block to retrieve (optional, default is zero or the last block on the blockchain)
-*   -lastIndex_ is the last block to retrieve (optional, default is _firstIndex_ + 99)
+*   _lastIndex_ is the last block to retrieve (optional, default is _firstIndex_ + 99)
 *   _includeTransactions_ is _true_ to include transaction details (optional)
 *   _includeExecutedPhased_ is _true_ to include approved and executed phased transactions (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -2385,7 +2385,7 @@ Get blocks from the blockchain in reverse block height order.
 **Response:**
 
 *   _blocks_ (A) is an array of blocks retrieved (refer to [Get Block](#get-block "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Blocks](API_Examples.md#get-blocks "The Blue0x API Examples") example.
@@ -2408,7 +2408,7 @@ Get Economic Cluster block data.
 *   _ecBlockHeight_ (N) is the EC block height
 *   _ecBlockId_ (S) is the EC block ID
 *   _timestamp_ (N) is the timestamp (in seconds since the genesis block) of the EC block
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get EC Block](API_Examples.md#get-ec-block "The Blue0x API Examples") example.
@@ -2551,14 +2551,14 @@ Get purchase orders which have expired without being delivered, given a seller I
 *   _requestType_ is _getDGSExpiredPurchases_
 *   _seller_ is the account ID of the product seller
 *   _firstIndex_ is a zero-based index to the first purchase order to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last purchase order to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last purchase order to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _purchases_ (A) is an array of purchase orders (refer to [Get DGS Purchase](#get-dgs-purchase "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Expired Purchases](API_Examples.md#get-dgs-expired-purchases "The Blue0x API Examples") example.
@@ -2591,7 +2591,7 @@ Get a DGS product given a goods ID.
 *   _name_ (S) is the name of the product
 *   _numberOfPurchases_ (N) is the number of purchases of the product
 *   _timestamp_ (N) is the timestamp (in seconds since the genesis block) of the creation of the product listing
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 
 **Example:** Refer to [Get DGS Good](API_Examples.md#get-dgs-good "The Blue0x API Examples") example.
 
@@ -2604,7 +2604,7 @@ Get DGS products for sale in reverse chronological listing creation order unless
 *   _requestType_ is _getDGSGoods_
 *   _seller_ is the account ID of the product seller (optional)
 *   _firstIndex_ is a zero-based index to the first product to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last product to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last product to retrieve (optional)
 *   _inStockOnly_ is _false_ if out-of-stock products (zero quantity) are to be retrieved (optional)
 *   _hideDelisted_ is _true_ if delisted products are to be omitted (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
@@ -2616,7 +2616,7 @@ Get DGS products for sale in reverse chronological listing creation order unless
 **Response:**
 
 *   _goods_ (A) is an array of goods (refer to [Get DGS Good](#get-dgs-good "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Goods](API_Examples.md#get-dgs-goods "The Blue0x API Examples") example.
@@ -2636,7 +2636,7 @@ Get the number of products for sale by a given seller or all sellers.
 **Response:**
 
 *   _numberOfGoods_ (N) is the number of goods for sale by the _seller_
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** The _numberOfGoods_ field refers to the number of distinct products for sale, regardless of the quantity of each.
@@ -2659,7 +2659,7 @@ Get the number of completed purchase orders given a goods ID.
 **Response:**
 
 *   _numberOfPurchases_ (N) is the number of completed purchase orders
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Goods Purchase Count](API_Examples.md#get-dgs-goods-purchase-count "The Blue0x API Examples") example.
@@ -2674,7 +2674,7 @@ Get completed purchase orders given a goods ID and optionally a buyer ID in reve
 *   _goods_ is the goods ID
 *   _buyer_ is a buyer ID (optional)
 *   _firstIndex_ is a zero-based index to the first purchase order to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last purchase order to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last purchase order to retrieve (optional)
 *   _withPublicFeedbacksOnly_ is _true_ if purchase orders without public feedback are to be omitted (optional)
 *   _completed_ is _true_ if only completed purchase orders are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -2683,7 +2683,7 @@ Get completed purchase orders given a goods ID and optionally a buyer ID in reve
 **Response:**
 
 *   _purchases_ (A) is an array of purchase orders (refer to [Get DGS Purchase](#get-dgs-purchase "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Goods Purchases](API_Examples.md#get-dgs-goods-purchases "The Blue0x API Examples") example.
@@ -2697,14 +2697,14 @@ Get pending purchase orders given a seller ID in reverse chronological order.
 *   _requestType_ is _getDGSPendingPurchases_
 *   _seller_ is the account ID of the seller
 *   _firstIndex_ is a zero-based index to the first purchase order to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last purchase order to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last purchase order to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _purchases_ (A) is an array of pending purchase orders (refer to [Get DGS Purchase](#get-dgs-purchase "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Pending Purchases](API_Examples.md#get-dgs-pending-purchases "The Blue0x API Examples") example.
@@ -2740,7 +2740,7 @@ Get a purchase order given a purchase order ID.
 *   _name_ (S) is the name of the product
 *   _goodsData_ (O) is an object with the two fields _data_ (S) (the encrypted product hex string) and _nonce_ (S), if the product has been delivered
 *   _timestamp_ (N) is the timestamp (in seconds since the genesis block) of the purchase order
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Purchase](API_Examples.md#get-dgs-purchase "The Blue0x API Examples") example.
@@ -2762,7 +2762,7 @@ Get the number of purchase orders given a seller and/or buyer ID, or all orders 
 **Response:**
 
 *   _numberOfPurchases_ (N) is the number of purchase orders associated with the seller and/or buyer
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Purchase Count](API_Examples.md#get-dgs-purchase-count "The Blue0x API Examples") example.
@@ -2777,7 +2777,7 @@ Get purchase orders given a seller and/or buyer ID in reverse chronological orde
 *   _seller_ is the account ID of the seller (optional)
 *   _buyer_ is the account ID of the buyer (optional if _seller_ provided)
 *   _firstIndex_ is a zero-based index to the purchase order to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the purchase order to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the purchase order to retrieve (optional)
 *   _withPublicFeedbacksOnly_ is _true_ if purchase orders without public feedback are to be omitted (optional)
 *   _completed_ is _true_ if only completed purchase orders are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -2786,7 +2786,7 @@ Get purchase orders given a seller and/or buyer ID in reverse chronological orde
 **Response:**
 
 *   _purchases_ (A) is an array of purchase orders (refer to [Get DGS Purchase](#get-dgs-purchase "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Purchases](API_Examples.md#get-dgs-purchases "The Blue0x API Examples") example.
@@ -2805,7 +2805,7 @@ Get the number of tags used by all sellers.
 **Response:**
 
 *   _numberOfTags_ (N) is the number of tags
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get DGS Tag Count](API_Examples.md#get-dgs-tag-count "The Blue0x API Examples") example.
@@ -2819,7 +2819,7 @@ Get tags used by all sellers in reverse _inStockCount_, reverse _totalCount_, _t
 *   _requestType_ is _getDGSTags_
 *   _inStockOnly_ is _false_ if out-of-stock tags are to be retrieved (optional)
 *   _firstIndex_ is a zero-based index to the first tag to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tag to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tag to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -2829,7 +2829,7 @@ Get tags used by all sellers in reverse _inStockCount_, reverse _totalCount_, _t
     *   _inStockCount_ (N) is the number of products available for sale as tagged
     *   _tag_ (S) is the tag word
     *   _totalCount_ (N) is the total number of products as tagged
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** The _...Count_ fields refer to the number of distinct products tagged, regardless of the quantity of each.
@@ -2846,7 +2846,7 @@ Get all tags starting with a given prefix (at least 2 characters long) in revers
 *   _tagPrefix_ is the prefix (at least 2 characters long) of the _tag_
 *   _inStockOnly_ is _false_ if out-of-stock tags are to be retrieved (optional)
 *   _firstIndex_ is a zero-based index to the first tag to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tag to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tag to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -2856,7 +2856,7 @@ Get all tags starting with a given prefix (at least 2 characters long) in revers
     *   _inStockCount_ (N) is the number of products available for sale as tagged
     *   _tag_ (S) is the tag word
     *   _totalCount_ (N) is the total number of products as tagged
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** The _...Count_ fields refer to the number of distinct products tagged, regardless of the quantity of each.
@@ -2874,7 +2874,7 @@ Get product listings that have a name or description that match a given query in
 *   _tag_ is a query on the good field _tags_ in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
 *   _seller_ is the account ID of the product seller (optional)
 *   _firstIndex_ is a zero-based index to the first product to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last product to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last product to retrieve (optional)
 *   _inStockOnly_ is _false_ if out-of-stock products (zero quantity) are to be retrieved (optional)
 *   _hideDelisted_ is _true_ if delisted products are to be omitted (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
@@ -2884,7 +2884,7 @@ Get product listings that have a name or description that match a given query in
 **Response:**
 
 *   _goods_ (A) is an array of goods objects (refer to [Get DGS Good](#get-dgs-good "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Search DGS Goods](API_Examples.md#search-dgs-goods "The Blue0x API Examples") example.
@@ -2954,7 +2954,7 @@ Returns the next block generators ordered by hit time. The list of currently act
 **Response:**
 
 *   _activeCount_ (N) is the number of active forging accounts
-*   -lastBlock_ (S) is the last block ID on the blockchain
+*   _lastBlock_ (S) is the last block ID on the blockchain
 *   _generators_ (A) is an array containing the number of next block generators requested
     *   _effectiveBalanceNXT_ (N) is the balance (in BLX) of the account available for forging: the unleased guaranteedBalance of this account plus the leased guaranteedBalance of all lessors to this account
     *   _accountRS_ (S) is the Reed-Solomon address of the account
@@ -3038,7 +3038,7 @@ Determine if a currency can be deleted.
 **Response:**
 
 *   _canDelete_ (B) is _true_ if the currency can be deleted, _false_ otherwise
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** a currency can be deleted only when all units of the currency are held by _account_. A reservable currency that has not yet been issued can be deleted by the issuer. A mintable currency that has not completed minting cannot be deleted by a non-issuer.
@@ -3160,7 +3160,7 @@ Get the currencies issued by a given account.
     *   _type_ (N) is the currency type bitmask (refer to [Get Currency](#get-currency "The Blue0x API"))
     *   _issuerAccountRS_ (S) is the Reed-Solomon address of the issuer account
     *   _issuerAccount_ (S) is the issuer account ID
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Currencies](API_Examples.md#get-account-currencies "The Blue0x API Examples") example.
@@ -3180,7 +3180,7 @@ Get the number of currencies issued by a given account.
 **Response:**
 
 *   _numberOfCurrencies_ (N) is the number of currencies issued
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Currency Count](API_Examples.md#get-account-currency-count "The Blue0x API Examples") example.
@@ -3196,7 +3196,7 @@ Get the exchange requests associated with a given account and/or currency in rev
 *   _currency_ is the currency ID (optional for expected requests if _account_ provided)
 *   _includeCurrencyInfo_ is _true_ to include the response fields _code_, _decimals_, _name_, _issuanceHeight_, _type_, _timestamp_, _issuerAccountRS_ and _issuerAccount_ (optional, applies only to expected requests)
 *   _firstIndex_ is a zero-based index to the first request to retrieve (optional, does not apply to expected requests)
-*   -lastIndex_ is a zero-based index to the last request to retrieve (optional, does not apply to expected requests)
+*   _lastIndex_ is a zero-based index to the last request to retrieve (optional, does not apply to expected requests)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -3216,7 +3216,7 @@ Get the exchange requests associated with a given account and/or currency in rev
     *   _issuerAccountRS_ (S) is the Reed-Solomon address of the issuer account
     *   _issuerAccount_ (S) is the issuer account ID
     *   _phased_ (B) is true if the transaction is phased (applies only to expected requests)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Exchange Requests](API_Examples.md#get-account-exchange-requests "The Blue0x API Examples") example.
@@ -3269,7 +3269,7 @@ Get all currencies in reverse creation order.
 
 *   _requestType_ is _getAllCurrencies_
 *   _firstIndex_ is a zero-based index to the first currency to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last currency to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last currency to retrieve (optional)
 *   _includeCounts_ is _true_ to include _numberOf..._ fields (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -3277,7 +3277,7 @@ Get all currencies in reverse creation order.
 **Response:**
 
 *   _currencies_ (A) is an array of currency objects (refer to [Get Currency](#get-currency "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Currencies](API_Examples.md#get-all-currencies "The Blue0x API Examples") example.
@@ -3291,7 +3291,7 @@ Get all currency exchanges in reverse chronological order.
 *   _requestType_ is _getAllExchanges_
 *   _timestamp_ is the earliest timestamp to retrieve (optional)
 *   _firstIndex_ is a zero-based index to the first exchange to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last exchange to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last exchange to retrieve (optional)
 *   _includeCurrencyInfo_ is _true_ to include some currency details (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -3299,7 +3299,7 @@ Get all currency exchanges in reverse chronological order.
 **Response:**
 
 *   _exchanges_ (A) is an array of exchange objects (refer to [Get Exchanges](#get-exchanges "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Exchanges](API_Examples.md#get-all-exchanges "The Blue0x API Examples") example.
@@ -3341,7 +3341,7 @@ Get currency buy or sell offers given a currency ID and/or an account ID in orde
 *   _availableOnly_ is _true_ to include only offers with non-zero supply and limit, but is ignored when both _currency_ and _account_ are given (optional, does not apply to expected offers)
 *   _sortByRate_ is _true_ to sort by rate (optional, applies only to expected offers, which are returned in expected order of execution by default)
 *   _firstIndex_ is a zero-based index to the first offer to retrieve (optional, does not apply to expected offers)
-*   -lastIndex_ is a zero-based index to the last offer to retrieve (optional, does not apply to expected offers)
+*   _lastIndex_ is a zero-based index to the last offer to retrieve (optional, does not apply to expected offers)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -3349,7 +3349,7 @@ Get currency buy or sell offers given a currency ID and/or an account ID in orde
 
 *   _offers_ (A) is an array of buy or sell offer objects (refer to [Get Offer](#get-offer "The Blue0x API") for details) with the following additional field only for an expected offer:
     *   _phased_ (B) is _true_ if the offer is phased, _false_ otherwise
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Buy / Sell Offers](API_Examples.md#get-buy-sell-offers "The Blue0x API Examples") example.
@@ -3389,7 +3389,7 @@ Get currencies given multiple currency IDs.
 **Response:**
 
 *   _currencies_ (A) is an array of currency objects (refer to [Get Currency](#get-currency "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Currencies](API_Examples.md#get-currencies "The Blue0x API Examples") example.
@@ -3404,7 +3404,7 @@ Get currencies issued by multiple accounts in reverse creation order.
 *   _account_ is one of multiple account IDs
 *   _account_ is one of multiple account IDs
 *   _firstIndex_ is a zero-based index to the first currency to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last currency to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last currency to retrieve (optional)
 *   _includeCounts_ is _true_ if _numberOf..._ fields are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -3412,7 +3412,7 @@ Get currencies issued by multiple accounts in reverse creation order.
 **Response:**
 
 *   _currencies_ (A) is an array of arrays of currency objects, where the outer array is indexed by the given account IDs (refer to [Get Currency](#get-currency "The Blue0x API") for details about the currency objects)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Currencies By Issuer](API_Examples.md#get-currencies-by-issuer "The Blue0x API Examples") example.
@@ -3461,7 +3461,7 @@ Get the details of a currency.
 *   _maxSupply_ (S) is the maximum currency supply (in QNT)
 *   _account_ (S) is the account ID of the currency issuer
 *   _algorithm_ (N) is the algorithm number for a mintable currency: 2 for SHA256, 3 for SHA3, 5 for Scrypt, 25 for Keccak25
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 
 **Example:** Refer to [Get Currency](API_Examples.md#get-currency "The Blue0x API Examples") example.
 
@@ -3480,7 +3480,7 @@ Get the number of accounts that hold a given currency.
 **Response:**
 
 *   _numberOfAccounts_ (N) is the number of accounts that hold the currency
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Currency Account Count](API_Examples.md#get-currency-account-count "The Blue0x API Examples") example.
@@ -3495,7 +3495,7 @@ Get the accounts that hold a given currency in reverse units order.
 *   _currency_ is the currency ID
 *   _height_ is the blockchain height at which the response applies (optional, default is current height)
 *   _firstIndex_ is a zero-based index to the first account to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last account to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last account to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -3507,7 +3507,7 @@ Get the accounts that hold a given currency in reverse units order.
     *   _currency_ (S) is the currency ID
     *   _units_ (S) is the amount of currency (in QNT)
     *   _account_ (S) is the account number
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Currency Accounts](API_Examples.md#get-currency-accounts "The Blue0x API Examples") example.
@@ -3522,7 +3522,7 @@ Get a reservable currency's founders.
 *   _currency_ is the currency ID
 *   _account_ is an account ID (optional)
 *   _firstIndex_ is a zero-based index to the first founder to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last founder to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last founder to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -3533,7 +3533,7 @@ Get a reservable currency's founders.
     *   _amountPerUnitNQT_ (S) is the amount (in NQT per QNT of _reserveSupply_) reserved by the founder
     *   _currency_ (S) is the currency ID
     *   _account_ (S) is the founding account number
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Currency Founders](API_Examples.md#get-currency-founders "The Blue0x API Examples") example.
@@ -3546,14 +3546,14 @@ Get all currency IDs in reverse chronological creation order.
 
 *   _requestType_ is _getCurrencyIds_
 *   _firstIndex_ is a zero-based index to the first currency to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last currency to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last currency to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _currencyIds_(A) is an array of currency IDs
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Currency Ids](API_Examples.md#get-currency-ids "The Blue0x API Examples") example.
@@ -3569,7 +3569,7 @@ Get currency transfers given a currency ID and/or an account ID in reverse block
 *   _account_ is the account ID (optional if _currency_ provided)
 *   _timestamp_ is the earliest transfer (in seconds since the genesis block) to retrieve (optional, does not apply to expected transfers)
 *   _firstIndex_ is a zero-based index to the first transfer to retrieve (optional, does not apply to expected transfers)
-*   -lastIndex_ is a zero-based index to the last transfer to retrieve (optional, does not apply to expected transfers)
+*   _lastIndex_ is a zero-based index to the last transfer to retrieve (optional, does not apply to expected transfers)
 *   _includeCurrencyInfo_ is _true_ to include some currency fields (optional, does not apply to expected transfers)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -3596,7 +3596,7 @@ Get currency transfers given a currency ID and/or an account ID in reverse block
     *   _phased_ (B) is _true_ if the transaction is phased, _false_ otherwise, applies only to an expected transfer
     *   _issuerAccountRS_ (S) is the Reed-Solomon address of the issuer account
     *   _issuerAccount_ (S) is the issuer account ID
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Currency Transfers](API_Examples.md#get-currency-transfers "The Blue0x API Examples") example.
@@ -3615,7 +3615,7 @@ Get currency exchanges given a currency and/or an account in reverse chronologic
 *   _currency_ is a currency ID (optional)
 *   _account_ is an account ID (optional if _currency_ provided)
 *   _firstIndex_ is a zero-based index to the first currency exchange to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last currency exchange to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last currency exchange to retrieve (optional)
 *   _timestamp_ is the earliest block (in seconds since the genesis block) to retrieve (optional)
 *   _includeCurrencyInfo_ is _true_ to include several currency-related fields (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -3643,7 +3643,7 @@ Get currency exchanges given a currency and/or an account in reverse chronologic
     *   _height_ is the blockchain height of the block containing the exchange transaction
     *   _issuerAccountRS_ (S) is the Reed-Solomon address of the issuer account
     *   _issuerAccount_ (S) is the issuer account ID
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Exchanges](API_Examples.md#get-exchanges "The Blue0x API Examples") example.
@@ -3663,7 +3663,7 @@ Get currency exchanges given an exchange request transaction ID in reverse chron
 **Response:**
 
 *   _exchanges_ (A) is an array of exchange objects (refer to [Get Exchanges](#get-exchanges "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Exchanges By Exchange Request](API_Examples.md#get-exchanges-by-exchange-request "The Blue0x API Examples") example.
@@ -3678,14 +3678,14 @@ Get currency exchanges given a currency offer ID in reverse chronological order.
 *   _offer_ (S) is a currency offer ID
 *   _includeCurrencyInfo_ is _true_ to include several currency-related fields (optional)
 *   _firstIndex_ is a zero-based index to the first currency exchange to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last currency exchange to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last currency exchange to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _exchanges_ (A) is an array of exchange objects (refer to [Get Exchanges](#get-exchanges "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Exchanges By Offer](API_Examples.md#get-exchanges-by-offer "The Blue0x API Examples") example.
@@ -3710,7 +3710,7 @@ Get the last exchange of each of multiple currencies.
 *   _exchanges_ (A) is an array of exchange objects (refer to [Get Exchanges](#get-exchanges "The Blue0x API") without _name_, _decimals_, _code_, _issuanceHeight_, _type_, _issuerAccountRS_ and _issuerAccount_ for details)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Get Last Exchanges](API_Examples.md#get-last-exchanges "The Blue0x API Examples") example.
+**Example:** Refer to [Get Last Exchanges](API_Examples.md#get_last-exchanges "The Blue0x API Examples") example.
 
 ### Get Minting Target
 
@@ -3733,7 +3733,7 @@ Get the current minting target of a mintable currency.
 *   _targetBytes_ (S) is the 32-byte target (little endian), which must equal or exceed the computed hash of the _nonce_
 *   _currency_ (S) is the currency ID
 *   _counter_ (N) is the counter associated with the minting account, the value previously submitted to [Currency Mint](#currency-mint "The Blue0x API")
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** If a _nonce_ is found such that its hash is less than the target, it can be submitted to the blockchain along with _counter_ + 1 using [Currency Mint](#currency-mint "The Blue0x API"), which results in _units_ NQT being credited to the minting account. _difficulty_ is inversely related to the target, and so increases exponentially as _maxSupply_ is approached because the target is defined as (2exp\-1)/_units_, where exp decreases linearly from 256-_minDifficulty_ to 256-_maxDifficulty_. (Refer to [Issue Currency](#issue-currency "The Blue0x API") for _maxSupply_, _minDifficulty_ and _maxDifficulty_.)
@@ -3763,7 +3763,7 @@ Get offer details given an offer ID.
     *   _account_ (S) is the offering account number
     *   _height_ (N) is the blockchain height of offer creation
     *   _rateNQT_ (S) is the currency exchange rate (in NQT per QNT)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Offer](API_Examples.md#get-offer "The Blue0x API Examples") example.
@@ -3827,7 +3827,7 @@ Get currencies having a code that matches a given query in reverse relevance ord
 *   _requestType_ is _searchCurrencies_
 *   _query_ is a full text query on the currency field _code_ in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
 *   _firstIndex_ is a zero-based index to the first currency to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last currency to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last currency to retrieve (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -3835,7 +3835,7 @@ Get currencies having a code that matches a given query in reverse relevance ord
 **Response:**
 
 *   _currencies_ (A) is an array of currency objects (refer to [Get Currency](#get-currency "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Search Currencies](API_Examples.md#search-currencies "The Blue0x API Examples") example.
@@ -3956,7 +3956,7 @@ Get information about a given peer.
 *   _uploadedVolume_ (N) is the number of bytes uploaded by the peer
 *   _version_ (S) is the version of the software running on the peer
 *   _platform_ (S) is a string representing the peer's platform
-*   -lastUpdated_ (N) is the timestamp (in seconds since the genesis block) of the last peer status update
+*   _lastUpdated_ (N) is the timestamp (in seconds since the genesis block) of the last peer status update
 *   _blacklisted_ (B) is _true_ if the peer is blacklisted
 *   _services_ (A) is an array of strings with the services the node provides
 *   _blacklistingCause_ (S) is the cause of blacklisting (if _blacklisted_ is _true_)
@@ -3967,7 +3967,7 @@ Get information about a given peer.
 *   _inbound_ (B) is _true_ if the peer has made a request to this node
 *   _inboundWebSocket_ (B) is _true_ if an inbound websocket has been established from this node
 *   _outboundWebSocket_ (B) is _true_ if an outbound websocket has been established to this node
-*   -lastConnectAttempt_ (B) is the timestamp (in seconds since the genesis block) of the last connection attempt to the peer
+*   _lastConnectAttempt_ (B) is the timestamp (in seconds since the genesis block) of the last connection attempt to the peer
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Peer](API_Examples.md#get-peer "The Blue0x API Examples") example.
@@ -4012,7 +4012,7 @@ Set the remote node to use when in roaming and light client modes. POST only.
 *   _version_ (S) is the version of the software running on the peer
 *   _platform_ (S) is a string representing the peer's platform
 *   _blockchainState_ (S) is a string describing the state of the blockchain in the peer
-*   -lastUpdated_ (N) is the timestamp (in seconds since the genesis block) of the last peer status update
+*   _lastUpdated_ (N) is the timestamp (in seconds since the genesis block) of the last peer status update
 *   _blacklisted_ (B) is _true_ if the peer is blacklisted
 *   _services_ (A) is an array of strings with the services the node provides
 *   _apiPort_ (N) is the API access port of the peer
@@ -4025,7 +4025,7 @@ Set the remote node to use when in roaming and light client modes. POST only.
 *   _inbound_ (B) is _true_ if the peer has made a request to this node
 *   _inboundWebSocket_ (B) is _true_ if an inbound websocket has been established from this node
 *   _outboundWebSocket_ (B) is _true_ if an outbound websocket has been established to this node
-*   -lastConnectAttempt_ (B) is the timestamp (in seconds since the genesis block) of the last connection attempt to the peer
+*   _lastConnectAttempt_ (B) is the timestamp (in seconds since the genesis block) of the last connection attempt to the peer
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Set API Proxy Peer](API_Examples.md#set-aPI-proxy-peer "The Blue0x API Examples") example.
@@ -4105,7 +4105,7 @@ Get the number of pending phased transactions associated with an account given t
 **Response:**
 
 *   _numberOfPhasedTransactions_ (N) is the number of pending phased transactions
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Phased Transaction Count](API_Examples.md#get-account-phased-transaction-count "The Blue0x API Examples") example.
@@ -4119,7 +4119,7 @@ Get pending phased transactions associated with an account given the account ID 
 *   _requestType_ is _getAccountPhasedTransactions_
 *   _account_ is the account ID
 *   _firstIndex_ is a zero-based index to the first phased transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -4138,7 +4138,7 @@ Get pending phased transactions based on an asset in reverse chronological creat
 *   _account_ is an account ID of the account that created the phased transactions (optional)
 *   _withoutWhitelist_ is _true_ to omit phased transactions that include a whitelist (optional)
 *   _firstIndex_ is a zero-based index to the first phased transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -4157,7 +4157,7 @@ Get pending phased transactions based on a currency in reverse chronological cre
 *   _account_ is an account ID of the account that created the phased transactions (optional)
 *   _withoutWhitelist_ is _true_ to omit phased transactions that include a whitelist (optional)
 *   _firstIndex_ is a zero-based index to the first phased transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -4214,7 +4214,7 @@ Get the details of a phasing poll.
 *   _whitelist_ (A) is an array of whitelist objects containing the following two fields (omitted if _votingModel_ != _5_):
     *   _whitelisted_ (S) is the number of the whitelisted account
     *   _whitelistedRS_ (S) is the Reed-Solomon address of the whitelisted account
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Phasing Poll](API_Examples.md#get-phasing-poll "The Blue0x API Examples") example.
@@ -4236,7 +4236,7 @@ Get a cast phasing poll vote given a phased transaction ID and an account ID of 
 *   _voter_ (S) is the account ID of the voter in the poll
 *   _voterRS_ (S) is the Reed-Solomon address of the _voter_
 *   _transaction_ (S) is the phased transaction ID
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Phasing Poll Vote](API_Examples.md#get-phasing-poll-vote "The Blue0x API Examples") example.
@@ -4250,7 +4250,7 @@ Get all cast phasing poll votes in a phasing poll given a phased transaction ID,
 *   _requestType_ is _getPhasingPollVotes_
 *   _transaction_ is the phased transaction ID
 *   _firstIndex_ is a zero-based index to the first vote to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last vote to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last vote to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -4287,7 +4287,7 @@ Get pending phased transactions which include a whitelist in reverse chronologic
 *   _requestType_ is _getVoterPhasedTransactions_
 *   _account_ is a whitelisted account ID included in the phased transactions
 *   _firstIndex_ is a zero-based index to the first phased transaction to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last phased transaction to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -4341,7 +4341,7 @@ Create, modify or remove an event listener which can report server events via [E
 **Response:**
 
 *   _registered_ is _true_ if the operation completed successfully
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Event Register](API_Examples.md#event-register "The Blue0x API Examples") example.
@@ -4367,7 +4367,7 @@ Wait for events registered with [Event Register](#event-register "The Blue0x API
         *   block string identifier (S) for a block event
         *   peer network address (S) for a peer event
         *   transaction string identifier (S) for a transaction event
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Event Wait](API_Examples.md#event_Wait "The Blue0x API Examples") example.
@@ -4389,15 +4389,15 @@ Get the blockchain status.
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 *   _version_ (S) is the application version
 *   _maxRollback_ (N) is the value of the _nxt.maxRollback_ property
-*   -lastBlock_ (S) is the last block ID on the blockchain
+*   _lastBlock_ (S) is the last block ID on the blockchain
 *   _application_ (S) is application name, typically _NRS_
 *   _isScanning_ (B) is _true_ if the blockchain is being scanned by the application, _false_ otherwise
 *   _isDownloading_ (B) is _true_ if a download is in progress, _false_ otherwise; _true_ when a batch of more than 10 blocks at once has been downloaded from a peer, reset to _false_ when an attempt to download more blocks from a peer does not result in any new blocks
 *   _cumulativeDifficulty_ (S) is the cumulative difficulty
-*   -lastBlockchainFeederHeight_ (N) is the height of the last blockchain of greatest cumulative difficulty obtained from a peer
+*   _lastBlockchainFeederHeight_ (N) is the height of the last blockchain of greatest cumulative difficulty obtained from a peer
 *   _maxPrunableLifetime_ (N) is the maximum prunable lifetime (in seconds)
 *   _time_ (N) is the current timestamp (in seconds since the genesis block)
-*   -lastBlockchainFeeder_ (S) is the address or announced address of the peer providing the last blockchain of greatest cumulative difficulty
+*   _lastBlockchainFeeder_ (S) is the address or announced address of the peer providing the last blockchain of greatest cumulative difficulty
 *   _blockchainState_ (S) Current state of this node's blockchain (UP\-tO\-dATE or DOWNLOADING)
 
 **Example:** Refer to [Get Blockchain Status](API_Examples.md#get-blockchain-status "The Blue0x API Examples") example.
@@ -4500,12 +4500,12 @@ Get the state of the server node and network.
 *   _numberOfPhasedTransactions_ (N) is the number of phased transactions in the blockchain
 *   _version_ (S) is the software version on this node
 *   _numberOfBidOrders_ (N) is the number of AE bid orders in the blockchain
-*   -lastBlock_ (S) is the last block address
+*   _lastBlock_ (S) is the last block address
 *   _totalMemory_ (N) is the amount of memory this node is using (in Bytes)
 *   _application_ (S) is the name of the software running on this node (typically _NRS_)
 *   _numberOfAliases_ (N) is the number of aliases in the blockchain
 *   _numberOfActivePeers_ (N) is the number of active peers on the network
-*   -lastBlockchainFeederHeight_ (N) is the height of the last blockchain feeder
+*   _lastBlockchainFeederHeight_ (N) is the height of the last blockchain feeder
 *   _maxPrunableLifetime_ (N) is the maximum prunable lifetime (in seconds)
 *   _numberOfExchanges_ (N) is the number of currency exchanges in the blockchain
 *   _numberOfTrades_ (N) is the number of AE trades in the blockchain
@@ -4513,7 +4513,7 @@ Get the state of the server node and network.
 *   _numberOfTags_ (N) is the number of DGS tags in the blockchain
 *   _time_ (N) is the current node time (in seconds since the genesis block)
 *   _numberOfAskOrders_ (N) is the number of AE ask orders in the blockchain
-*   -lastBlockchainFeeder_ (S) is the announced name of the feeder of the last blockchain
+*   _lastBlockchainFeeder_ (S) is the announced name of the feeder of the last blockchain
 *   _isOffline_ (B) is _true_ if this node is connected to other peers, _false_ otherwise
 
 **Note:** AE is Asset Exchange, DGS is Digital Goods Store
@@ -4551,7 +4551,7 @@ Retrieves info about shufflings for a specific account.
 *   _includeFinished_ is _true_ to include completed shufflings (optional)
 *   _includeHoldingInfo_ is _true_ to include holding info (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _adminPassword_ is a string with the admin password (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -4574,7 +4574,7 @@ Retrieves info about all shufflings.
 *   _includeHoldingInfo_ is _true_ to include holding info (optional)
 *   _finishedOnly_ is _true_ to omit not yet finished shufflings (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _adminPassword_ is a string with the admin password (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -4596,7 +4596,7 @@ Retrieves info about a shufflings that are currently assigned to a specific acco
 *   _account_ is the account ID
 *   _includeHoldingInfo_ is _true_ to include holding info (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _adminPassword_ is a string with the admin password (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -4619,7 +4619,7 @@ Retrieves info about shufflings for a specific holding and/or stage.
 *   _stage_ is the stage of the shuffling (See [Get Constants](#get-constants "The Blue0x API") for type definitions) (optional)
 *   _includeFinished_ is _true_ to include completed shufflings (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _adminPassword_ is a string with the admin password (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -4889,14 +4889,14 @@ Get all available tagged data uploaded by a given account in reverse chronologic
 *   _account_ is the account ID
 *   _includeData_ is _true_ to include _data_ (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _data_ (A) is an array of tagged data objects (refer to [Get Tagged Data](#get-tagged-data "The Blue0x API") with _hash_ omitted for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Account Tagged Data](API_Examples.md#get-account-tagged-data "The Blue0x API Examples") example.
@@ -4910,14 +4910,14 @@ Get all available tagged data in reverse chronological order.
 *   _requestType_ is _getAllTaggedData_
 *   _includeData_ is _true_ to include _data_ (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _data_ (A) is an array of tagged data objects (refer to [Get Tagged Data](#get-tagged-data "The Blue0x API") with _hash_ omitted for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Tagged Data](API_Examples.md#get-all-tagged-data "The Blue0x API Examples") example.
@@ -4933,14 +4933,14 @@ Get available tagged data by channel, optionally filtered by account, in reverse
 *   _account_ is an account ID (optional)
 *   _includeData_ is _true_ to include _data_ (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _data_ (A) is an array of tagged data objects (refer to [Get Tagged Data](#get-tagged-data "The Blue0x API") with _hash_ omitted for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Channel Tagged Data](API_Examples.md#get-channel-tagged-data "The Blue0x API Examples") example.
@@ -4958,7 +4958,7 @@ Get the total number of distinct available data tags.
 **Response:**
 
 *   _numberOfDataTags_ (N) is the total number of distinct data tags
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Data Tag Count](API_Examples.md#get-data-tag-count "The Blue0x API Examples") example.
@@ -4971,7 +4971,7 @@ Get the distinct tags of all available tagged data, with the number of uses of e
 
 *   _requestType_ is _getDataTags_
 *   _firstIndex_ is a zero-based index to the first tag to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tag to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tag to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -4980,7 +4980,7 @@ Get the distinct tags of all available tagged data, with the number of uses of e
 *   _tags_ (A) is an array of tag objects including the fields:
     *   _tag_ (S) is a tag word
     *   _count_ (N) is the number of uses of _tag_ among all tagged data
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Data Tags](API_Examples.md#get-data-tags "The Blue0x API Examples") example.
@@ -4994,7 +4994,7 @@ Prefix search of available data tags, return in alphabetical order.
 *   _requestType_ is _getDataTagsLike_
 *   _tagPrefix_ is the prefix to search for (2 character minimum) among all data tags
 *   _firstIndex_ is a zero-based index to the first tag to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tag to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tag to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -5003,7 +5003,7 @@ Prefix search of available data tags, return in alphabetical order.
 *   _tags_ (A) is an array of tag objects including the fields:
     *   _tag_ (S) is a tag word
     *   _count_ (N) is the number of uses of _tag_ among all tagged data
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Data Tags Like](API_Examples.md#get-data-tags-like "The Blue0x API Examples") example.
@@ -5038,7 +5038,7 @@ Get available tagged data given a transaction ID.
 *   _transaction_ (S) is the transaction ID
 *   _transactionTimestamp_ (N) is the transaction timestamp (in seconds since the genesis block)
 *   _blockTimestamp_ (N) is the block timestamp (in seconds since the genesis block)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** Refer to [Upload Tagged Data](#Upload-tagged-data "The Blue0x API") for details about the _data_ and metadata (_filename_, _name_, _description_, _tags_, _type_, _channel_ and _isText_) fields.
@@ -5075,14 +5075,14 @@ Full text search on available tagged data name, description and tags; optionally
 *   _account_ is an account ID (optional)
 *   _includeData_ is _true_ to include _data_ (optional)
 *   _firstIndex_ is a zero-based index to the first tagged data to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last tagged data to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _data_ (A) is an array of tagged data objects (refer to [Get Tagged Data](#get-tagged-data "The Blue0x API") with _hash_ omitted for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Search Tagged Data](API_Examples.md#search-tagged-data "The Blue0x API Examples") example.
@@ -5136,7 +5136,7 @@ Verify expired tagged data downloaded from another node, against the hash in the
 
 *   _verify_ (B) is _true_ if the hash of the provided _data_ and metadata matches the hash in the blockchain
 *   _hash_ (S) is the hash of the tagged data
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 *   _version.TaggedDataUpload_ (N) is _1_, the version number
 
@@ -5310,7 +5310,7 @@ Gets the transactions referencing a given transaction id.
 *   _requestType_ is _getReferencingTransactions_
 *   _transaction_ is one transaction ID
 *   _firstIndex_ is a zero-based index to the first block ID to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last block ID to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last block ID to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -5365,7 +5365,7 @@ Get a transaction object given a transaction ID.
 *   _ecBlockId_ (N) is the economic clustering block ID
 *   _ecBlockHeight_ (N) is the economic clustering block height
 *   _attachment_ (O) is an object containing any additional data needed for the transaction, if applicable
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** The _block_, _blockTimestamp_ and _confirmations_ fields are omitted for unconfirmed transactions. Double-spending transactions are not retrieved.
@@ -5389,7 +5389,7 @@ Get the bytecode of a transaction.
 *   _transactionBytes_ (S) are the bytes contained in the transaction
 *   _unsignedTransactionBytes_ (S) are the unsigned bytes contained in the transaction
 *   _prunableAttachmentJSON_ (O) is the prunable attachment JSON object, if applicable, because _transactionBytes_ never includes prunable data
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Transaction Bytes](API_Examples.md#get-transaction-bytes "The Blue0x API Examples") example.
@@ -5469,7 +5469,7 @@ Calculates the full hash, signature hash, and transaction ID of an unsigned tran
 *   _fullHash_ (S) is the full hash of the signed transaction
 *   _prunableAttachmentJSON_ (O) is the prunable attachment JSON object, if applicable, because _transactionBytes_ never includes prunable data
 *   _transaction_ (S) is the transaction ID, derived from the _fullHash_
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Sign Transaction](API_Examples.md#sign-transaction "The Blue0x API Examples") example.
@@ -5561,7 +5561,7 @@ Get the details of a poll.
 *   _options_ (A) is the array of options (answers)
 *   _minRangeValue_ (N) is the minimum integer value for an option (answer)
 *   _maxRangeValue_ (N) is the maximum integer value for an option (answer)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Poll](API_Examples.md#get-poll "The Blue0x API Examples") example.
@@ -5596,7 +5596,7 @@ Get the result of a poll.
 *   _results_ (A) is an array of result objects with the following fields for each result:
     *   _weight_ (S) is the sum of the _weight_ of each account that voted for the corresponding option (answer); an account's _weight_ is _1_ if the voting model is _0_, otherwise it is the NQT, asset QNT or currency QNT balance of the account if the voting model is _1_, _2_ or _3_ respectively; however, the _weight_ is _0_ if _minBalance_ is not met
     *   _result_ (S) is the sum over each account that voted for the corresponding option (answer) of: the product of the account's _weight_ and the _rangeValue_ selected when the vote was cast.
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Poll Result](API_Examples.md#get-poll-result "The Blue0x API Examples") example.
@@ -5621,7 +5621,7 @@ Get a poll vote given a poll ID and an account ID.
 *   _voterRS_ (S) is the Reed-Solomon address of the voter
 *   _transaction_ (S) is the transaction ID of the vote
 *   _weight_ (S) is the weight assigned to each vote (applies if _includeWeights_ is _true_)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** Votes are deleted from the database 1441 blocks after the poll is finished. Only aggregate results are kept (refer to [Get Poll Result](#get-poll-result "The Blue0x API")).
@@ -5638,14 +5638,14 @@ Get all votes on a poll in reverse chronological order.
 *   _poll_ is the poll ID
 *   _includeWeights_ is _true_ to calculate and return the weight assigned to each vote (optional)
 *   _firstIndex_ is a zero-based index to the first vote to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last vote to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last vote to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
 **Response:**
 
 *   _votes_ (A) is an array of vote objects (refer to [Get Poll Vote](#get-poll-vote "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Note:** Votes are deleted from the database 1441 blocks after the poll is finished. Only aggregate results are kept (refer to [Get Poll Result](#get-poll-result "The Blue0x API")).
@@ -5662,7 +5662,7 @@ Get poll details in reverse creation order.
 *   _account_ is a creation account ID filter (optional)
 *   _timestamp_ is the earliest poll (in seconds since the genesis block) to retrieve (optional)
 *   _firstIndex_ is a zero-based index to the first poll to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last poll to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last poll to retrieve (optional)
 *   _includeFinished_ is _true_ to include completed polls (optional)
 *   _finishedOnly_ is _true_ to exclude not yet executed, phased transactions (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -5671,7 +5671,7 @@ Get poll details in reverse creation order.
 **Response:**
 
 *   _polls_ (A) is an array of polls (refer to [Get Poll](#get-poll "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get Polls](API_Examples.md#get-polls "The Blue0x API Examples") example.
@@ -5685,7 +5685,7 @@ Search for poll details given a name/description query string.
 *   _requestType_ is _searchPolls_
 *   _query_ is a full text query on the poll fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
 *   _firstIndex_ is a zero-based index to the first poll to retrieve (optional)
-*   -lastIndex_ is a zero-based index to the last poll to retrieve (optional)
+*   _lastIndex_ is a zero-based index to the last poll to retrieve (optional)
 *   _includeFinished_ is _true_ to include completed polls (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -5693,7 +5693,7 @@ Search for poll details given a name/description query string.
 **Response:**
 
 *   _polls_ (A) is an array of polls (refer to [Get Poll](#get-poll "The Blue0x API") for details)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Search Polls](API_Examples.md#search-polls "The Blue0x API Examples") example.
@@ -5913,7 +5913,7 @@ Get unconfirmed transactions broadcasted from this node but not yet received bac
 **Response:**
 
 *   _transactions_ (A) is an array of broadcasted unconfirmed transactions not yet received back from a peer (S)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Broadcasted Transactions](API_Examples.md#get-all-broadcasted-transactions "The Blue0x API Examples") example.
@@ -5931,7 +5931,7 @@ Get unconfirmed transactions temporarily kept in memory during transaction proce
 **Response:**
 
 *   _transactions_ (A) is an array of unconfirmed transactions temporarily kept in memory (S)
-*   -lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
+*   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Get All Waiting Transactions](API_Examples.md#get-all_Waiting-transactions "The Blue0x API Examples") example.
