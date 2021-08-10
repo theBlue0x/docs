@@ -11,7 +11,7 @@ Each API call is documented below, with definitions given for HTTP request param
 *   The JSON response fields are each followed by one of -s_ for string, -a_ for array, -o_ for object, _N_ for number or -b_ for boolean.
 *   In the examples, the Blue0x node is represented as -localhost_ and requests and responses are formatted for easy reading; line breaks and spaces are not actually used except in some parameter values. All requests are in URL format which implies the HTTP GET method. When GET is allowed, the URL can be entered into a browser URL field but proper URL encoding is usually required (e.g., spaces in a parameter value must be replaced by _+_ or _%20_). Otherwise, the URL should be used as a guide to preparing an HTTP POST request using cURL, for example.
 
-All API calls can be viewed and tested at [http://localhost:2022/test](http://localhost:2022/test) while the local server node is running. For specific API calls, use [http://localhost:2022/test?requestType=](http://localhost:2022/test?requestType=)_specificRequestType_.
+All API calls can be viewed and tested at [https://localhost:2022/test](https://localhost:2022/test) while the local server node is running. For specific API calls, use [https://localhost:2022/test?requestType=](https://localhost:2022/test?requestType=)_specificRequestType_.
 
 This document is adapted for Blue0x from the [NXT API Documentation](https://nxtdocs.jelurida.com/API "Nxt API").
 
@@ -328,7 +328,7 @@ General Notes
 
 ### Genesis Block
 
-Many API requests make reference to the genesis block. FYI, the genesis block's ID is [4777664216118977193](http://localhost:2022/nxt?=%2Fnxt&requestType=getBlock&height=0). Sending messages, selling aliases, and leasing balances to the Genesis account are not allowed.
+Many API requests make reference to the genesis block. FYI, the genesis block's ID is [4777664216118977193](https://localhost:2022/nxt?=%2Fnxt&requestType=getBlock&height=0). Sending messages, selling aliases, and leasing balances to the Genesis account are not allowed.
 
 ### Flexible Account IDs
 
@@ -914,7 +914,7 @@ Get accounts having a name or description that match a given query in reverse re
 **Request:**
 
 *   _requestType_ is _searchAccounts_
-*   _query_ is a full text query on the account fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
+*   _query_ is a full text query on the account fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
 *   _firstIndex_ is a zero-based index to the first account to retrieve (optional)
 *   -lastIndex_ is a zero-based index to the last account to retrieve (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -1144,7 +1144,7 @@ Create and/or assign an alias. POST only.
 
 *   _requestType_ is _setAlias_
 *   _aliasName_ is the alias name
-*   _aliasURI_ is the alias URI (e.g. [http://www.google.com/](http://www.google.com/))
+*   _aliasURI_ is the alias URI (e.g. [https://www.google.com/](https://www.google.com/))
 
 **Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the alias ID.
 
@@ -2269,7 +2269,7 @@ Get assets having a name or description that match a given query in reverse rele
 **Request:**
 
 *   _requestType_ is _searchAssets_
-*   _query_ is a full text query on the asset fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
+*   _query_ is a full text query on the asset fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
 *   _firstIndex_ is a zero-based index to the first asset to retrieve (optional)
 *   -lastIndex_ is a zero-based index to the last asset to retrieve (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
@@ -2870,8 +2870,8 @@ Get product listings that have a name or description that match a given query in
 **Request:**
 
 *   _requestType_ is _searchDGSGoods_
-*   _query_ is a full text query on the goods fields _name_ and _description_ in the [standard Lucene syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
-*   _tag_ is a query on the good field _tags_ in the [standard Lucene syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
+*   _query_ is a full text query on the goods fields _name_ and _description_ in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
+*   _tag_ is a query on the good field _tags_ in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
 *   _seller_ is the account ID of the product seller (optional)
 *   _firstIndex_ is a zero-based index to the first product to retrieve (optional)
 *   -lastIndex_ is a zero-based index to the last product to retrieve (optional)
@@ -3825,7 +3825,7 @@ Get currencies having a code that matches a given query in reverse relevance ord
 **Request:**
 
 *   _requestType_ is _searchCurrencies_
-*   _query_ is a full text query on the currency field _code_ in the [standard Lucene syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
+*   _query_ is a full text query on the currency field _code_ in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
 *   _firstIndex_ is a zero-based index to the first currency to retrieve (optional)
 *   -lastIndex_ is a zero-based index to the last currency to retrieve (optional)
 *   _includeCounts_ is _true_ if the fields beginning with _numberOf..._ are to be included (optional)
@@ -5069,7 +5069,7 @@ Full text search on available tagged data name, description and tags; optionally
 **Request:**
 
 *   _requestType_ is _searchTaggedData_
-*   _query_ is a full text query on the metadata fields _name_ (S), _description_ (S) and _tags_ (S) in the [standard Lucene syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
+*   _query_ is a full text query on the metadata fields _name_ (S), _description_ (S) and _tags_ (S) in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview)
 *   _tag_ is a word in the _tags_ string (optional)
 *   _channel_ is a channel string (optional)
 *   _account_ is an account ID (optional)
@@ -5224,7 +5224,7 @@ Generate a token. POST only.
 *   _secretPhrase_ is the passphrase of the account generating the token
 *   _website_ is a web site URL for which authorization should be granted, or general text to be digitally signed
 
-**Note:** _website_ is typically a URL (with the leading http:// unnecessary) that an account owner signs with his _secretPhrase_ (private key) to bind the account to the URL, but _website_ can be any text that the owner wishes to sign.
+**Note:** _website_ is typically a URL (with the leading https:// unnecessary) that an account owner signs with his _secretPhrase_ (private key) to bind the account to the URL, but _website_ can be any text that the owner wishes to sign.
 
 **Response:**
 
@@ -5683,7 +5683,7 @@ Search for poll details given a name/description query string.
 **Request:**
 
 *   _requestType_ is _searchPolls_
-*   _query_ is a full text query on the poll fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
+*   _query_ is a full text query on the poll fields _name_ (S) and _description_ (S) in the [standard Lucene syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview) (optional)
 *   _firstIndex_ is a zero-based index to the first poll to retrieve (optional)
 *   -lastIndex_ is a zero-based index to the last poll to retrieve (optional)
 *   _includeFinished_ is _true_ to include completed polls (optional)
