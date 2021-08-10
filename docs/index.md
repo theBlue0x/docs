@@ -9,7 +9,7 @@ The Blue0x API allows interaction with Blue0x nodes using HTTP requests to port 
 Each API call is documented below, with definitions given for HTTP request parameters and JSON response fields, followed by an example:
 
 *   The JSON response fields are each followed by one of _s_ for string, _a_ for array, _o_ for object, _N_ for number or _b_ for boolean.
-*   In the examples, the Blue0x node is represented as -localhost_ and requests and responses are formatted for easy reading; line breaks and spaces are not actually used except in some parameter values. All requests are in URL format which implies the HTTP GET method. When GET is allowed, the URL can be entered into a browser URL field but proper URL encoding is usually required (e.g., spaces in a parameter value must be replaced by _+_ or _%20_). Otherwise, the URL should be used as a guide to preparing an HTTP POST request using cURL, for example.
+*   In the examples, the Blue0x node is represented as _localhost_ and requests and responses are formatted for easy reading; line breaks and spaces are not actually used except in some parameter values. All requests are in URL format which implies the HTTP GET method. When GET is allowed, the URL can be entered into a browser URL field but proper URL encoding is usually required (e.g., spaces in a parameter value must be replaced by _+_ or _%20_). Otherwise, the URL should be used as a guide to preparing an HTTP POST request using cURL, for example.
 
 All API calls can be viewed and tested at [https://localhost:2022/test](https://localhost:2022/test) while the local server node is running. For specific API calls, use [https://localhost:2022/test?requestType=](https://localhost:2022/test?requestType=)_specificRequestType_.
 
