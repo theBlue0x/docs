@@ -1,0 +1,16 @@
+site_name: Blue0x API Docs
+site_description: 'Blue0x API Documentation'
+site_author: 'Blue0x Devs'
+docs_dir: docs/
+nav:
+    - Blue0x API: index.md
+    - API Examples: API_Examples.md
+theme:
+    name: material
+    icon:
+        logo: 'material/server-network'
+    favicon: img/favicon.ico
+
+
+
+        
