@@ -13,8 +13,6 @@ Cast a vote on a poll. POST only.
 *   _vote01_ is an integer within the allowed range to vote for option (answer) 1 (optional if _minNumberOfOptions_ met, default is _\-128_)
 *   _vote02_ is an integer within the allowed range to vote for option (answer) 2 (optional if _minNumberOfOptions_ met, default is _\-128_)
 
-⋮
-
 **Note:** The allowed vote values are integers between _minRangeValue_ and _maxRangeValue_, inclusive. This range, along with the minimum and maximum number of options that can and must be voted on are specified when the poll is created. Refer to [Create Poll](#create-poll "The Blue0x API").
 
 **Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
