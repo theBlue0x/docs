@@ -116,10 +116,7 @@ https://localhost:2022/nxt?
   requestType=getAccountBlockCount&
   account=7114946486381367146
 ```
-
-```
 **Response:**
-```
 ```
 {
  "numberOfBlocks": 460,
@@ -136,10 +133,7 @@ https://localhost:2022/nxt?
   account=7114946486381367146&
   lastIndex=5
 ```
-
-```
 **Response:**
-```
 ```
 {
  "blockIds": [

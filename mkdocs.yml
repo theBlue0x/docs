@@ -3,7 +3,28 @@ site_description: 'Blue0x API Documentation'
 site_author: 'Blue0x Devs'
 docs_dir: docs/
 nav:
-    - Blue0x API: index.md
+    - ALL: index.md
+    - OVERVIEW: general.md
+    - TABLE OF CONTENTS: toc.md
+    - Account: account.md
+    - Alias: alias.md
+    - Assets: assets.md
+    - Blocks: blocks.md
+    - Debug: debug.md
+    - Forging: forging.md
+    - Hallmark: hallmark.md
+    - Marketplace: marketplace.md
+    - Messaging: messaging.md
+    - Monetary System: monetary_system.md
+    - Networking: networking.md
+    - Phasing: phasing.md
+    - Server: server.md
+    - Shuffling: shuffling.md
+    - Tagged Data: tagged_data.md
+    - Token: token.md
+    - Transactions: transactions.md
+    - Utilities: utilities.md
+    - Voting: voting.md
     - API Examples: API_Examples.md
 theme:
     name: material
@@ -13,4 +34,4 @@ theme:
 
 
 
-        
+

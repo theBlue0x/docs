@@ -4,19 +4,19 @@ Blue0x API Documentation
 Description
 -------------
 
-The Blue0x API allows interaction with Blue0x nodes using HTTP requests to port 2022. Most HTTP requests can use either the GET or POST methods, but some API calls accept only the POST method for security reasons. Responses are returned as JSON objects.
+The Blue0x API interacts with Blue0x nodes using HTTP requests to port 2022. Most HTTP requests can use either the GET or POST methods, but some API calls accept only the POST method for security reasons. Responses are returned as JSON objects.
 
 Each API call is documented below, with definitions given for HTTP request parameters and JSON response fields, followed by an example:
 
 *   The JSON response fields are each followed by one of _s_ for string, _a_ for array, _o_ for object, _N_ for number or _b_ for boolean.
 *   In the examples, the Blue0x node is represented as _localhost_ and requests and responses are formatted for easy reading; line breaks and spaces are not actually used except in some parameter values. All requests are in URL format which implies the HTTP GET method. When GET is allowed, the URL can be entered into a browser URL field but proper URL encoding is usually required (e.g., spaces in a parameter value must be replaced by _+_ or _%20_). Otherwise, the URL should be used as a guide to preparing an HTTP POST request using cURL, for example.
 
-All API calls can be viewed and tested at [https://localhost:2022/test](https://localhost:2022/test) while the local server node is running. For specific API calls, use [https://localhost:2022/test?requestType=](https://localhost:2022/test?requestType=)_specificRequestType_.
+All API calls can be viewed and tested at [localhost:2022/test](localhost:2022/test) while a local BLX node is running. For specific API calls, use [localhost:2022/test?requestType=](localhost:2022/test?requestType=)_specificRequestType_.
 
 This document is adapted for Blue0x from the [NXT API Documentation](https://nxtdocs.jelurida.com/API "Nxt API").
 
-Categories
--------------------
+Table of Contents
+-----------
 
 *   [General Notes](#general-notes)
     *   [Genesis Block](#genesis-block)
@@ -30,7 +30,7 @@ Categories
     *   [Roaming and Light Client Modes](#roaming-and-light-client-modes)
 *   [Create Transaction](#create-transaction)
     *   [Create Transaction Request](#create-transaction-request)
-    *   [Create Transaction Response](#create-transaction-response)
+    *   [Create Transaction Response](index.md#create-transaction-response)
 *   [Account Operations](#account-operations)
     *   [Delete Account Property](#delete-account-property)
     *   [Get Account](#get-account)
@@ -40,7 +40,7 @@ Categories
     *   [Get Account Id](#get-account-id)
     *   [Get Account Ledger](#get-account-ledger)
     *   [Get Account Ledger Entry](#get-account-ledger-entry)
-    *   [Get Account Lessors](#get-account_lessors)
+    *   [Get Account Lessors](#get-account-lessors)
     *   [Get Account Properties](#get-account-properties)
     *   [Get Account Public Key](#get-account-public-key)
     *   [Get Balance](#get-balance)
@@ -328,7 +328,7 @@ General Notes
 
 ### Genesis Block
 
-Many API requests make reference to the genesis block. FYI, the genesis block's ID is [4777664216118977193](https://localhost:2022/nxt?=%2Fnxt&requestType=getBlock&height=0). Sending messages, selling aliases, and leasing balances to the Genesis account are not allowed.
+Many API requests make reference to the genesis block. FYI, the genesis block's ID is [4777664216118977193](localhost:2022/nxt?=%2Fnxt&requestType=getBlock&height=0). Sending messages, selling aliases, and leasing balances to the Genesis account are not allowed.
 
 ### Flexible Account IDs
 
@@ -338,9 +338,11 @@ All API requests that require an account ID accept either an account number or t
 
 The Blue0x token, BLX, is used to quantify value within the network and a certain amount of BLX is required, as a fee, for each transaction within the network. This fee goes to the node that forges (generates) the new block containing the transaction that is then accepted into the blockchain.
 
-One billion BLX were created in the [Genesis Block](#genesis-block "The Blue0x API"), and 100,000 BLX were then distributed to NXT owners as per the Jelurida license agreement.  The Blue0x (BLX) blockchain was created May 7, 2021 at 12:34:00.
+One billion BLX were created in the [Genesis Block](#genesis-block "The Blue0x API"), and 100,000 BLX were then distributed to NXT owners as per the Jelurida license agreement.  
 
-The Blue0x system can be thought of as an asset owned by all who posses BLX. In this sense, BLX quantifies ownership of or stake in the system. Stakeholders are entitled to forge blocks and collect transaction fees in proportion to the amount of BLX they possess.
+The Blue0x (BLX) blockchain was created on May 7, 2021 at 12:34:00.
+
+The Blue0x system can be thought of as a network owned by all who posses BLX. In this sense, BLX quantifies ownership of or stake in the system. Stakeholders are entitled to forge blocks and collect transaction fees in proportion to the amount of BLX they possess.
 
 Seperate assets and currencies, such as USDX, are created within the Blue0x network. The amount of these assets and currencies are represented as integers in units of QNT, and are priced in NQT per QNT.
 
@@ -377,9 +379,9 @@ Currently, there are two varieties of prunable data in the Blue0x system: prunab
 
 ### Properties Files
 
-The behavior of some API calls is affected by property settings loaded from files in the _nxt/conf_ directory during Blue0x server intialization. This directory contains the _nxt-default.properties_ and -logging-default.properties_ files, both of which contain default property settings along with documentation. A few of the property settings can be obtained while the server is running through the [Get Blockchain Status](#get-blockchain-status "The Blue0x API") and [Get State](#get-state "The Blue0x API") calls.
+The behavior of some API calls is affected by property settings loaded from files in the _nxt/conf_ directory during Blue0x server intialization. This directory contains the _nxt-default.properties_ and _logging-default.properties_ files, both of which contain default property settings along with documentation. 
 
-It is recommended not to modify default properties files because they can be overwritten during software updates. Instead, properties in the default files can be overridden by including them in optional _nxt.properties_ and -logging.properties_ files in the same directory. For example, a _nxt.properties_ file can be created with the contents:
+It is recommended not to modify default properties files because they can be overwritten during software updates. Instead, properties in the default files can be overridden by including them in optional _nxt.properties_ and _logging.properties_ files in the same directory. For example, a _nxt.properties_ file can be created with the contents:
 
 nxt.isTestnet=true
 
@@ -393,7 +395,7 @@ All [Debug Operations](#debug-operations "The Blue0x API") require adminPassword
 
 ### Roaming and Light Client Modes
 
-The remote node to use when in roaming and light client modes is selected randomly, but can be changed manually in the UI, or using the new [set API Proxy Peer](#set-api-proxy-peer "The Blue0x API") API, or forced to a specific peer using the _nxt.forceAPIProxyServerURL_ property.
+The remote node to use when in roaming and light client modes is selected randomly, but can be changed manually in the UI, or using the [Set API Proxy Peer](#set-api-proxy-peer "The Blue0x API") API, or forced to a specific peer using the _nxt.forceAPIProxyServerURL_ property.
 
 Remote nodes can be blacklisted from the UI, or using the [Blacklist API Proxy Peer](#blacklist-api-proxy-peer "The Blue0x API") API. This blacklisting is independent from peer blacklisting. The API proxy blacklisting period can be set using the _nxt.apiProxyBlacklistingPeriod_ property (default 1800000 milliseconds).
 
@@ -402,7 +404,7 @@ API requests that require sending the secret phrase, shared key, or admin passwo
 Create Transaction
 --------------------
 
-The following API calls create Blue0x transactions using HTTP POST requests. Follow the links for examples and HTTP POST request parameters specific to each call. Refer to the sections below for [HTTP POST request parameters](#create-transaction-request "The Blue0x API") and [JSON response fields](#create-transaction-response "The Blue0x API") common to all calls that create transactions. Calls in _italics_ are phasing-safe (refer to [Get Constants](#get-constants "The Blue0x API") and [Create Phasing Poll](#create-phasing-poll "The Blue0x API"))
+The following API calls create Blue0x transactions using HTTP POST requests. Follow the links for examples and HTTP POST request parameters specific to each call. Refer to the sections below for [HTTP POST request parameters](#create-transaction-request "The Blue0x API") and [JSON response fields](index.md#create-transaction-response "The Blue0x API") common to all calls that create transactions. Calls in _italics_ are phasing-safe (refer to [Get Constants](#get-constants "The Blue0x API") and [Create Phasing Poll](#create-phasing-poll "The Blue0x API"))
 
 *   _[Send Money](#send-money "The Blue0x API")_
 *   _[Set Account Information](#set-account-information "The Blue0x API")_
@@ -420,11 +422,11 @@ The following API calls create Blue0x transactions using HTTP POST requests. Fol
 *   [DGS Delivery](#dgs-delivery "The Blue0x API")
 *   [DGS Feedback](#dgs-feedback "The Blue0x API")
 *   _[DGS Listing](#dgs-listing "The Blue0x API")_
-*   [DGS PriceChange](#dgs-priceChange "The Blue0x API")
+*   [DGS PriceChange](#dgs-pricechange "The Blue0x API")
 *   [DGS Purchase](#dgs-purchase "The Blue0x API")
-*   [DGS Quantity Change](#dgs_Quantity-change "The Blue0x API")
+*   [DGS Quantity Change](#dgs-quantity-change "The Blue0x API")
 *   [DGS Refund](#dgs-refund "The Blue0x API")
-*   _[Lease Balance](#Lease-balance "The Blue0x API")_
+*   _[Lease Balance](#lease-balance "The Blue0x API")_
 *   [Currency Buy / Sell](#currency-buy-Sell "The Blue0x API")
 *   [Currency Mint](#currency-mint "The Blue0x API")
 *   [Currency Reserve Claim](#currency-reserve-claim "The Blue0x API")
@@ -435,9 +437,9 @@ The following API calls create Blue0x transactions using HTTP POST requests. Fol
 *   [Transfer Currency](#transfer-currency "The Blue0x API")
 *   [Create Poll](#create-poll "The Blue0x API")
 *   [Cast Vote](#cast_vote "The Blue0x API")
-*   _[Approve Transaction](#Approve-transaction "The Blue0x API")_
+*   _[Approve Transaction](#approve-transaction "The Blue0x API")_
 *   [Extend Tagged Data](#extend-tagged-data "The Blue0x API")
-*   [Upload Tagged Data](#Upload-tagged-data "The Blue0x API")
+*   [Upload Tagged Data](#upload-tagged-data "The Blue0x API")
 
 ### Create Transaction Request
 
@@ -495,7 +497,7 @@ Deletes an account property. POST only.
 *   _recipient_ is the account where a property should be removed (optional)
 *   _setter_ is the account who did set the property (optional)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Delete Account Property](API_Examples.md#delete-account-property "The Blue0x API Examples") example.
 
@@ -943,7 +945,7 @@ Send Blue0x to another account. POST only.
 *   _recipient_ is the account ID of the recipient
 *   _recipientPublicKey_ is the public key of the receiving account (optional, enhances security of a new account)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Send Money](API_Examples.md#send-money "The Blue0x API Examples") example.
 
@@ -963,7 +965,7 @@ Set account information. POST only.
 *   _messagePatternRegex_ is a regular expression pattern following the java.util.regex.Pattern specification; incoming transactions are only accepted if they contain a plain text message which matches this pattern (disabled indefinitely due to a security issue)
 *   _messagePatternFlags_ is a bitmask of java.util.regex.Pattern flags, such as 2 (Pattern.CASE\-iNSENSITIVE)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Set Account Info](API_Examples.md#set-account-info "The Blue0x API Examples") example.
 
@@ -978,7 +980,7 @@ Set account property. POST only.
 *   _property_ is the property name.
 *   _value_ is the property value.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Set Account Property](API_Examples.md#set-account-property "The Blue0x API Examples") example.
 
@@ -1101,7 +1103,7 @@ Sets (or removes) phasing control for a specific account. POST only.
 *   _controlMinDuration_ is the minimum duration in block height (optional)
 *   _controlMaxDuration_ is the maximum phasing duration in block height (optional)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Set Phasing Only Control](API_Examples.md#set-phasing-only-control "The Blue0x API Examples") example.
 
@@ -1124,7 +1126,7 @@ Buy or sell an alias. POST only.
 
 **Note**: An alias can be transferred rather than sold by setting _priceNQT_ to zero. A pending sale can be canceled by selling again to self for a price of zero.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Buy / Sell Alias](API_Examples.md#buy-sell-alias "The Blue0x API Examples") example.
 
@@ -1146,7 +1148,7 @@ Create and/or assign an alias. POST only.
 *   _aliasName_ is the alias name
 *   _aliasURI_ is the alias URI (e.g. [https://www.google.com/](https://www.google.com/))
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the alias ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the alias ID.
 
 **Example:** Refer to [Set Alias](API_Examples.md#set-alias "The Blue0x API Examples") example.
 
@@ -1160,7 +1162,7 @@ Delete an alias given an alias ID or name. POST only.
 *   _alias_ is the alias ID (optional)
 *   _aliasName_ is the alias name to be deleted (optional if _alias_ provided)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Delete Alias](API_Examples.md#delete-alias "The Blue0x API Examples") example.
 
@@ -1467,7 +1469,7 @@ Create an Arbitrary Message transaction. POST only.
 
 **Note:** The _encryptedMessageData-encryptedMessageNonce_ pair or the _encryptToSelfMessageData-encryptToSelfMessageNonce_ pair can be the output of [Encrypt To](#encrypt-to "The Blue0x API")
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Send Message](API_Examples.md#send-message "The Blue0x API Examples") example.
 
@@ -1517,7 +1519,7 @@ Cancel an existing asset order. POST only.
 *   _requestType_ is either _cancelBidOrder_ or _cancelAskOrder_
 *   _order_ is the order ID of the order being canceled
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Cancel Order](API_Examples.md#cancel-order "The Blue0x API Examples") example.
 
@@ -1539,7 +1541,7 @@ Permanently deletes a specified quantity of owned asset shares.
 *   _asset_ is the asset ID
 *   _quantityQNT_ is the quantity (in QNT) of the asset to be deleted
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Delete Asset Shares](API_Examples.md#delete-asset-shares "The Blue0x API Examples") example.
 
@@ -1554,7 +1556,7 @@ Pay dividend to all shareholders of an asset. POST only.
 *   _height_ is the blockchain height at which asset holders shares will be counted (must be less than 1440 blocks in the past)
 *   _amountNQTPerQNT_ is dividend amount (in NQT per QNT of the asset)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Dividend Payment](API_Examples.md#dividend-payment "The Blue0x API Examples") example.
 
@@ -2235,7 +2237,7 @@ Create an asset on the exchange. POST only.
 *   _quantityQNT_ is the total amount (in QNT) of the asset in existence
 *   _decimals_ is the number of decimal places used by the asset (optional, zero default)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the asset ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the asset ID.
 
 **Example:** Refer to [Issue Asset](API_Examples.md#issue-asset "The Blue0x API Examples") example.
 
@@ -2250,7 +2252,7 @@ Place an asset order. POST only.
 *   _quantityQNT_ is the amount (in QNT) of the asset being ordered
 *   _priceNQT_ is the bid/ask price (in NQT)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the order ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the order ID.
 
 **Example:** Refer to [Place Order](API_Examples.md#place-order "The Blue0x API Examples") example.
 
@@ -2296,7 +2298,7 @@ Transfer a quantity of an asset from one account to another. POST only.
 *   _asset_ is the ID of the asset being transferred
 *   _quantityQNT_ is the amount (in QNT) of the asset being transferred
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the transfered asset ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the transfered asset ID.
 
 **Example:** Refer to [Transfer Asset](API_Examples.md#transfer-asset "The Blue0x API Examples") example.
 
@@ -2427,7 +2429,7 @@ Delist a listed product. POST only.
 *   _requestType_ is _dgsDelisting_
 *   _goods_ is the goods ID
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Delisting](API_Examples.md#dgs-delisting "The Blue0x API Examples") example.
 
@@ -2447,7 +2449,7 @@ Deliver a product. POST only.
 
 **Note:** If the encrypted goods data is longer than 1000 bytes, use a prunable encrypted message to deliver the goods.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Delivery](API_Examples.md#dgs-delivery "The Blue0x API Examples") example.
 
@@ -2463,7 +2465,7 @@ Give feedback about a purchased product after delivery. POST only.
 
 **Note**: The unencrypted _message_ parameter is used for public feedback.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Feedback](API_Examples.md#dgs-feedback "The Blue0x API Examples") example.
 
@@ -2480,7 +2482,7 @@ List a product in the DGS by creating a listing transaction. POST only.
 *   _quantity_ is the quantity of the product for sale
 *   _priceNQT_ is the price (in NQT) of the product
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the goods ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the goods ID.
 
 **Example:** Refer to [DGS Listing](API_Examples.md#dgs-listing "The Blue0x API Examples") example.
 
@@ -2494,7 +2496,7 @@ Change the price of a listed product. POST only.
 *   _goods_ is the goods ID of the product
 *   _priceNQT_ is the new price of the product
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Price Change](API_Examples.md#dgs-price-change "The Blue0x API Examples") example.
 
@@ -2510,7 +2512,7 @@ Purchase a product for sale. POST only.
 *   _quantity_ is the quantity to be purchased
 *   _deliveryDeadlineTimestamp_ is the timestamp (in seconds since the genesis block) by which delivery of the product must occur
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the purchase order ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the purchase order ID.
 
 **Example:** Refer to [DGS Purchase](API_Examples.md#dgs-purchase "The Blue0x API Examples") example.
 
@@ -2524,7 +2526,7 @@ Change the quantity of a listed product. POST only.
 *   _goods_ is the goods ID of the product
 *   _deltaQuantity_ is the change in the quantity of the product for sale (use negative numbers for a decrease in quantity)
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Quantity Change](API_Examples.md#dgs_Quantity-change "The Blue0x API Examples") example.
 
@@ -2538,7 +2540,7 @@ Refund a purchase. POST only.
 *   _purchase_ is the purchase order ID
 *   _refundNQT_ is the amount (in NQT) of the refund
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Refund](API_Examples.md#dgs-refund "The Blue0x API Examples") example.
 
@@ -2929,18 +2931,18 @@ Refer to [Start / Stop / Get Forging](#start-stop-get-forging "The Blue0x API").
 
 ### Lease Balance
 
-[Lease](https://nxtwiki.org/wiki/Account-leasing "Account Leasing") the entire guaranteed balance of Blue0x to another account, after 1440 confirmations. POST only.
+Lease the entire guaranteed balance of Blue0x to another account, after 1440 confirmations. POST only.
 
 **Request:** Refer to [Create Transaction Request](#create-transaction-request "The Blue0x API") for common parameters.
 
-*   _requestType_ is -leaseBalance_
+*   _requestType_ is _leaseBalance_
 *   _period_ is the lease period (in number of blocks, 1440 minimum)
 *   _recipient_ is the lessee (recipient) account
 *   _recipientPublicKey_ is the public key of the lessee (recipient) account (optional, enhances security of a new account)
 
 **Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
 
-**Example:** Refer to [Lease Balance](API_Examples.md#Lease-balance "The Blue0x API Examples") example.
+**Example:** Refer to [Lease Balance](API_Examples.md#lease-balance "The Blue0x API Examples") example.
 
 ### Get Next Block Generators
 
@@ -2989,7 +2991,7 @@ Decode a node hallmark.
 *   _date_ (S) is the date the hallmark was created, in YYYY-MM-DD format
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Decode Hallmark](API_Examples.md#decode_Hallmark "The Blue0x API Examples") example.
+**Example:** Refer to [Decode Hallmark](API_Examples.md#decode-hallmark "The Blue0x API Examples") example.
 
 ### Mark Host
 
@@ -3012,16 +3014,14 @@ Generates a node hallmark. POST only.
 
 **Note:** Refer to [Create Hallmark](https://nxtwiki.org/wiki/How-To:CreateHallmark "How-To:CreateHallmark") for instructions for applying the hallmark to a public node.
 
-**Example:** Refer to [Mark Host](API_Examples.md#Mark_Host "The Blue0x API Examples") example.
+**Example:** Refer to [Mark Host](API_Examples.md#mark-host "The Blue0x API Examples") example.
 
 #### Generate Hallmark
 
-Refer to [Mark Host](#Mark_Host "The Blue0x API").
+Refer to [Mark Host](#mark-host "The Blue0x API").
 
 Monetary System Operations
 -----------------------------
-
-General Monetary System documentation is available [here](https://bitbucket.org/JeanLucPicard/nxt/issue/205/monetary-system-documentation). Documentation on the MintWorker tool for currency minting is available [here](https://bitbucket.org/JeanLucPicard/nxt/issue/207/mint-worker-utility).
 
 ### Can Delete Currency
 
@@ -3100,7 +3100,7 @@ Claim currency reserve. POST only.
 
 **Note:** Holders of a claimable currency may claim the locked NQT backing their units, thus reducing the supply of the currency.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Currency Reserve Claim](API_Examples.md#currency-reserve-claim "The Blue0x API Examples") example.
 
@@ -3792,7 +3792,7 @@ Issue a new currency or re-issue an existing currency with different properties.
 
 **Notes:** Reservable requires exchangeable and/or claimable, as does controllable; but mintable requires exchangeable. Claimable requires reservable, non-mintable and zero _initialSupply_.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the currency ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the currency ID.
 
 **Example:** Refer to [Issue Currency](API_Examples.md#issue-currency "The Blue0x API Examples") example.
 
@@ -3814,7 +3814,7 @@ Publish an exchange offer for an exchangeable currency. POST only.
 
 **Notes:** Each time currency is bought in response to an exchange request to sell currency (refer to [Currency Sell](#currency-buy-sell "The Blue0x API")), _totalBuyLimit_ is reduced and the supply of currency offered to sell increases by the amount bought. When _totalBuyLimit_ becomes zero, the buy offer is withdrawn. These same notes apply if _buy_ and _sell_ are interchanged. Only the most recent offer associated with an account is valid, even if an earlier offer by that account has not yet expired or reached its limits.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the offer ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the offer ID.
 
 **Example:** Refer to [Publish Exchange Offer](API_Examples.md#publish-exchange-offer "The Blue0x API Examples") example.
 
@@ -3851,7 +3851,7 @@ Transfer currency to a given recipient. POST only.
 *   _currency_ is the currency ID
 *   _units_ is the amount (in QNT) of the transfer
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Transfer Currency](API_Examples.md#transfer-currency "The Blue0x API Examples") example.
 
@@ -3871,7 +3871,7 @@ Add a peer to the list of known peers and attempt to connect to it. Password pro
 
 *   _isNewlyAdded_ is _true_ if the peer was not already known, omitted otherwise
 
-**Example:** Refer to [Add Peer](API_Examples.md#Add-peer "The Blue0x API Examples") example.
+**Example:** Refer to [Add Peer](API_Examples.md#add-peer "The Blue0x API Examples") example.
 
 ### Blacklist API Proxy Peer
 
@@ -3888,7 +3888,7 @@ Blacklist a remote node from the UI, so it won't be used when in roaming and lig
 *   _done_ (B) is _true_ if the peer is blacklisted
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Blacklist API Proxy Peer](API_Examples.md#blacklist-aPI-proxy-peer "The Blue0x API Examples") example.
+**Example:** Refer to [Blacklist API Proxy Peer](API_Examples.md#blacklist-api-proxy-peer "The Blue0x API Examples") example.
 
 ### Blacklist Peer
 
@@ -4020,7 +4020,7 @@ Set the remote node to use when in roaming and light client modes. POST only.
 *   _blacklistingCause_ (S) is the cause of blacklisting (if _blacklisted_ is _true_)
 *   _announcedAddress_ (S) is the name that the peer announced to the network (could be a DNS name, IP address, or any other string)
 *   _application_ (S) is the name of the software application, typically _NRS_
-*   _state_ (N) defines the state of the peer: 0 for NON\-cONNECTED, 1 for CONNECTED, or 2 for DISCONNECTED
+*   _state_ (N) defines the state of the peer: 0 for NON-CONNECTED, 1 for CONNECTED, or 2 for DISCONNECTED
 *   _shareAddress_ (B) is _true_ if the address is allowed to be shared with other peers
 *   _inbound_ (B) is _true_ if the peer has made a request to this node
 *   _inboundWebSocket_ (B) is _true_ if an inbound websocket has been established from this node
@@ -4028,7 +4028,7 @@ Set the remote node to use when in roaming and light client modes. POST only.
 *   _lastConnectAttempt_ (B) is the timestamp (in seconds since the genesis block) of the last connection attempt to the peer
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Set API Proxy Peer](API_Examples.md#set-aPI-proxy-peer "The Blue0x API Examples") example.
+**Example:** Refer to [Set API Proxy Peer](API_Examples.md#set-api-proxy-peer "The Blue0x API Examples") example.
 
 Phasing Operations
 ---------------------
@@ -4046,9 +4046,9 @@ Approve (vote for) a phased transaction. POST only.
 
 **Note:** This transaction will be accepted in the blockchain only if all phased transactions it is voting for are already in it.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
-**Example:** Refer to [Approve Transaction](API_Examples.md#Approve-transaction "The Blue0x API Examples") example.
+**Example:** Refer to [Approve Transaction](API_Examples.md#approve-transaction "The Blue0x API Examples") example.
 
 ### Create Phasing Poll
 
@@ -4087,7 +4087,7 @@ Create a phased transaction with conditional deferred execution based on the res
 
 **Note:** When a balance affects the poll result, the result depends only on the balance (including pending outgoing phased transfers) computed just prior to the finish height.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Create Phasing Poll](API_Examples.md#create-phasing-poll "The Blue0x API Examples") example.
 
@@ -4306,27 +4306,24 @@ Create, modify or remove an event listener which can report server events via [E
 
 *   _requestType_ is _eventRegister_
 *   _event_ is one of multiple server events from the following list of event names: (optional, default is all possible events)
-    *   Block.BLOCK\-gENERATED
-    *   Block.BLOCK\-pOPPED
-    *   Block.BLOCK\-pUSHED
-    *   Peer.ADD\-iNBOUND
-    *   Peer.ADDED\-aCTIVE\-pEER
+    *   Block.BLOCK\-GENERATED
+    *   Block.BLOCK\-POPPED
+    *   Block.BLOCK\-PUSHED
+    *   Peer.ADD\-INBOUND
+    *   Peer.ADDED\-ACTIVE\-PEER
     *   Peer.BLACKLIST
-    *   Peer.CHANGED\-aCTIVE\-pEER
+    *   Peer.CHANGED\-ACTIVE\-PEER
     *   Peer.DEACTIVATE
-    *   Peer.NEW\-pEER
+    *   Peer.NEW\-PEER
     *   Peer.REMOVE
-    *   Peer.REMOVE\-iNBOUND
+    *   Peer.REMOVE\-INBOUND
     *   Peer.UNBLACKLIST
-    *   Transaction.ADDED\-cONFIRMED\-tRANSACTIONS
-    *   Transaction.ADDED\-uNCONFIRMED\-tRANSACTIONS
-    *   Transaction.REJECT\-pHASED\-tRANSACTION
-    *   Transaction.RELEASE\-pHASED\-tRANSACTION
-    *   Transaction.REMOVE\-uNCONFIRMED\-tRANSACTIONS
+    *   Transaction.ADDED\-CONFIRMED\-TRANSACTIONS
+    *   Transaction.ADDED\-UNCONFIRMED\-TRANSACTIONS
+    *   Transaction.REJECT\-PHASED\-TRANSACTION
+    *   Transaction.RELEASE\-PHASED\-TRANSACTION
+    *   Transaction.REMOVE\-UNCONFIRMED\-TRANSACTIONS
 *   _event_ is one of multiple server events (optional)
-
-⋮
-
 *   _add_ is _true_ to add events to an existing listener (optional, omit if _remove_ is _true_)
 *   _remove_ is _true_ to remove events from an existing listener (optional, omit if _add_ is _true_)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
@@ -4370,7 +4367,7 @@ Wait for events registered with [Event Register](#event-register "The Blue0x API
 *   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Event Wait](API_Examples.md#event_Wait "The Blue0x API Examples") example.
+**Example:** Refer to [Event Wait](API_Examples.md#event-wait "The Blue0x API Examples") example.
 
 ### Get Blockchain Status
 
@@ -4398,7 +4395,7 @@ Get the blockchain status.
 *   _maxPrunableLifetime_ (N) is the maximum prunable lifetime (in seconds)
 *   _time_ (N) is the current timestamp (in seconds since the genesis block)
 *   _lastBlockchainFeeder_ (S) is the address or announced address of the peer providing the last blockchain of greatest cumulative difficulty
-*   _blockchainState_ (S) Current state of this node's blockchain (UP\-tO\-dATE or DOWNLOADING)
+*   _blockchainState_ (S) Current state of this node's blockchain (UP\-TO\-DATE or DOWNLOADING)
 
 **Example:** Refer to [Get Blockchain Status](API_Examples.md#get-blockchain-status "The Blue0x API Examples") example.
 
@@ -4437,7 +4434,6 @@ Get all defined constants.
 *   _phasingHashAlgorithms_ (A) is an array of defined phasing hash algorithms (refer to the example below)
 *   _requestTypes_ (A) is an array of decined request types (refer to the example below)
 
-**Example:** Refer to [Get Constants](API_Examples.md#get-constants "The Blue0x API Examples") example.
 
 ### Get Plugins
 
@@ -4727,7 +4723,7 @@ Cancels a shuffling
 *   _shufflingStateHash_ is the state hash of the shuffling
 *   _cancellingAccount_ is the account ID (optional)
 
-**Response** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 ### Shuffling Create
 
@@ -4742,7 +4738,7 @@ Creates a new shuffling.
 *   _participantCount_ is the number of participants
 *   _registrationPeriod_ is the number of blocks the participants have to register until the shuffle is cancelled
 
-**Response** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Create](API_Examples.md#shuffling-create "The Blue0x API Examples") example.
 
@@ -4757,7 +4753,7 @@ Manually process the shuffling for a specific participant. Note that the shuffli
 *   _recipientSecretPhrase_ is the secret phrase of the recipient account (optional if _recipientPublicKey_ is provided)
 *   _recipientPublicKey_ is the public key of the recipient account (optional if _recipientSecretPhrase_ is provided)
 
-**Response** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Process](API_Examples.md#shuffling-process "The Blue0x API Examples") example.
 
@@ -4770,7 +4766,7 @@ Registers a new participant to an existing shuffling. The shuffling must be in s
 *   _requestType_ is _shufflingRegister_
 *   _shufflingFullHash_ is the full hash of the shuffling to register
 
-**Response** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Register](API_Examples.md#shuffling-register "The Blue0x API Examples") example.
 
@@ -4784,7 +4780,7 @@ Sends a verification that an account's recipient public key is found within a sh
 *   _shuffling_ is the shuffling ID
 *   _shufflingStateHash_ is the current state hash of the shuffle
 
-**Response** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Verify](API_Examples.md#shuffling-verify "The Blue0x API Examples") example.
 
@@ -4871,11 +4867,11 @@ Extend the expiration time of already uploaded tagged data. POST only.
 *   _channel_
 *   _isText_
 
-**Note:** The _data_ and metadata (_filename_, _name_, _description_, _tags_, _type_, _channel_ and _isText_) parameters can be omitted if the tagged data has not yet expired; otherwise, the tagged data can be restored to the blockchain only if these fields have exactly the same values as when the data was uploaded (refer to [Upload Tagged Data](#Upload-tagged-data "The Blue0x API")).
+**Note:** The _data_ and metadata (_filename_, _name_, _description_, _tags_, _type_, _channel_ and _isText_) parameters can be omitted if the tagged data has not yet expired; otherwise, the tagged data can be restored to the blockchain only if these fields have exactly the same values as when the data was uploaded (refer to [Upload Tagged Data](#upload-tagged-data "The Blue0x API")).
 
 **Note:** Anyone can submit an extension, not only the original uploader. Each extend transaction increases the expiration deadline by two weeks (24 hours on Testnet). Extending an existing tagged data from another account does not change the original submitter account ID by which it is indexed and searchable.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Extend Tagged Data](API_Examples.md#extend-tagged-data "The Blue0x API Examples") example.
 
@@ -5041,7 +5037,7 @@ Get available tagged data given a transaction ID.
 *   _lastBlock_ (S) is the last block ID on the blockchain (applies if _requireBlock_ is provided but not _requireLastBlock_)
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Note:** Refer to [Upload Tagged Data](#Upload-tagged-data "The Blue0x API") for details about the _data_ and metadata (_filename_, _name_, _description_, _tags_, _type_, _channel_ and _isText_) fields.
+**Note:** Refer to [Upload Tagged Data](#upload-tagged-data "The Blue0x API") for details about the _data_ and metadata (_filename_, _name_, _description_, _tags_, _type_, _channel_ and _isText_) fields.
 
 **Example:** Refer to [Get Tagged Data](API_Examples.md#get-tagged-data "The Blue0x API Examples") example.
 
@@ -5106,9 +5102,9 @@ Upload and broadcast new tagged data. POST only.
 
 **Note:** The maximum length of _data_ plus all associated metadata is 42 kilobytes. The maximum length of _description_ is 1000 bytes. The maximum length of the other metadata (_name_, _tags_, _type_, _channel_ and _filename_) is 100 bytes each.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
-**Example:** Refer to [Upload Tagged Data](API_Examples.md#Upload-tagged-data "The Blue0x API Examples") example.
+**Example:** Refer to [Upload Tagged Data](API_Examples.md#upload-tagged-data "The Blue0x API Examples") example.
 
 ### Verify Tagged Data
 
@@ -5130,7 +5126,7 @@ Verify expired tagged data downloaded from another node, against the hash in the
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
-**Note:** The _data_ and metadata (_filename_, _name_, _description_, _tags_, _type_, _channel_ and _isText_) must have exactly the same values as when the data was uploaded (refer to [Upload Tagged Data](#Upload-tagged-data "The Blue0x API")).
+**Note:** The _data_ and metadata (_filename_, _name_, _description_, _tags_, _type_, _channel_ and _isText_) must have exactly the same values as when the data was uploaded (refer to [Upload Tagged Data](#upload-tagged-data "The Blue0x API")).
 
 **Response:**
 
@@ -5493,7 +5489,7 @@ Cast a vote on a poll. POST only.
 
 **Note:** The allowed vote values are integers between _minRangeValue_ and _maxRangeValue_, inclusive. This range, along with the minimum and maximum number of options that can and must be voted on are specified when the poll is created. Refer to [Create Poll](#create-poll "The Blue0x API").
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Cast Vote](API_Examples.md#cast-vote "The Blue0x API Examples") example.
 
@@ -5528,7 +5524,7 @@ Create a new poll. POST only.
 
 **Note:** When a balance affects the poll result, the result depends only on the balance (including pending outgoing phased transfers) computed just prior to the finish height.
 
-**Response:** Refer to [Create Transaction Response](#create-transaction-response "The Blue0x API"). The transaction ID is also the poll ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the poll ID.
 
 **Example:** Refer to [Create Poll](API_Examples.md#create-poll "The Blue0x API Examples") example.
 
@@ -5715,7 +5711,7 @@ Decodes a base64-encoded jpeg to a UTF-8 string. POST only.
 *   _qrCodeData_ (S) is a UTF-8 string containing the decoded data from the base64 string
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Decode QR Code](API_Examples.md#decode_QR-code "The Blue0x API Examples") example.
+**Example:** Refer to [Decode QR Code](API_Examples.md#decode-qr-code "The Blue0x API Examples") example.
 
 ### Detect Mime Type
 
@@ -5752,7 +5748,7 @@ Encodes a UTF-8 string to a base64-encoded jpeg. POST only.
 *   _qrCodeBase64_ (S) is a base64 string encoding a jpeg image of the QR code
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Encode QR Code](API_Examples.md#encode_QR-code "The Blue0x API Examples") example.
+**Example:** Refer to [Encode QR Code](API_Examples.md#encode-qr-code "The Blue0x API Examples") example.
 
 ### Full Hash To Id
 
@@ -5769,7 +5765,7 @@ Converts a full hash to an ID.
 *   -longId_ (S) is the signed long integer (8-bytes) representation of the ID used internally, returned as a string
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Full Hash To Id](API_Examples.md#Full_Hash-to-id "The Blue0x API Examples") example.
+**Example:** Refer to [Full Hash To Id](API_Examples.md#full-hash-to-id "The Blue0x API Examples") example.
 
 ### Hash
 
@@ -5782,14 +5778,14 @@ Calculates the hash of a secret for use in [phased transactions](#create-phasing
 *   _secret_ is a secret phrase in text form or hex string form
 *   _secretIsText_ is _true_ if _secret_ is text, _false_ if it is a hex string (optional)
 
-**Note:** _secret_ is converted from a hex string to a byte array, which is what the hash algorithm expects, unless _secretIsText_ is _true_, in which case _secret_ is first converted from text to a UTF-8 hex string as by [Hex Convert](#Hex-convert "The Blue0x API").
+**Note:** _secret_ is converted from a hex string to a byte array, which is what the hash algorithm expects, unless _secretIsText_ is _true_, in which case _secret_ is first converted from text to a UTF-8 hex string as by [Hex Convert](#hex-convert "The Blue0x API").
 
 **Response:**
 
 *   _hash_ (S) is the hash of the secret, in the form of a hex string
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Hash](API_Examples.md#Hash "The Blue0x API Examples") example.
+**Example:** Refer to [Hash](API_Examples.md#hash "The Blue0x API Examples") example.
 
 ### Hex Convert
 
@@ -5806,7 +5802,7 @@ Converts a text string into a UTF-8 hex string and if the text input is already 
 *   _text_ (S) is a text string converted from _string_ if it is a valid UTF-8 hex string
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Hex Convert](API_Examples.md#Hex-convert "The Blue0x API Examples") example.
+**Example:** Refer to [Hex Convert](API_Examples.md#hex-convert "The Blue0x API Examples") example.
 
 ### Long Convert
 
@@ -5825,7 +5821,7 @@ Converts an ID to the signed long integer representation used internally.
 
 **Note:** Java does not support unsigned integers, so any unsigned ID (such as a block ID) visible in the [NRS client](https://nxtwiki.org/wiki/Nxt_client_interface "Nxt client interface") is represented internally as a signed integer.
 
-**Example:** Refer to [Long Convert](API_Examples.md#Long-convert "The Blue0x API Examples") example.
+**Example:** Refer to [Long Convert](API_Examples.md#long-convert "The Blue0x API Examples") example.
 
 ### RS Convert
 
@@ -5842,12 +5838,12 @@ Get both the Reed-Solomon account address and the account number given an accoun
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 *   _account_ (S) is the account number
 
-**Example:** Refer to [RS Convert](API_Examples.md#rS-convert "The Blue0x API Examples") example.
+**Example:** Refer to [RS Convert](API_Examples.md#rs-convert "The Blue0x API Examples") example.
 
 Debug Operations
 -------------------
 
-All debug utilities require an _adminPassword_ request parameter. See [Admin Password](#Admin-password "The Blue0x API") for more info.
+All debug utilities require an _adminPassword_ request parameter. See [Admin Password](#admin-password "The Blue0x API") for more info.
 
 ### Clear Unconfirmed Transactions
 
@@ -5991,7 +5987,7 @@ Forces a rebuild of the Lucene search index. POST only.
 *   _done_ (B) is _true_ if the operation completed successfully
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Example:** Refer to [Lucene Reindex](API_Examples.md#Lucene-reindex "The Blue0x API Examples") example.
+**Example:** Refer to [Lucene Reindex](API_Examples.md#lucene-reindex "The Blue0x API Examples") example.
 
 ### Pop Off
 
