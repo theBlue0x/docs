@@ -103,12 +103,12 @@ Get a transaction object given a transaction ID.
 *   _timestamp_ (N) is the time (in seconds since the genesis block) of the transaction
 *   _referencedTransactionFullHash_ (S) is the full hash of a transaction referenced by this one, omitted if no previous transaction is referenced
 *   _confirmations_ (N) is the number of transaction confirmations
-*   _subtype_ (N) is the transaction subtype (refer to [Get Constants](index.md#get-constants "The Blue0x API") for a current list of subtypes)
+*   _subtype_ (N) is the transaction subtype (refer to [Get Constants](all.md#get-constants "The Blue0x API") for a current list of subtypes)
 *   _block_ (S) is the ID of the block containing the transaction
 *   _blockTimestamp_ (N) is the timestamp (in seconds since the genesis block) of the block
 *   _height_ (N) is the height of the block in the blockchain
 *   _senderPublicKey_ (S) is the public key of the sending account for the transaction
-*   _type_ (N) is the transaction type (refer to [Get Constants](index.md#get-constants "The Blue0x API") for a current list of types)
+*   _type_ (N) is the transaction type (refer to [Get Constants](all.md#get-constants "The Blue0x API") for a current list of types)
 *   _deadline_ (N) is the deadline (in minutes) for the transaction to be confirmed
 *   _signature_ (S) is the digital signature of the transaction
 *   _recipient_ (S) is the account number of the recipient, if applicable

@@ -27,7 +27,7 @@ Determine if a currency can be deleted.
 
 Make an exchange request to buy or sell an exchangeable currency. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _currencyBuy_ or _currencySell_
 *   _currency_ is the currency ID
@@ -36,7 +36,7 @@ Make an exchange request to buy or sell an exchangeable currency. POST only.
 
 **Note:** An exchange request is immediately executed once accepted onto the blockchain based only on currently available offers (refer to [Publish Exchange Offer](#publish-exchange-offer "The Blue0x API")). The request then expires, regardless of the amount of currency exchanged; the request may be completely filled, partially filled, or expire without any exchange if no matching offers are found.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Currency Buy / Sell](API_Examples.md#currency-buy-sell "The Blue0x API Examples") example.
 
@@ -52,7 +52,7 @@ Refer to [Currency Buy / Sell](#currency-buy-sell "The Blue0x API").
 
 Submit a valid computed nonce to the blockchain in return for newly minted currency. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _currencyMint_
 *   _currency_ is the mintable currency ID
@@ -62,7 +62,7 @@ Submit a valid computed nonce to the blockchain in return for newly minted curre
 
 **Note:** The hash of _nonce_ must be less than _targetBytes_ provided by [Get Minting Target](#get-minting-target "The Blue0x API") for given _units_ and _counter_. _counter_ must be increased with each submission.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Currency Mint](API_Examples.md#currency-mint "The Blue0x API Examples") example.
 
@@ -70,7 +70,7 @@ Submit a valid computed nonce to the blockchain in return for newly minted curre
 
 Claim currency reserve. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _currencyReserveClaim_
 *   _currency_ is the currency ID
@@ -78,7 +78,7 @@ Claim currency reserve. POST only.
 
 **Note:** Holders of a claimable currency may claim the locked NQT backing their units, thus reducing the supply of the currency.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Currency Reserve Claim](API_Examples.md#currency-reserve-claim "The Blue0x API Examples") example.
 
@@ -86,7 +86,7 @@ Claim currency reserve. POST only.
 
 Increase the currency reserve of an unissued reservable currency. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _currencyReserveIncrease_
 *   _currency_ is the currency ID
@@ -94,7 +94,7 @@ Increase the currency reserve of an unissued reservable currency. POST only.
 
 **Note:** An additional _amountPerUnitNQT_ \* _reserveSupply_ NQT (beyond what has previously been reserved) will be locked until the _issuanceHeight_ is reached. Upon issuance, if the currency is claimable the NQT will remain locked until claimed; otherwise the NQT will transfer to the issuing account. Also upon issuance, a portion of the _reserveSupply_ QNT will be transfered to each reserving account in proportion to the NQT that was contributed.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Currency Reserve Increase](API_Examples.md#currency-reserve-increase "The Blue0x API Examples") example.
 
@@ -102,12 +102,12 @@ Increase the currency reserve of an unissued reservable currency. POST only.
 
 Delete a deletable currency (refer to [Can Delete Currency](#can-delete-currency "The Blue0x API")). POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _deleteCurrency_
 *   _currency_ is the currency ID
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Delete Currency](API_Examples.md#delete-currency "The Blue0x API Examples") example.
 
@@ -750,7 +750,7 @@ Get offer details given an offer ID.
 
 Issue a new currency or re-issue an existing currency with different properties. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _issueCurrency_
 *   _name_ is the currency name, 3 to 10 characters and longer than the currency code
@@ -770,7 +770,7 @@ Issue a new currency or re-issue an existing currency with different properties.
 
 **Notes:** Reservable requires exchangeable and/or claimable, as does controllable; but mintable requires exchangeable. Claimable requires reservable, non-mintable and zero _initialSupply_.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the currency ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the currency ID.
 
 **Example:** Refer to [Issue Currency](API_Examples.md#issue-currency "The Blue0x API Examples") example.
 
@@ -778,7 +778,7 @@ Issue a new currency or re-issue an existing currency with different properties.
 
 Publish an exchange offer for an exchangeable currency. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _publishExchangeOffer_
 *   _currency_ is the currency ID
@@ -792,7 +792,7 @@ Publish an exchange offer for an exchangeable currency. POST only.
 
 **Notes:** Each time currency is bought in response to an exchange request to sell currency (refer to [Currency Sell](#currency-buy-sell "The Blue0x API")), _totalBuyLimit_ is reduced and the supply of currency offered to sell increases by the amount bought. When _totalBuyLimit_ becomes zero, the buy offer is withdrawn. These same notes apply if _buy_ and _sell_ are interchanged. Only the most recent offer associated with an account is valid, even if an earlier offer by that account has not yet expired or reached its limits.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the offer ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the offer ID.
 
 **Example:** Refer to [Publish Exchange Offer](API_Examples.md#publish-exchange-offer "The Blue0x API Examples") example.
 
@@ -829,6 +829,6 @@ Transfer currency to a given recipient. POST only.
 *   _currency_ is the currency ID
 *   _units_ is the amount (in QNT) of the transfer
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Transfer Currency](API_Examples.md#transfer-currency "The Blue0x API Examples") example.

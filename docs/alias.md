@@ -5,7 +5,7 @@ Alias Operations
 
 Buy or sell an alias. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is either _buyAlias_ or _sellAlias_
 *   _alias_ is the ID of the alias (optional)
@@ -17,7 +17,7 @@ Buy or sell an alias. POST only.
 
 **Note**: An alias can be transferred rather than sold by setting _priceNQT_ to zero. A pending sale can be canceled by selling again to self for a price of zero.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Buy / Sell Alias](API_Examples.md#buy-sell-alias "The Blue0x API Examples") example.
 
@@ -33,13 +33,13 @@ Refer to [Buy / Sell Alias](#buy-sell-alias "The Blue0x API").
 
 Create and/or assign an alias. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _setAlias_
 *   _aliasName_ is the alias name
 *   _aliasURI_ is the alias URI (e.g. [https://www.google.com/](https://www.google.com/))
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the alias ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the alias ID.
 
 **Example:** Refer to [Set Alias](API_Examples.md#set-alias "The Blue0x API Examples") example.
 
@@ -47,13 +47,13 @@ Create and/or assign an alias. POST only.
 
 Delete an alias given an alias ID or name. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _deleteAlias_
 *   _alias_ is the alias ID (optional)
 *   _aliasName_ is the alias name to be deleted (optional if _alias_ provided)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Delete Alias](API_Examples.md#delete-alias "The Blue0x API Examples") example.
 

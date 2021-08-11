@@ -7,12 +7,12 @@ In the BLX client interface, the Digital Goods Store (DGS) is referred to as the
 
 Delist a listed product. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dgsDelisting_
 *   _goods_ is the goods ID
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Delisting](API_Examples.md#dgs-delisting "The Blue0x API Examples") example.
 
@@ -20,7 +20,7 @@ Delist a listed product. POST only.
 
 Deliver a product. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dgsDelivery_
 *   _purchase_ is the purchase order ID
@@ -32,7 +32,7 @@ Deliver a product. POST only.
 
 **Note:** If the encrypted goods data is longer than 1000 bytes, use a prunable encrypted message to deliver the goods.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Delivery](API_Examples.md#dgs-delivery "The Blue0x API Examples") example.
 
@@ -40,7 +40,7 @@ Deliver a product. POST only.
 
 Give feedback about a purchased product after delivery. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dgsFeedback_
 *   _purchase_ is the purchase order ID
@@ -48,7 +48,7 @@ Give feedback about a purchased product after delivery. POST only.
 
 **Note**: The unencrypted _message_ parameter is used for public feedback.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Feedback](API_Examples.md#dgs-feedback "The Blue0x API Examples") example.
 
@@ -65,7 +65,7 @@ List a product in the DGS by creating a listing transaction. POST only.
 *   _quantity_ is the quantity of the product for sale
 *   _priceNQT_ is the price (in NQT) of the product
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the goods ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the goods ID.
 
 **Example:** Refer to [DGS Listing](API_Examples.md#dgs-listing "The Blue0x API Examples") example.
 
@@ -73,13 +73,13 @@ List a product in the DGS by creating a listing transaction. POST only.
 
 Change the price of a listed product. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dgsPriceChange_
 *   _goods_ is the goods ID of the product
 *   _priceNQT_ is the new price of the product
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Price Change](API_Examples.md#dgs-price-change "The Blue0x API Examples") example.
 
@@ -87,7 +87,7 @@ Change the price of a listed product. POST only.
 
 Purchase a product for sale. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dgsPurchase_
 *   _goods_ is the goods ID of the product
@@ -95,7 +95,7 @@ Purchase a product for sale. POST only.
 *   _quantity_ is the quantity to be purchased
 *   _deliveryDeadlineTimestamp_ is the timestamp (in seconds since the genesis block) by which delivery of the product must occur
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the purchase order ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the purchase order ID.
 
 **Example:** Refer to [DGS Purchase](API_Examples.md#dgs-purchase "The Blue0x API Examples") example.
 
@@ -103,13 +103,13 @@ Purchase a product for sale. POST only.
 
 Change the quantity of a listed product. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dgsQuantityChange_
 *   _goods_ is the goods ID of the product
 *   _deltaQuantity_ is the change in the quantity of the product for sale (use negative numbers for a decrease in quantity)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Quantity Change](API_Examples.md#dgs-quantity-change "The Blue0x API Examples") example.
 
@@ -117,13 +117,13 @@ Change the quantity of a listed product. POST only.
 
 Refund a purchase. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dgsRefund_
 *   _purchase_ is the purchase order ID
 *   _refundNQT_ is the amount (in NQT) of the refund
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [DGS Refund](API_Examples.md#dgs-refund "The Blue0x API Examples") example.
 

@@ -5,12 +5,12 @@ Asset Exchange Operations
 
 Cancel an existing asset order. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is either _cancelBidOrder_ or _cancelAskOrder_
 *   _order_ is the order ID of the order being canceled
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Cancel Order](API_Examples.md#cancel-order "The Blue0x API Examples") example.
 
@@ -26,13 +26,13 @@ Refer to [Cancel Order](#cancel-order "The Blue0x API").
 
 Permanently deletes a specified quantity of owned asset shares.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _deleteAssetShares_
 *   _asset_ is the asset ID
 *   _quantityQNT_ is the quantity (in QNT) of the asset to be deleted
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Delete Asset Shares](API_Examples.md#delete-asset-shares "The Blue0x API Examples") example.
 
@@ -40,14 +40,14 @@ Permanently deletes a specified quantity of owned asset shares.
 
 Pay dividend to all shareholders of an asset. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _dividendPayment_
 *   _asset_ is the asset ID
 *   _height_ is the blockchain height at which asset holders shares will be counted (must be less than 1440 blocks in the past)
 *   _amountNQTPerQNT_ is dividend amount (in NQT per QNT of the asset)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Dividend Payment](API_Examples.md#dividend-payment "The Blue0x API Examples") example.
 
@@ -720,7 +720,7 @@ Get trades associated with a given asset and/or account in reverse block height 
 
 Create an asset on the exchange. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _issueAsset_
 *   _name_ is the name of the asset
@@ -728,7 +728,7 @@ Create an asset on the exchange. POST only.
 *   _quantityQNT_ is the total amount (in QNT) of the asset in existence
 *   _decimals_ is the number of decimal places used by the asset (optional, zero default)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the asset ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the asset ID.
 
 **Example:** Refer to [Issue Asset](API_Examples.md#issue-asset "The Blue0x API Examples") example.
 
@@ -736,14 +736,14 @@ Create an asset on the exchange. POST only.
 
 Place an asset order. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is either _placeBidOrder_ or _placeAskOrder_
 *   _asset_ is the asset ID of the asset being ordered
 *   _quantityQNT_ is the amount (in QNT) of the asset being ordered
 *   _priceNQT_ is the bid/ask price (in NQT)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the order ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the order ID.
 
 **Example:** Refer to [Place Order](API_Examples.md#place-order "The Blue0x API Examples") example.
 
@@ -781,7 +781,7 @@ Get assets having a name or description that match a given query in reverse rele
 
 Transfer a quantity of an asset from one account to another. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _transferAsset_
 *   _recipient_ is the recipient account ID
@@ -789,6 +789,6 @@ Transfer a quantity of an asset from one account to another. POST only.
 *   _asset_ is the ID of the asset being transferred
 *   _quantityQNT_ is the amount (in QNT) of the asset being transferred
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the transfered asset ID.
+**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the transfered asset ID.
 
 **Example:** Refer to [Transfer Asset](API_Examples.md#transfer-asset "The Blue0x API Examples") example.

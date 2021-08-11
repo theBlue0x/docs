@@ -3,7 +3,17 @@ site_description: 'Blue0x API Documentation'
 site_author: 'Blue0x Devs'
 docs_dir: docs/
 nav:
-    - ALL: index.md
+  - Home: 
+    - Home: index.md
+    - Learn More: learn_more/what.md
+    - API: all.md
+
+  - Learn More:
+    - What is Blue0x?: learn_more/what.md
+    - Why should I care?: learn_more/why.md
+
+  - API:
+    - ALL: all.md
     - OVERVIEW: general.md
     - TABLE OF CONTENTS: toc.md
     - Account: account.md
@@ -26,10 +36,11 @@ nav:
     - Utilities: utilities.md
     - Voting: voting.md
     - API Examples: API_Examples.md
+
 theme:
     name: material
-    icon:
-        logo: 'material/server-network'
+    custom_dir: material/overrides/
+    logo: img/logo.png
     favicon: img/favicon.ico
     palette:
     - scheme: default
@@ -40,8 +51,11 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: blue
-
+      primary: black
+    features:
+    - navigation.tabs
+    - navigation.instant
+    - header.autohide
 
 
 
