@@ -6,36 +6,36 @@ nav:
   - Home: 
     - Home: index.md
     - Learn More: learn_more/what.md
-    - API: all.md
+    - API: api/index.md
 
   - Learn More:
     - What is Blue0x?: learn_more/what.md
     - Why should I care?: learn_more/why.md
 
   - API:
-    - ALL: all.md
-    - OVERVIEW: general.md
-    - TABLE OF CONTENTS: toc.md
-    - Account: account.md
-    - Alias: alias.md
-    - Assets: assets.md
-    - Blocks: blocks.md
-    - Debug: debug.md
-    - Forging: forging.md
-    - Hallmark: hallmark.md
-    - Marketplace: marketplace.md
-    - Messaging: messaging.md
-    - Monetary System: monetary_system.md
-    - Networking: networking.md
-    - Phasing: phasing.md
-    - Server: server.md
-    - Shuffling: shuffling.md
-    - Tagged Data: tagged_data.md
-    - Token: token.md
-    - Transactions: transactions.md
-    - Utilities: utilities.md
-    - Voting: voting.md
-    - API Examples: API_Examples.md
+    - ALL: api/index.md
+    - OVERVIEW: api/general.md
+    - TABLE OF CONTENTS: api/toc.md
+    - Account: api/account.md
+    - Alias: api/alias.md
+    - Assets: api/assets.md
+    - Blocks: api/blocks.md
+    - Debug: api/debug.md
+    - Forging: api/forging.md
+    - Hallmark: api/hallmark.md
+    - Marketplace: api/marketplace.md
+    - Messaging: api/messaging.md
+    - Monetary System: api/monetary_system.md
+    - Networking: api/networking.md
+    - Phasing: api/phasing.md
+    - Server: api/server.md
+    - Shuffling: api/shuffling.md
+    - Tagged Data: api/tagged_data.md
+    - Token: api/token.md
+    - Transactions: api/transactions.md
+    - Utilities: api/utilities.md
+    - Voting: api/voting.md
+    - API Examples: api/API_Examples.md
 
 theme:
     name: material

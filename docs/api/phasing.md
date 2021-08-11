@@ -5,7 +5,7 @@ Phasing Operations
 
 Approve (vote for) a phased transaction. POST only.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _approveTransaction_
 *   _transactionFullHash_ is the full hash of the transaction to be approved (may be used up to 10 times per API request)
@@ -14,7 +14,7 @@ Approve (vote for) a phased transaction. POST only.
 
 **Note:** This transaction will be accepted in the blockchain only if all phased transactions it is voting for are already in it.
 
-**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Approve Transaction](API_Examples.md#approve-transaction "The Blue0x API Examples") example.
 
@@ -22,9 +22,9 @@ Approve (vote for) a phased transaction. POST only.
 
 Create a phased transaction with conditional deferred execution based on the result of a vote, on a list of linked transactions or on the revelation of a secret; or simply with unconditional deferred execution. POST only.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
-*   _requestType_ is any type from the [Create Transaction](all.md#create-transaction "The Blue0x API") list which is phasing-safe, indicated with italics such as -send Money_
+*   _requestType_ is any type from the [Create Transaction](index.md#create-transaction "The Blue0x API") list which is phasing-safe, indicated with italics such as -send Money_
 *   _phased_ is _true_ to create a phased transaction (optional but required for all of the following parameters, which are all optional for unphased transactions)
 *   _phasingFinishHeight_ is the block height at which the poll will finish; the transaction will be executed at this block height only if all conditions (if any) have been met, otherwise the transaction will never be executed
 *   _phasingVotingModel_ is an integer code for the method of approval:
@@ -55,7 +55,7 @@ Create a phased transaction with conditional deferred execution based on the res
 
 **Note:** When a balance affects the poll result, the result depends only on the balance (including pending outgoing phased transfers) computed just prior to the finish height.
 
-**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Create Phasing Poll](API_Examples.md#create-phasing-poll "The Blue0x API Examples") example.
 
@@ -169,15 +169,15 @@ Get the details of a phasing poll.
 *   _account_ (S) is the number of the account that created the phasing poll
 *   _accountRS_ (S) is the Reed-Solomon address of the account that created the phasing poll
 *   _finishHeight_ (N) is the block height at which the poll finished or will finish
-*   _votingModel_ (N) is the voting model (refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API"))
+*   _votingModel_ (N) is the voting model (refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API"))
 *   _quorum_ (S) is the minimum number of votes needed to approve the poll
 *   _transactionFullHash_ (S) is the full hash of the phasing poll transaction
 *   _finished_ (B) is _true_ if the poll is finished, _false_ otherwise (omitted if _finished_ is _false_)
 *   _result_ (S) is the sum of the _result_ of each account that approved (voted for) the transaction; an account's _result_ is _1_ if the voting model is _0_, _4_ or _5_; it is the NQT, asset QNT or currency QNT balance of the account if the voting model is _1_, _2_ or _3_ respectively; however, the _result_ is _0_ if _minBalance_ is not met
 *   _approved_ (B) is _true_ if the poll was approved, _false_ otherwise
 *   _minBalance_ (S) is the required minimum balance of voting accounts to be eligible to vote
-*   _minBalanceModel_ (N) is the minimum balance model (refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API"))
-*   _hashedSecret_ (S) is the hash of a secret that must be included in each approval (vote) transaction for the approval to be accepted (refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API"))
+*   _minBalanceModel_ (N) is the minimum balance model (refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API"))
+*   _hashedSecret_ (S) is the hash of a secret that must be included in each approval (vote) transaction for the approval to be accepted (refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API"))
 *   -linkedFullHashes_ (A) is an array of full hashes of linked transactions (omitted if _votingModel_ != _4_)
 *   _whitelist_ (A) is an array of whitelist objects containing the following two fields (omitted if _votingModel_ != _5_):
     *   _whitelisted_ (S) is the number of the whitelisted account

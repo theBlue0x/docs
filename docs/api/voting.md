@@ -5,7 +5,7 @@ Voting System Operations
 
 Cast a vote on a poll. POST only.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _castVote_
 *   _poll_ is the poll ID
@@ -17,7 +17,7 @@ Cast a vote on a poll. POST only.
 
 **Note:** The allowed vote values are integers between _minRangeValue_ and _maxRangeValue_, inclusive. This range, along with the minimum and maximum number of options that can and must be voted on are specified when the poll is created. Refer to [Create Poll](#create-poll "The Blue0x API").
 
-**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Cast Vote](API_Examples.md#cast-vote "The Blue0x API Examples") example.
 
@@ -25,7 +25,7 @@ Cast a vote on a poll. POST only.
 
 Create a new poll. POST only.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _createPoll_
 *   _name_ is the name of the poll
@@ -48,7 +48,7 @@ Create a new poll. POST only.
 
 **Note:** When a balance affects the poll result, the result depends only on the balance (including pending outgoing phased transfers) computed just prior to the finish height.
 
-**Response:** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API"). The transaction ID is also the poll ID.
+**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API"). The transaction ID is also the poll ID.
 
 **Example:** Refer to [Create Poll](API_Examples.md#create-poll "The Blue0x API Examples") example.
 

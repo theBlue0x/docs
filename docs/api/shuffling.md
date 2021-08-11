@@ -183,20 +183,20 @@ Retrieves info about participants in a shuffling.
 
 Cancels a shuffling
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _shufflingCancel_
 *   _shuffling_ is the shuffling ID
 *   _shufflingStateHash_ is the state hash of the shuffling
 *   _cancellingAccount_ is the account ID (optional)
 
-**Response** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 ### Shuffling Create
 
 Creates a new shuffling.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _shufflingCreate_
 *   _holding_ is the holding id (optional if holdingType is 0)
@@ -205,7 +205,7 @@ Creates a new shuffling.
 *   _participantCount_ is the number of participants
 *   _registrationPeriod_ is the number of blocks the participants have to register until the shuffle is cancelled
 
-**Response** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Create](API_Examples.md#shuffling-create "The Blue0x API Examples") example.
 
@@ -213,14 +213,14 @@ Creates a new shuffling.
 
 Manually process the shuffling for a specific participant. Note that the shuffling must be in processing stage and the _secretPhrase_ must match the current shuffling assignee.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _shufflingProcess_
 *   _shuffling_ is the shuffling ID
 *   _recipientSecretPhrase_ is the secret phrase of the recipient account (optional if _recipientPublicKey_ is provided)
 *   _recipientPublicKey_ is the public key of the recipient account (optional if _recipientSecretPhrase_ is provided)
 
-**Response** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Process](API_Examples.md#shuffling-process "The Blue0x API Examples") example.
 
@@ -228,12 +228,12 @@ Manually process the shuffling for a specific participant. Note that the shuffli
 
 Registers a new participant to an existing shuffling. The shuffling must be in stage registration.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _shufflingRegister_
 *   _shufflingFullHash_ is the full hash of the shuffling to register
 
-**Response** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Register](API_Examples.md#shuffling-register "The Blue0x API Examples") example.
 
@@ -241,13 +241,13 @@ Registers a new participant to an existing shuffling. The shuffling must be in s
 
 Sends a verification that an account's recipient public key is found within a shuffling.
 
-**Request:** Refer to [Create Transaction Request](all.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _shufflingVerify_
 *   _shuffling_ is the shuffling ID
 *   _shufflingStateHash_ is the current state hash of the shuffle
 
-**Response** Refer to [Create Transaction Response](all.md#create-transaction-response "The Blue0x API").
+**Response** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Shuffling Verify](API_Examples.md#shuffling-verify "The Blue0x API Examples") example.
 
