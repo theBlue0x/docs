@@ -7,7 +7,7 @@ Many API requests make reference to the genesis block. FYI, the genesis block's 
 
 ### Flexible Account IDs
 
-All API requests that require an account ID accept either an account number or the corresponding [Reed-Solomon address](https://nxtwiki.org/wiki/RS-address-format "RS Address Format").
+All API requests that require an account ID accept either an account number or the corresponding [Reed-Solomon address](https://nxtdocs.jelurida.com/RS_Address_Format "RS Address Format").
 
 ### Quantity Units BLX, NQT and QNT
 
