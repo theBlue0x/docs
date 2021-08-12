@@ -14,7 +14,7 @@ nav:
     - What is Blue0x?: learn_more/index.md
 
   - API:
-    - ALL: api/index.md
+    - ALL OPERATIONS: api/index.md
     - OVERVIEW: api/overview.md
     - TABLE OF CONTENTS: api/toc.md
     - Account: api/account.md
