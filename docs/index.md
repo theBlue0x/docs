@@ -1,4 +1,4 @@
 ---
 template: home.html
-title: Blue0x | LEARN
+title: BLUE0X | LEARN
 ---
