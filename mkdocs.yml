@@ -1,6 +1,10 @@
-site_name: 'Learn about the Blue0x Network'
-site_description: 'Learn about the Blue0x Network'
-site_author: 'Blue0x Devs'
+site_name: Learn about the Blue0x Network
+site_description: Learn about the Blue0x Network
+site_author: Blue0x Devs
+repo_name: github.com/theBlue0x
+repo_url: https://github.com/theBlue0x/
+edit_uri: ""
+
 docs_dir: docs/
 nav:
   - Home: 
@@ -63,6 +67,8 @@ theme:
     - navigation.tabs
     - navigation.instant
     - header.autohide
+    icon:
+      repo: fontawesome/brands/github
 
 
 
