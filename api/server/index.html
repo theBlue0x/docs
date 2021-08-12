@@ -1,0 +1,1297 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn about the Blue0x Network">
+      
+      
+      
+        <meta name="author" content="Blue0x Devs">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Server - Learn about the Blue0x Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#server-information-operations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learn about the Blue0x Network" class="md-header__button md-logo" aria-label="Learn about the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn about the Blue0x Network
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Server
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learn_more/" class="md-tabs__link">
+        Learn More
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        Setup
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../node_rewards/" class="md-tabs__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learn about the Blue0x Network" class="md-nav__button md-logo" aria-label="Learn about the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Learn about the Blue0x Network
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        Home
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        Learn More
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Learn More
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Learn More" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Learn More
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        What is Blue0x?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        ALL OPERATIONS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        OVERVIEW
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        TABLE OF CONTENTS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alias/" class="md-nav__link">
+        Alias
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocks/" class="md-nav__link">
+        Blocks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug/" class="md-nav__link">
+        Debug
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forging/" class="md-nav__link">
+        Forging
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hallmark/" class="md-nav__link">
+        Hallmark
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marketplace/" class="md-nav__link">
+        Marketplace
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaging/" class="md-nav__link">
+        Messaging
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monetary_system/" class="md-nav__link">
+        Monetary System
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        Networking
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phasing/" class="md-nav__link">
+        Phasing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Server
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Server
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-information-operations" class="md-nav__link">
+    Server Information Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Information Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-register" class="md-nav__link">
+    Event Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-wait" class="md-nav__link">
+    Event Wait
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-blockchain-status" class="md-nav__link">
+    Get Blockchain Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-constants" class="md-nav__link">
+    Get Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-plugins" class="md-nav__link">
+    Get Plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-state" class="md-nav__link">
+    Get State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-time" class="md-nav__link">
+    Get Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shuffling/" class="md-nav__link">
+        Shuffling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tagged_data/" class="md-nav__link">
+        Tagged Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../token/" class="md-nav__link">
+        Token
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voting/" class="md-nav__link">
+        Voting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API_Examples/" class="md-nav__link">
+        API Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Node Rewards
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Node Rewards" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Node Rewards
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        How-To
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-information-operations" class="md-nav__link">
+    Server Information Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Information Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-register" class="md-nav__link">
+    Event Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-wait" class="md-nav__link">
+    Event Wait
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-blockchain-status" class="md-nav__link">
+    Get Blockchain Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-constants" class="md-nav__link">
+    Get Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-plugins" class="md-nav__link">
+    Get Plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-state" class="md-nav__link">
+    Get State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-time" class="md-nav__link">
+    Get Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Server</h1>
+                
+                <h2 id="server-information-operations">Server Information Operations</h2>
+<h3 id="event-register">Event Register</h3>
+<p>Create, modify or remove an event listener which can report server events via <a href="#event_Wait" title="The Blue0x API">Event Wait</a>. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>eventRegister</em></li>
+<li><em>event</em> is one of multiple server events from the following list of event names: (optional, default is all possible events)<ul>
+<li>Block.BLOCK-GENERATED</li>
+<li>Block.BLOCK-POPPED</li>
+<li>Block.BLOCK-PUSHED</li>
+<li>Peer.ADD-INBOUND</li>
+<li>Peer.ADDED-ACTIVE-PEER</li>
+<li>Peer.BLACKLIST</li>
+<li>Peer.CHANGED-ACTIVE-PEER</li>
+<li>Peer.DEACTIVATE</li>
+<li>Peer.NEW-PEER</li>
+<li>Peer.REMOVE</li>
+<li>Peer.REMOVE-INBOUND</li>
+<li>Peer.UNBLACKLIST</li>
+<li>Transaction.ADDED-CONFIRMED-TRANSACTIONS</li>
+<li>Transaction.ADDED-UNCONFIRMED-TRANSACTIONS</li>
+<li>Transaction.REJECT-PHASED-TRANSACTION</li>
+<li>Transaction.RELEASE-PHASED-TRANSACTION</li>
+<li>Transaction.REMOVE-UNCONFIRMED-TRANSACTIONS</li>
+</ul>
+</li>
+<li><em>event</em> is one of multiple server events (optional)</li>
+<li><em>add</em> is <em>true</em> to add events to an existing listener (optional, omit if <em>remove</em> is <em>true</em>)</li>
+<li><em>remove</em> is <em>true</em> to remove events from an existing listener (optional, omit if <em>add</em> is <em>true</em>)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Note:</strong> To create a new event listener, omit both <em>add</em> and <em>remove</em>. To remove an existing event listener, set <em>remove</em> to <em>true</em> and omit <em>event</em>; all registered events will be removed, any outstanding <a href="#event_Wait" title="The Blue0x API">Event Wait</a> will be completed and the listener will be deactivated.</p>
+<p><strong>Note:</strong> An event listener is automatically deactivated whenever all registered events are removed or if <a href="#event_Wait" title="The Blue0x API">Event Wait</a> is not called frequently enough, according to the <em>nxt.apiEventTimeout</em> property. The timeout is not precise; the removal process runs every <em>nxt.apiEventTimeout</em> / 2 seconds, so that many extra seconds may elapse before removal; the first <a href="#event_Wait" title="The Blue0x API">Event Wait</a> call should be made immediately after registration to avoid deactivation.</p>
+<p><strong>Note:</strong> Each API user (with a unique address) can create only one event listener. When a new one is created, it will replace an existing one. The maximum number of unique users is controlled by the <em>nxt.maxEventUsers</em> property.</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>registered</em> is <em>true</em> if the operation completed successfully</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#event-register" title="The Blue0x API Examples">Event Register</a> example.</p>
+<h3 id="event-wait">Event Wait</h3>
+<p>Wait for events registered with <a href="#event-register" title="The Blue0x API">Event Register</a>. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>eventWait</em></li>
+<li><em>timeout</em> is the amount of time (in seconds) to wait for an event before the call returns (optional, default and maximum is the nxt.apiEventTimeout property)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Notes:</strong> The call returns immediately if one or more events have occurred since the last call; multiple events are all returned together. If a new call is made before the last one returns, the <em>timeout</em> timer resets to the new value. Event registration expires if wait calls are not made frequently enough, according to the <em>nxt.apiEventTimeout</em> property.</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>events</em> (A) is an array of event objects each of which has the following fields:<ul>
+<li><em>name</em> (S) is the name of the event (refer to <a href="#event-register" title="The Blue0x API">Event Register</a> for the list of event names)</li>
+<li><em>ids</em> (A) is an array of identifiers, depending on the type of event:<ul>
+<li>block string identifier (S) for a block event</li>
+<li>peer network address (S) for a peer event</li>
+<li>transaction string identifier (S) for a transaction event</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#event-wait" title="The Blue0x API Examples">Event Wait</a> example.</p>
+<h3 id="get-blockchain-status">Get Blockchain Status</h3>
+<p>Get the blockchain status.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getBlockchainStatus</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>currentMinRollbackHeight</em> (N) is the current minimum rollback height</li>
+<li><em>numberOfBlocks</em> (N) is the number of blocks in the blockchain (height + 1)</li>
+<li><em>isTestnet</em> (B) is <em>true</em> if the node is connected to testnet, <em>false</em> otherwise</li>
+<li><em>includeExpiredPrunable</em> (B) is the value of the <em>nxt.includeExpiredPrunable</em> property</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+<li><em>version</em> (S) is the application version</li>
+<li><em>maxRollback</em> (N) is the value of the <em>nxt.maxRollback</em> property</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain</li>
+<li><em>application</em> (S) is application name, typically <em>NRS</em></li>
+<li><em>isScanning</em> (B) is <em>true</em> if the blockchain is being scanned by the application, <em>false</em> otherwise</li>
+<li><em>isDownloading</em> (B) is <em>true</em> if a download is in progress, <em>false</em> otherwise; <em>true</em> when a batch of more than 10 blocks at once has been downloaded from a peer, reset to <em>false</em> when an attempt to download more blocks from a peer does not result in any new blocks</li>
+<li><em>cumulativeDifficulty</em> (S) is the cumulative difficulty</li>
+<li><em>lastBlockchainFeederHeight</em> (N) is the height of the last blockchain of greatest cumulative difficulty obtained from a peer</li>
+<li><em>maxPrunableLifetime</em> (N) is the maximum prunable lifetime (in seconds)</li>
+<li><em>time</em> (N) is the current timestamp (in seconds since the genesis block)</li>
+<li><em>lastBlockchainFeeder</em> (S) is the address or announced address of the peer providing the last blockchain of greatest cumulative difficulty</li>
+<li><em>blockchainState</em> (S) Current state of this node's blockchain (UP-TO-DATE or DOWNLOADING)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-blockchain-status" title="The Blue0x API Examples">Get Blockchain Status</a> example.</p>
+<h3 id="get-constants">Get Constants</h3>
+<p>Get all defined constants.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getConstants</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>maxBlockPayloadLength</em> (N) is the maximum block payload length (in bytes)</li>
+<li><em>maxArbitraryMessageLength</em> (N) is the maximum length (in bytes) of an arbitrary message</li>
+<li><em>maxPrunableMessageLength</em> (N) is the maximum length (in bytes) of a prunable message</li>
+<li><em>maxTaggedDataDataLength</em> (N) is the maximum length (in bytes) of tagged data</li>
+<li><em>maxPhasingDuration</em> (N) is the maximum allowed phasing duration in block height</li>
+<li><em>epochBeginning</em> (N) is the time in milliseconds when genesis block was created</li>
+<li><em>genesisAccountId</em> (S) is the genesis account number</li>
+<li><em>genesisBlockId</em> (S) is the genesis block ID</li>
+<li><em>transactionTypes</em> (A) is an array of defined transaction types and subtypes (refer to the example below)</li>
+<li><em>transactionSubTypes</em> (A) is an array of defined transaction subtypes and subtypes (refer to the example below)</li>
+<li><em>peerStates</em> (A) is an array of defined peer states (refer to the example below)</li>
+<li><em>currencyTypes</em> (A) is an array of defined currency types (refer to the example below)</li>
+<li><em>disabledAPIs</em> (A) is an array of configured disabled apis (refer to the example below)</li>
+<li><em>apiTags</em> (A) is an array of defined api tags (refer to the example below)</li>
+<li><em>disabledAPITags</em> (A) is an array of configured disabled api tags (refer to the example below)</li>
+<li><em>votingModels</em> (A) is an array of defined voting models (refer to the example below)</li>
+<li><em>holdingTypes</em> (A) is an array of defined holding types (refer to the example below)</li>
+<li><em>minBalanceModels</em> (A) is an array of defined minimum balance models (refer to the example below)</li>
+<li><em>shufflingStages</em> (A) is an array of defined shuffling stages (refer to the example below)</li>
+<li><em>shufflingParticipantStates</em> (A) is an array of defined shuffling participant states (refer to the example below)</li>
+<li><em>hashAlgorithms</em> (A) is an array of defined hash algorithms (refer to the example below)</li>
+<li><em>mintingHashAlgorithms</em> (A) is an array of defined minting hash algorithms (refer to the example below)</li>
+<li><em>phasingHashAlgorithms</em> (A) is an array of defined phasing hash algorithms (refer to the example below)</li>
+<li><em>requestTypes</em> (A) is an array of decined request types (refer to the example below)</li>
+</ul>
+<h3 id="get-plugins">Get Plugins</h3>
+<p>Get a list of all installed plugins on the server.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPlugins</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>plugins</em> (A) is an array of plugin names (S)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-plugins" title="The Blue0x API Examples">Get Plugins</a> example.</p>
+<h3 id="get-state">Get State</h3>
+<p>Get the state of the server node and network.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getState</em></li>
+<li><em>includeCounts</em> is <em>true</em> if the fields beginning with <em>numberOf...</em> are to be included (optional); password protected like the <a href="../debug/" title="The Blue0x API">Debug Operations</a> if <em>true</em>.</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>numberOfPeers</em> (N) is the number of known peers on the network</li>
+<li><em>numberOfGoods</em> (N) is the number of DGS goods in the blockchain</li>
+<li><em>numberOfPolls</em> (N) is the number of polls in the blockchain</li>
+<li><em>numberOfUnlockedAccounts</em> (N) is the number of unlocked accounts on this node</li>
+<li><em>numberOfTransfers</em> (N) is the number of AE transfers in the blockchain</li>
+<li><em>includeExpiredPrunable</em> (B) is the value of the <em>nxt.includeExpiredPrunable</em> property</li>
+<li><em>numberOfOrders</em> (N) is the number of AE orders in the blockchain</li>
+<li><em>numberOfTransactions</em> (N) is the number of transactions in the blockchain</li>
+<li><em>maxMemory</em> (N) is the maximum amount of memory the node may use (in Bytes)</li>
+<li><em>maxRollback</em> (N) is the value of the <em>nxt.maxRollback</em> property</li>
+<li><em>numberOfOffers</em> (N) is the number of buy currency offers in the blockchain</li>
+<li><em>isDownloading</em> (B) is <em>true</em> if a download is in progress, <em>false</em> otherwise; <em>true</em> when a batch of more than 10 blocks at once has been downloaded from a peer, reset to <em>false</em> when an attempt to download more blocks from a peer does not result in any new blocks</li>
+<li><em>isScanning</em> (B) is <em>true</em> if this node is scanning the blockchain, <em>false</em> otherwise</li>
+<li><em>cumulativeDifficulty</em> (S) is the current cumulative forging difficulty</li>
+<li><em>numberOfCurrencies</em> (N) is the number of currencies in the blockchain</li>
+<li><em>numberOfAssets</em> (N) is the number of AE assets in the blockchain</li>
+<li><em>numberOfPrunableMessages</em> (N) is the number of prunable messages in the blockchain</li>
+<li><em>freeMemory</em> (N) is the amount of free memory on this node (in Bytes)</li>
+<li><em>peerPort</em> (N) is the port used for connecting to peers</li>
+<li><em>numberOfVotes</em> (N) is the number of votes in the blockchain</li>
+<li><em>availableProcessors</em> (N) is the number of processors on this node</li>
+<li><em>numberOfTaggedData</em> (N) is the number of tagged data in the blockchain</li>
+<li><em>numberOfActiveAccountLeases</em> (N) is the number of active account leases in the blockchain</li>
+<li><em>numberOfAccountLeases</em> (N) is the total number of account leases including scheduled leases (first scheduled lease only) in the blockchain</li>
+<li><em>numberOfAccounts</em> (N) is the number of accounts in the blockchain</li>
+<li><em>numberOfDataTags</em> (N) is the number of data tags in the blockchain</li>
+<li><em>needsAdminPassword</em> (B) is <em>true</em> if the <em>nxt.disableAdminPassword</em> property is <em>false</em></li>
+<li><em>currentMinRollbackHeight</em> (N) is the current minimum rollback height</li>
+<li><em>numberOfBlocks</em> (N) is the number of blocks (height + 1) in the blockchain</li>
+<li><em>isTestnet</em> (B) is <em>true</em> if the node is connected to testnet, <em>false</em> otherwise</li>
+<li><em>numberOfCurrencyTransfers</em> (N) is the number of currency transfers in the blockchain</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+<li><em>numberOfPhasedTransactions</em> (N) is the number of phased transactions in the blockchain</li>
+<li><em>version</em> (S) is the software version on this node</li>
+<li><em>numberOfBidOrders</em> (N) is the number of AE bid orders in the blockchain</li>
+<li><em>lastBlock</em> (S) is the last block address</li>
+<li><em>totalMemory</em> (N) is the amount of memory this node is using (in Bytes)</li>
+<li><em>application</em> (S) is the name of the software running on this node (typically <em>NRS</em>)</li>
+<li><em>numberOfAliases</em> (N) is the number of aliases in the blockchain</li>
+<li><em>numberOfActivePeers</em> (N) is the number of active peers on the network</li>
+<li><em>lastBlockchainFeederHeight</em> (N) is the height of the last blockchain feeder</li>
+<li><em>maxPrunableLifetime</em> (N) is the maximum prunable lifetime (in seconds)</li>
+<li><em>numberOfExchanges</em> (N) is the number of currency exchanges in the blockchain</li>
+<li><em>numberOfTrades</em> (N) is the number of AE trades in the blockchain</li>
+<li><em>numberOfPurchases</em> (N) is the number of DGS purchases in the blockchain</li>
+<li><em>numberOfTags</em> (N) is the number of DGS tags in the blockchain</li>
+<li><em>time</em> (N) is the current node time (in seconds since the genesis block)</li>
+<li><em>numberOfAskOrders</em> (N) is the number of AE ask orders in the blockchain</li>
+<li><em>lastBlockchainFeeder</em> (S) is the announced name of the feeder of the last blockchain</li>
+<li><em>isOffline</em> (B) is <em>true</em> if this node is connected to other peers, <em>false</em> otherwise</li>
+</ul>
+<p><strong>Note:</strong> AE is Asset Exchange, DGS is Digital Goods Store</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-state" title="The Blue0x API Examples">Get State</a> example.</p>
+<h3 id="get-time">Get Time</h3>
+<p>Get the current time.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getTime</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>time</em> (N) is the current time (in seconds since the genesis block).</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-time" title="The Blue0x API Examples">Get Time</a> example.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../phasing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Phasing" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Phasing
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../shuffling/" class="md-footer__link md-footer__link--next" aria-label="Next: Shuffling" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Shuffling
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>

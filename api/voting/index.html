@@ -1,0 +1,1286 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn about the Blue0x Network">
+      
+      
+      
+        <meta name="author" content="Blue0x Devs">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Voting - Learn about the Blue0x Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#voting-system-operations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learn about the Blue0x Network" class="md-header__button md-logo" aria-label="Learn about the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn about the Blue0x Network
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Voting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learn_more/" class="md-tabs__link">
+        Learn More
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        Setup
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../node_rewards/" class="md-tabs__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learn about the Blue0x Network" class="md-nav__button md-logo" aria-label="Learn about the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Learn about the Blue0x Network
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        Home
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        Learn More
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Learn More
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Learn More" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Learn More
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        What is Blue0x?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        ALL OPERATIONS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        OVERVIEW
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        TABLE OF CONTENTS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alias/" class="md-nav__link">
+        Alias
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocks/" class="md-nav__link">
+        Blocks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug/" class="md-nav__link">
+        Debug
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forging/" class="md-nav__link">
+        Forging
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hallmark/" class="md-nav__link">
+        Hallmark
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marketplace/" class="md-nav__link">
+        Marketplace
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaging/" class="md-nav__link">
+        Messaging
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monetary_system/" class="md-nav__link">
+        Monetary System
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        Networking
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phasing/" class="md-nav__link">
+        Phasing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shuffling/" class="md-nav__link">
+        Shuffling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tagged_data/" class="md-nav__link">
+        Tagged Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../token/" class="md-nav__link">
+        Token
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Voting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Voting
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voting-system-operations" class="md-nav__link">
+    Voting System Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Voting System Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cast-vote" class="md-nav__link">
+    Cast Vote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-poll" class="md-nav__link">
+    Create Poll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll" class="md-nav__link">
+    Get Poll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll-result" class="md-nav__link">
+    Get Poll Result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll-vote" class="md-nav__link">
+    Get Poll Vote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll-votes" class="md-nav__link">
+    Get Poll Votes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-polls" class="md-nav__link">
+    Get Polls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-polls" class="md-nav__link">
+    Search Polls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API_Examples/" class="md-nav__link">
+        API Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Node Rewards
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Node Rewards" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Node Rewards
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        How-To
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voting-system-operations" class="md-nav__link">
+    Voting System Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Voting System Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cast-vote" class="md-nav__link">
+    Cast Vote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-poll" class="md-nav__link">
+    Create Poll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll" class="md-nav__link">
+    Get Poll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll-result" class="md-nav__link">
+    Get Poll Result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll-vote" class="md-nav__link">
+    Get Poll Vote
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-poll-votes" class="md-nav__link">
+    Get Poll Votes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-polls" class="md-nav__link">
+    Get Polls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-polls" class="md-nav__link">
+    Search Polls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Voting</h1>
+                
+                <h2 id="voting-system-operations">Voting System Operations</h2>
+<h3 id="cast-vote">Cast Vote</h3>
+<p>Cast a vote on a poll. POST only.</p>
+<p><strong>Request:</strong> Refer to <a href="../#create-transaction-request" title="The Blue0x API">Create Transaction Request</a> for common parameters.</p>
+<ul>
+<li><em>requestType</em> is <em>castVote</em></li>
+<li><em>poll</em> is the poll ID</li>
+<li><em>vote00</em> is an integer within the allowed range to vote for option (answer) 0 (optional if <em>minNumberOfOptions</em> met, default is <em>-128</em>)</li>
+<li><em>vote01</em> is an integer within the allowed range to vote for option (answer) 1 (optional if <em>minNumberOfOptions</em> met, default is <em>-128</em>)</li>
+<li><em>vote02</em> is an integer within the allowed range to vote for option (answer) 2 (optional if <em>minNumberOfOptions</em> met, default is <em>-128</em>)</li>
+</ul>
+<p><strong>Note:</strong> The allowed vote values are integers between <em>minRangeValue</em> and <em>maxRangeValue</em>, inclusive. This range, along with the minimum and maximum number of options that can and must be voted on are specified when the poll is created. Refer to <a href="#create-poll" title="The Blue0x API">Create Poll</a>.</p>
+<p><strong>Response:</strong> Refer to <a href="../#create-transaction-response" title="The Blue0x API">Create Transaction Response</a>.</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#cast-vote" title="The Blue0x API Examples">Cast Vote</a> example.</p>
+<h3 id="create-poll">Create Poll</h3>
+<p>Create a new poll. POST only.</p>
+<p><strong>Request:</strong> Refer to <a href="../#create-transaction-request" title="The Blue0x API">Create Transaction Request</a> for common parameters.</p>
+<ul>
+<li><em>requestType</em> is <em>createPoll</em></li>
+<li><em>name</em> is the name of the poll</li>
+<li><em>description</em> is the description of the poll, or the question to be answered</li>
+<li><em>finishHeight</em> is the block height when the poll is completed</li>
+<li><em>votingModel</em> is <em>0</em> for -one Vote Per Account_, <em>1</em> for <em>Vote By BLX Balance</em>, <em>2</em> for <em>Vote By Asset Balance</em> and <em>3</em> for <em>Vote By Currency Balance</em></li>
+<li><em>minNumberOfOptions</em> is the minimum number of options (answers) that must be voted for</li>
+<li><em>maxNumberOfOptions</em> is the maximum number of options (answers) that can be voted for</li>
+<li><em>minRangeValue</em> is the minimum integer value for an option (answer) (&gt;= <em>0</em>)</li>
+<li><em>maxRangeValue</em> is the maximum integer value for an option (answer) (&gt;= <em>minRangeValue</em>)</li>
+<li><em>minBalance</em> is the minimum balance (in NQT or QNT) required for voting (optional, default 0)</li>
+<li><em>minBalanceModel</em> is (required if <em>minBalance</em> &gt; <em>0</em>, must match <em>votingModel</em> when <em>votingModel</em> &gt; <em>0</em>)<ul>
+<li><em>1</em> for BLX balance</li>
+<li><em>2</em> for an asset balance</li>
+<li><em>3</em> for a currency balance</li>
+</ul>
+</li>
+<li><em>holding</em> is the asset or currency ID (required if <em>minBalanceModel</em> &gt; <em>1</em>)</li>
+<li><em>option00</em> is the name of option (answer) 0</li>
+<li><em>option01</em> is the name of option (answer) 1 (optional)</li>
+<li><em>option02</em> is the name of option (answer) 2 (optional)</li>
+</ul>
+<p><strong>Note:</strong> When a balance affects the poll result, the result depends only on the balance (including pending outgoing phased transfers) computed just prior to the finish height.</p>
+<p><strong>Response:</strong> Refer to <a href="../#create-transaction-response" title="The Blue0x API">Create Transaction Response</a>. The transaction ID is also the poll ID.</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#create-poll" title="The Blue0x API Examples">Create Poll</a> example.</p>
+<h3 id="get-poll">Get Poll</h3>
+<p>Get the details of a poll.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPoll</em></li>
+<li><em>poll</em> is the poll ID</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>poll</em> (S) is the poll ID</li>
+<li><em>account</em> (S) is the account number of the poll creator</li>
+<li><em>accountRS</em> (S) is the Reed-Solomon address of the account</li>
+<li><em>name</em> (S) is the name of the poll</li>
+<li><em>description</em> (S) is the description of the poll, or the question to be answered</li>
+<li><em>finishHeight</em> (N) is the block height when the poll is completed</li>
+<li><em>finished</em> (B) is <em>true</em> if the poll is completed, <em>false</em> otherwise</li>
+<li><em>votingModel</em> (N) is <em>0</em> for -one Vote Per Account_, <em>1</em> for <em>Vote By BLX Balance</em>, <em>2</em> for <em>Vote By Asset Balance</em> and <em>3</em> for <em>Vote By Currency Balance</em></li>
+<li><em>minNumberOfOptions</em> (N) is the minimum number of options (answers) that must be voted for</li>
+<li><em>maxNumberOfOptions</em> (N) is the maximum number of options (answers) that can be voted for</li>
+<li><em>minBalance</em> (S) is the minimum balance (in NQT or QNT) required for voting</li>
+<li><em>minBalanceModel</em> (N) is <em>1</em> for BLX balance, <em>2</em> for an asset balance, <em>3</em> for a currency balance when <em>minBalance</em> &gt; 0</li>
+<li><em>holding</em> is the asset or currency ID when minBalanceModel &gt; 1</li>
+<li><em>options</em> (A) is the array of options (answers)</li>
+<li><em>minRangeValue</em> (N) is the minimum integer value for an option (answer)</li>
+<li><em>maxRangeValue</em> (N) is the maximum integer value for an option (answer)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-poll" title="The Blue0x API Examples">Get Poll</a> example.</p>
+<h3 id="get-poll-result">Get Poll Result</h3>
+<p>Get the result of a poll.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPollResult</em></li>
+<li><em>poll</em> is the poll ID</li>
+<li><em>votingModel</em> (optional, default null)</li>
+<li><em>holding</em> (optional, default null)</li>
+<li><em>minBalance</em> (optional, default <em>0</em>)</li>
+<li><em>minBalanceModel</em> (required if <em>minBalance</em> &gt; <em>0</em>, must match <em>votingModel</em> when <em>votingModel</em> &gt; <em>0</em>)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Note:</strong> The <em>votingModel</em>, <em>holding</em>, <em>minBalance</em> and <em>minBalanceModel</em> parameters are optional and default to the original values specified when the poll was created (refer to <a href="#create-poll" title="The Blue0x API">Create Poll</a>). The original values can only be overridden while the votes are still stored in the database, until 1441 blocks after the poll is completed. If <em>votingModel</em> is specified, <em>holding</em>, <em>minBalance</em> and <em>minBalanceModel</em> or the defaults specified above apply, otherwise they are ignored.</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>poll</em> (S) is the poll ID</li>
+<li><em>votingModel</em> (N) is the votingModel used to calculate <em>results</em> (refer to Note above)</li>
+<li><em>minBalanceModel</em> (N) is the minBalanceModel used to calculate <em>results</em> (refer to Note above)</li>
+<li><em>minBalance</em> (S) is the minBalance used to calculate <em>results</em> (refer to Note above)</li>
+<li><em>holding</em> (S) is the asset or currency ID if the voting model uses an asset or currency balance to determine <em>weight</em>, if applicable (refer to Note above)</li>
+<li><em>decimals</em> (N) is the number decimal places used by the asset or currency, if applicable</li>
+<li><em>finished</em> (B) is <em>true</em> if the poll is complete, <em>false</em> otherwise</li>
+<li><em>options</em> (A) is the array of options (answers) of the poll</li>
+<li><em>results</em> (A) is an array of result objects with the following fields for each result:<ul>
+<li><em>weight</em> (S) is the sum of the <em>weight</em> of each account that voted for the corresponding option (answer); an account's <em>weight</em> is <em>1</em> if the voting model is <em>0</em>, otherwise it is the NQT, asset QNT or currency QNT balance of the account if the voting model is <em>1</em>, <em>2</em> or <em>3</em> respectively; however, the <em>weight</em> is <em>0</em> if <em>minBalance</em> is not met</li>
+<li><em>result</em> (S) is the sum over each account that voted for the corresponding option (answer) of: the product of the account's <em>weight</em> and the <em>rangeValue</em> selected when the vote was cast.</li>
+</ul>
+</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-poll-result" title="The Blue0x API Examples">Get Poll Result</a> example.</p>
+<h3 id="get-poll-vote">Get Poll Vote</h3>
+<p>Get a poll vote given a poll ID and an account ID.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPollVote</em></li>
+<li><em>poll</em> is the poll ID</li>
+<li><em>account</em> is the account ID</li>
+<li><em>includeWeights</em> is <em>true</em> to calculate and return the weight assigned to each vote (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>votes</em> (A) is an array of votes, the range values (S) corresponding to each option (answer) with empty strings for non-votes</li>
+<li><em>voter</em> (S) is the account number of the voter</li>
+<li><em>voterRS</em> (S) is the Reed-Solomon address of the voter</li>
+<li><em>transaction</em> (S) is the transaction ID of the vote</li>
+<li><em>weight</em> (S) is the weight assigned to each vote (applies if <em>includeWeights</em> is <em>true</em>)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Note:</strong> Votes are deleted from the database 1441 blocks after the poll is finished. Only aggregate results are kept (refer to <a href="#get-poll-result" title="The Blue0x API">Get Poll Result</a>).</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-poll-vote" title="The Blue0x API Examples">Get Poll Vote</a> example.</p>
+<h3 id="get-poll-votes">Get Poll Votes</h3>
+<p>Get all votes on a poll in reverse chronological order.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPollVotes</em></li>
+<li><em>poll</em> is the poll ID</li>
+<li><em>includeWeights</em> is <em>true</em> to calculate and return the weight assigned to each vote (optional)</li>
+<li><em>firstIndex</em> is a zero-based index to the first vote to retrieve (optional)</li>
+<li><em>lastIndex</em> is a zero-based index to the last vote to retrieve (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>votes</em> (A) is an array of vote objects (refer to <a href="#get-poll-vote" title="The Blue0x API">Get Poll Vote</a> for details)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Note:</strong> Votes are deleted from the database 1441 blocks after the poll is finished. Only aggregate results are kept (refer to <a href="#get-poll-result" title="The Blue0x API">Get Poll Result</a>).</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-poll-votes" title="The Blue0x API Examples">Get Poll Votes</a> example.</p>
+<h3 id="get-polls">Get Polls</h3>
+<p>Get poll details in reverse creation order.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPolls</em></li>
+<li><em>account</em> is a creation account ID filter (optional)</li>
+<li><em>timestamp</em> is the earliest poll (in seconds since the genesis block) to retrieve (optional)</li>
+<li><em>firstIndex</em> is a zero-based index to the first poll to retrieve (optional)</li>
+<li><em>lastIndex</em> is a zero-based index to the last poll to retrieve (optional)</li>
+<li><em>includeFinished</em> is <em>true</em> to include completed polls (optional)</li>
+<li><em>finishedOnly</em> is <em>true</em> to exclude not yet executed, phased transactions (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>polls</em> (A) is an array of polls (refer to <a href="#get-poll" title="The Blue0x API">Get Poll</a> for details)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-polls" title="The Blue0x API Examples">Get Polls</a> example.</p>
+<h3 id="search-polls">Search Polls</h3>
+<p>Search for poll details given a name/description query string.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>searchPolls</em></li>
+<li><em>query</em> is a full text query on the poll fields <em>name</em> (S) and <em>description</em> (S) in the <a href="https://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Overview">standard Lucene syntax</a> (optional)</li>
+<li><em>firstIndex</em> is a zero-based index to the first poll to retrieve (optional)</li>
+<li><em>lastIndex</em> is a zero-based index to the last poll to retrieve (optional)</li>
+<li><em>includeFinished</em> is <em>true</em> to include completed polls (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>polls</em> (A) is an array of polls (refer to <a href="#get-poll" title="The Blue0x API">Get Poll</a> for details)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#search-polls" title="The Blue0x API Examples">Search Polls</a> example.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../utilities/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Utilities" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Utilities
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../API_Examples/" class="md-footer__link md-footer__link--next" aria-label="Next: API Examples" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              API Examples
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>

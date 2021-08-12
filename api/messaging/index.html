@@ -1,0 +1,1342 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn about the Blue0x Network">
+      
+      
+      
+        <meta name="author" content="Blue0x Devs">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Messaging - Learn about the Blue0x Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arbitrary-message-system-operations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learn about the Blue0x Network" class="md-header__button md-logo" aria-label="Learn about the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn about the Blue0x Network
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Messaging
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learn_more/" class="md-tabs__link">
+        Learn More
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../setup/" class="md-tabs__link">
+        Setup
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../node_rewards/" class="md-tabs__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learn about the Blue0x Network" class="md-nav__button md-logo" aria-label="Learn about the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Learn about the Blue0x Network
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        Home
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        Learn More
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Learn More
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Learn More" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Learn More
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        What is Blue0x?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        ALL OPERATIONS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        OVERVIEW
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        TABLE OF CONTENTS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alias/" class="md-nav__link">
+        Alias
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocks/" class="md-nav__link">
+        Blocks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug/" class="md-nav__link">
+        Debug
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forging/" class="md-nav__link">
+        Forging
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hallmark/" class="md-nav__link">
+        Hallmark
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marketplace/" class="md-nav__link">
+        Marketplace
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Messaging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Messaging
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arbitrary-message-system-operations" class="md-nav__link">
+    Arbitrary Message System Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Arbitrary Message System Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decrypt-from" class="md-nav__link">
+    Decrypt From
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-prunable-message" class="md-nav__link">
+    Download Prunable Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypt-to" class="md-nav__link">
+    Encrypt To
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-prunable-messages" class="md-nav__link">
+    Get All Prunable Messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-prunable-message" class="md-nav__link">
+    Get Prunable Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-prunable-messages" class="md-nav__link">
+    Get Prunable Messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-shared-key" class="md-nav__link">
+    Get Shared Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-message" class="md-nav__link">
+    Read Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-message" class="md-nav__link">
+    Send Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-prunable-message" class="md-nav__link">
+    Verify Prunable Message
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monetary_system/" class="md-nav__link">
+        Monetary System
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        Networking
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phasing/" class="md-nav__link">
+        Phasing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shuffling/" class="md-nav__link">
+        Shuffling
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tagged_data/" class="md-nav__link">
+        Tagged Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../token/" class="md-nav__link">
+        Token
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voting/" class="md-nav__link">
+        Voting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API_Examples/" class="md-nav__link">
+        API Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Node Rewards
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Node Rewards" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Node Rewards
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        How-To
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arbitrary-message-system-operations" class="md-nav__link">
+    Arbitrary Message System Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Arbitrary Message System Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decrypt-from" class="md-nav__link">
+    Decrypt From
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-prunable-message" class="md-nav__link">
+    Download Prunable Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypt-to" class="md-nav__link">
+    Encrypt To
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-prunable-messages" class="md-nav__link">
+    Get All Prunable Messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-prunable-message" class="md-nav__link">
+    Get Prunable Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-prunable-messages" class="md-nav__link">
+    Get Prunable Messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-shared-key" class="md-nav__link">
+    Get Shared Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-message" class="md-nav__link">
+    Read Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-message" class="md-nav__link">
+    Send Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-prunable-message" class="md-nav__link">
+    Verify Prunable Message
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Messaging</h1>
+                
+                <h2 id="arbitrary-message-system-operations">Arbitrary Message System Operations</h2>
+<h3 id="decrypt-from">Decrypt From</h3>
+<p>Decrypt an AES-encrypted message.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>decryptFrom</em></li>
+<li><em>secretPhrase</em> is the secret passphrase of the recipient</li>
+<li><em>account</em> is the account ID of the recipient</li>
+<li><em>data</em> is AES-encrypted data</li>
+<li><em>nonce</em> is the unique nonce associated with the encrypted data</li>
+<li><em>decryptedMessageIsText</em> is <em>false</em> if the decrypted message is a hex string, otherwise the decrypted message is text (optional)</li>
+<li><em>uncompressDecryptedMessage</em> is <em>false</em> to prevent gzip uncompression after decryption (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>decryptedMessage</em> (S) is the decrypted message</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#decrypt-from" title="The Blue0x API Examples">Decrypt From</a> example.</p>
+<h3 id="download-prunable-message">Download Prunable Message</h3>
+<p>Downloadins a prunable message attachments directly as binary data. An optional secretPhrase parameter is supported, to allow decryption and downloading of the encrypted part of the message instead of the plain text part.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>downloadPrunableMessage</em></li>
+<li><em>transaction</em> is the transaction ID</li>
+<li><em>secretPhrase</em> is the secret passphrase used to decrypt the encrypted part of the message (optional)</li>
+<li><em>sharedKey</em> is the shared key used to decrypt the message (optional) (see <a href="#get-shared-key" title="The Blue0x API">Get Shared Key</a>)</li>
+<li><em>retrieve</em> is <em>true</em> to retrieve the message from achival node if needed (optional)</li>
+<li><em>requireBlock</em> is theblock ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong> The prunable data as a binary file.</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#download-prunable-message" title="The Blue0x API Examples">Download Prunable Message</a> example.</p>
+<h3 id="encrypt-to">Encrypt To</h3>
+<p>Encrypt a message using AES without sending it.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>encryptTo</em></li>
+<li><em>secretPhrase</em> is the secret passphrase of the sender</li>
+<li><em>recipient</em> is the account ID of the recipient</li>
+<li><em>messageToEncrypt</em> is either UTF-8 text or a string of hex digits to be compressed and converted into a 1000 byte maximum bytecode then encrypted using AES</li>
+<li><em>messageToEncryptIsText</em> is <em>false</em> if the message to encrypt is a hex string, otherwise the message to encrypt is text (optional)</li>
+<li><em>compressMessageToEncrypt</em> is <em>false</em> to prevent gzip compression before encryption (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>data</em> (S) is the AES-encrypted data</li>
+<li><em>nonce</em> (S) is a 32-byte pseudorandom nonce</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#encrypt-to" title="The Blue0x API Examples">Encrypt To</a> example.</p>
+<h3 id="get-all-prunable-messages">Get All Prunable Messages</h3>
+<p>Get all available prunable messages in reverse block timestamp order.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getAllPrunableMessages</em></li>
+<li><em>timestamp</em> is the earliest message (in seconds since the genesis block) to retrieve (optional)</li>
+<li><em>firstIndex</em> is a zero-based index to the first prunable message to retrieve (optional)</li>
+<li><em>lastIndex</em> is a zero-based index to the last prunable message to retrieve (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>prunableMessages</em> (A) is an array of prunable messages (refer to <a href="#get-prunable-message" title="The Blue0x API">Get Prunable Message</a>)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millsec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-all-prunable-messages" title="The Blue0x API Examples">Get All Prunable Messages</a> example.</p>
+<h3 id="get-prunable-message">Get Prunable Message</h3>
+<p>Get the prunable message given a transaction ID, optionally decrypting it if encrypted and if a secretPhrase is provided, if it is still available.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPrunableMessage</em></li>
+<li><em>transaction</em> is the transaction ID</li>
+<li><em>secretPhrase</em> is the secret phrase needed for decryption (optional)</li>
+<li><em>sharedKey</em> is the shared key used to decrypt the message (optional) (see <a href="#get-shared-key" title="The Blue0x API">Get Shared Key</a>)</li>
+<li><em>retrieve</em> is <em>true</em> to retrieve pruned data from other nodes if not available (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>sender</em> (S) is the sender account number</li>
+<li><em>senderRS</em> (S) is the Reed-Solomon address of the sender account</li>
+<li><em>recipient</em> (S) is the recipient account number</li>
+<li><em>recipientRS</em> (S) is the Reed-Solomon address of the recipient account</li>
+<li><em>message</em> (S) is the plain message text</li>
+<li><em>messageIsText</em> (B) is <em>true</em> if the plain message is text, <em>false</em> if it is a hex string</li>
+<li><em>encryptedMessage</em> (O) is the encrypted message object, containing <em>data</em> (S) and <em>nonce</em> (S) fields</li>
+<li><em>encryptedMessageIsText</em> (B) is <em>true</em> if the encrypted message is text, <em>false</em> if it is a hex string</li>
+<li><em>decryptedMessage</em> (S) is the decrypted and decompressed (if necessary) encrypted message, if applicable and if <em>secretPhrase</em> is provided</li>
+<li><em>isCompressed</em> (B) is <em>true</em> if the encrypted message was compressed before encryption, if applicable</li>
+<li><em>transaction</em> (S) is the transaction ID</li>
+<li><em>transactionTimestamp</em> (N) is the transaction timestamp (in seconds since the genesis block)</li>
+<li><em>blockTimestamp</em> (N) is the block timestamp (in seconds since the genesis block)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millsec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-prunable-message" title="The Blue0x API Examples">Get Prunable Message</a> example.</p>
+<h3 id="get-prunable-messages">Get Prunable Messages</h3>
+<p>Get all still-available prunable messages given an account id, optionally limiting to only those with another account as recipient or sender, in reverse chronological order.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getPrunableMessages</em></li>
+<li><em>account</em> is the account ID</li>
+<li><em>otherAccount</em> is another account ID, either sender or recipient, to limit the response</li>
+<li><em>secretPhrase</em> is the secret phrase needed for decryption (optional)</li>
+<li><em>timestamp</em> is the earliest prunable message (in seconds since the genesis block) to retrieve (optional)</li>
+<li><em>firstIndex</em> is a zero-based index to the first prunable message to retrieve (optional)</li>
+<li><em>lastIndex</em> is a zero-based index to the last prunable message to retrieve (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>prunableMessages</em> (A) is an array of prunable message objects (refer to <a href="#get-prunable-message" title="The Blue0x API">Get Prunable Message</a> for details)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millsec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-prunable-messages" title="The Blue0x API Examples">Get Prunable Messages</a> example.</p>
+<h3 id="get-shared-key">Get Shared Key</h3>
+<p>Get the one-time shared key used for encryption of messages.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getSharedKey</em></li>
+<li><em>account</em> is the recipient account ID</li>
+<li><em>secretPhrase</em> is the secret phrase of the sender</li>
+<li><em>nonce</em> is the 32-byte pseudorandom nonce</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>sharedKey</em> (S) is shared key as a hexadecimal string</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-shared-key" title="The Blue0x API Examples">Get Shared Key</a> example.</p>
+<h3 id="read-message">Read Message</h3>
+<p>Get a message given a transaction ID.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>readMessage</em></li>
+<li><em>transaction</em> is the transaction ID of the message</li>
+<li><em>secretPhrase</em> is the secret passphrase of the account that received the message (optional)</li>
+<li><em>sharedKey</em> is the shared key used to decrypt the message (optional) (see <a href="#get-shared-key" title="The Blue0x API">Get Shared Key</a>)</li>
+<li><em>retrieve</em> is <em>true</em> to retrieve pruned data from archival nodes (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>messageIsPrunable</em> (B) is <em>true</em> if there is a plain message and it is prunable, <em>false</em> if it is not prunable</li>
+<li><em>message</em> (S) is the plain message, if applicable</li>
+<li><em>encryptedMessageIsPrunable</em> (B) is <em>true</em> if there is an encrypted message and it is prunable, <em>false</em> if it is not prunable</li>
+<li><em>decryptedMessage</em> (S) is the decrypted message, if applicable and only if the provided <em>secretPhrase</em> belongs to either the sender or receiver of the transaction</li>
+<li><em>decryptedMessageToSelf</em> (S) is the decrypted message sent to self, if applicable and only if the provided <em>secretPhrase</em> belongs to the sender of transaction</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#read-message" title="The Blue0x API Examples">Read Message</a> example.</p>
+<h3 id="send-message">Send Message</h3>
+<p>Create an Arbitrary Message transaction. POST only.</p>
+<p><strong>Request:</strong> Refer to <a href="../#create-transaction-request" title="The Blue0x API">Create Transaction Request</a> for common parameters.</p>
+<ul>
+<li><em>requestType</em> is <em>sendMessage</em></li>
+<li><em>recipient</em> is the account ID of the recipient (optional)</li>
+<li><em>recipientPublicKey</em> is the public key of the receiving account (optional, enhances security of a new account)</li>
+<li><em>message</em> is either UTF-8 text or a string of hex digits (perhaps previously encoded using an arbitrary algorithm) to be converted into a bytecode with a maximum length of one kilobyte, 42 kilobytes if prunable (optional)</li>
+<li><em>messageIsText</em> is <em>false</em> if the message is a hex string, otherwise the message is text (optional)</li>
+<li><em>messageIsPrunable</em> is <em>true</em> if the message is prunable (optional)</li>
+<li><em>messageToEncrypt</em> is either UTF-8 text or a string of hex digits to be compressed (unless <em>compressMessageToEncrypt</em> is <em>false</em>) and converted into a bytecode with a maximum length of one kilobyte, 42 kilobytes if prunable, then encrypted using AES (optional)</li>
+<li><em>messageToEncryptIsText</em> is <em>false</em> if the message to encrypt is a hex string, otherwise the message to encrypt is text (optional)</li>
+<li><em>encryptedMessageData</em> is already encrypted data which overrides <em>messageToEncrypt</em> if provided (optional)</li>
+<li><em>encryptedMessageNonce</em> is a unique 32-byte number which cannot be reused (optional unless <em>encryptedMessageData</em> is provided)</li>
+<li><em>encryptedMessageIsPrunable</em> is <em>true</em> if the encrypted message is prunable (optional)</li>
+<li><em>compressMessageToEncrypt</em> is <em>false</em> to prevent gzip compression before encryption (optional)</li>
+<li><em>messageToEncryptToSelf</em> is either UTF-8 text or a string of hex digits to be compressed (unless <em>compressMessageToEncryptToSelf</em> is false) and converted into a one kilobyte maximum bytecode then encrypted with AES, then sent to the sending account (optional)</li>
+<li><em>messageToEncryptToSelfIsText</em> is <em>false</em> if the message to self-encrypt is a hex string, otherwise the message to encrypt is text (optional)</li>
+<li><em>encryptToSelfMessageData</em> is already encrypted data which overrides messageToEncryptToSelf if provided (optional)</li>
+<li><em>encryptToSelfMessageNonce</em> is a unique 32-byte number which cannot be reused (optional unless encryptToSelfMessageData is provided)</li>
+<li><em>compressMessageToEncryptToSelf</em> is <em>false</em> to prevent gzip compression before encryption (optional)</li>
+</ul>
+<p><strong>Note:</strong> Any combination (including none or all) of the three options plain <em>message</em>, <em>messageToEncrypt</em>, and <em>messageToEncryptToSelf</em> will be included in the transaction. However, one and only one prunable message may be included in a single transaction if there is not already a message of the same type (either plain or encrypted).</p>
+<p><strong>Note:</strong> The <em>encryptedMessageData-encryptedMessageNonce</em> pair or the <em>encryptToSelfMessageData-encryptToSelfMessageNonce</em> pair can be the output of <a href="#encrypt-to" title="The Blue0x API">Encrypt To</a></p>
+<p><strong>Response:</strong> Refer to <a href="../#create-transaction-response" title="The Blue0x API">Create Transaction Response</a>.</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#send-message" title="The Blue0x API Examples">Send Message</a> example.</p>
+<h3 id="verify-prunable-message">Verify Prunable Message</h3>
+<p>Verify that a prunable message obtained from any source, when hashed, matches the hash of the original prunable message.</p>
+<p><strong>Request:</strong> Refer to <a href="#send-message" title="The Blue0x API">Send Message</a> for more details about the following request parameters.</p>
+<ul>
+<li><em>requestType</em> is <em>verifyPrunableMessage</em></li>
+<li><em>message</em> is the plain message, if applicable (optional)</li>
+<li><em>messageIsText</em> is <em>false</em> if the provided plain <em>message</em> is a hex string (optional)</li>
+<li><em>encryptedMessageData</em> is the data part of the encrypted data-nonce pair (optional if <em>message</em> provided)</li>
+<li><em>encryptedMessageNonce</em> is the nonce part of the encrypted data-nonce pair (required if <em>encryptedMessageData</em> provided)</li>
+<li><em>messageToEncryptIsText</em> is <em>false</em> if the encrypted message was a hex string before encryption (optional)</li>
+<li><em>compressMessageToEncrypt</em> is <em>false</em> if the encrypted message was not compressed before encryption (optional)</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Note:</strong> The hash is computed from the message itself plus its associated flag(s) <em>isText</em> and <em>isCompressed</em> (encrypted only); therefore the flag(s) must be provided for verification if different from the default(s). The original <em>encryptedMessageData-encryptedMessageNonce</em> pair used to compute the original hash must be provided again to recompute the hash for verification of a prunable encrypted message.</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>version.PrunablePlainMessage</em> or <em>version.PrunableEncryptedMessage</em> (N) is <em>1</em>, the version number</li>
+<li><em>verify</em> (B) is <em>true</em> if the original hash matches the hash computed from the provided values</li>
+<li><em>message</em> (S) or <em>encryptedMessage</em> (O) is the prunable plain message or the prunable encrypted message object containing the fields:<ul>
+<li><em>data</em> (S)</li>
+<li><em>nonce</em> (B)</li>
+<li><em>isText</em> (B)</li>
+<li><em>isCompressed</em> (B)</li>
+</ul>
+</li>
+<li><em>messageIsText</em> (B) is <em>true</em> if the plain message is text, <em>false</em> if it is a hex string, if applicable</li>
+<li><em>messageHash</em> or <em>encryptedMessageHash</em> (S) is the hash</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millsec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#verify-prunable-message" title="The Blue0x API Examples">Verify Prunable Message</a> example.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../marketplace/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Marketplace" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Marketplace
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../monetary_system/" class="md-footer__link md-footer__link--next" aria-label="Next: Monetary System" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Monetary System
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+    
+  </body>
+</html>
