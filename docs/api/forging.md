@@ -40,14 +40,14 @@ Refer to [Start / Stop / Get Forging](#start-stop-get-forging "The Blue0x API").
 
 Lease the entire guaranteed balance of Blue0x to another account, after 1440 confirmations. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _leaseBalance_
 *   _period_ is the lease period (in number of blocks, 1440 minimum)
 *   _recipient_ is the lessee (recipient) account
 *   _recipientPublicKey_ is the public key of the lessee (recipient) account (optional, enhances security of a new account)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Lease Balance](API_Examples.md#lease-balance "The Blue0x API Examples") example.
 

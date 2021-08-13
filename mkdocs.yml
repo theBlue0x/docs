@@ -10,17 +10,21 @@ nav:
   - Home: 
     - Home: index.md
     - Learn More: learn_more/index.md
-    - API: api/index.md
     - Setup: setup/index.md
+    - API: api/index.md
     - Node Rewards: node_rewards/index.md
+    - Resources: resources/index.md
 
   - Learn More:
     - What is Blue0x?: learn_more/index.md
 
+  - Setup:
+    - Setup: setup/index.md
+
   - API:
-    - ALL OPERATIONS: api/index.md
-    - OVERVIEW: api/overview.md
+    - OVERVIEW: api/index.md
     - TABLE OF CONTENTS: api/toc.md
+    - CREATE TRANSACTION: api/create_transaction.md
     - Account: api/account.md
     - Alias: api/alias.md
     - Assets: api/assets.md
@@ -41,9 +45,6 @@ nav:
     - Utilities: api/utilities.md
     - Voting: api/voting.md
     - API Examples: api/API_Examples.md
-
-  - Setup:
-    - Setup: setup/index.md
 
   - Node Rewards:
     - How-To: node_rewards/index.md

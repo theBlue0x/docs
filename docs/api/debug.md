@@ -1,7 +1,7 @@
 Debug Operations
 -------------------
 
-All debug utilities require an _adminPassword_ request parameter. See [Admin Password](overview.md#admin-password "The Blue0x API") for more info.
+All debug utilities require an _adminPassword_ request parameter. See [Admin Password](index.md#admin-password "The Blue0x API") for more info.
 
 ### Clear Unconfirmed Transactions
 

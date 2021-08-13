@@ -12,7 +12,7 @@ Deletes an account property. POST only.
 *   _recipient_ is the account where a property should be removed (optional)
 *   _setter_ is the account who did set the property (optional)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Delete Account Property](API_Examples.md#delete-account-property "The Blue0x API Examples") example.
 
@@ -451,14 +451,14 @@ Get accounts having a name or description that match a given query in reverse re
 
 Send Blue0x to another account. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _sendMoney_
 *   _amountNQT_ is the amount (in NQT) in the transaction
 *   _recipient_ is the account ID of the recipient
 *   _recipientPublicKey_ is the public key of the receiving account (optional, enhances security of a new account)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Send Money](API_Examples.md#send-money "The Blue0x API Examples") example.
 
@@ -470,7 +470,7 @@ Refer to [Send Money](account.md#send-money "The Blue0x API").
 
 Set account information. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _setAccountInfo_
 *   _name_ is a name to associate with the account (optional)
@@ -478,7 +478,7 @@ Set account information. POST only.
 *   _messagePatternRegex_ is a regular expression pattern following the java.util.regex.Pattern specification; incoming transactions are only accepted if they contain a plain text message which matches this pattern (disabled indefinitely due to a security issue)
 *   _messagePatternFlags_ is a bitmask of java.util.regex.Pattern flags, such as 2 (Pattern.CASE\-iNSENSITIVE)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Set Account Info](API_Examples.md#set-account-info "The Blue0x API Examples") example.
 
@@ -486,14 +486,14 @@ Set account information. POST only.
 
 Set account property. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _setAccountProperty_
 *   _recipient_ is the account ID of the recipient.
 *   _property_ is the property name.
 *   _value_ is the property value.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Set Account Property](API_Examples.md#set-account-property "The Blue0x API Examples") example.
 
@@ -602,7 +602,7 @@ Retrieve phasing control with their respective restrictions for a specific accou
 
 Sets (or removes) phasing control for a specific account. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _setPhasingOnlyControl_
 *   _controlVotingModel_ is the voting model or -1 to remove phasing control
@@ -616,6 +616,6 @@ Sets (or removes) phasing control for a specific account. POST only.
 *   _controlMinDuration_ is the minimum duration in block height (optional)
 *   _controlMaxDuration_ is the maximum phasing duration in block height (optional)
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Set Phasing Only Control](API_Examples.md#set-phasing-only-control "The Blue0x API Examples") example.

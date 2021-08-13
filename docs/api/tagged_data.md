@@ -41,7 +41,7 @@ Extend the expiration time of already uploaded tagged data. POST only.
 
 **Note:** Anyone can submit an extension, not only the original uploader. Each extend transaction increases the expiration deadline by two weeks (24 hours on Testnet). Extending an existing tagged data from another account does not change the original submitter account ID by which it is indexed and searchable.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Extend Tagged Data](API_Examples.md#extend-tagged-data "The Blue0x API Examples") example.
 
@@ -272,7 +272,7 @@ Upload and broadcast new tagged data. POST only.
 
 **Note:** The maximum length of _data_ plus all associated metadata is 42 kilobytes. The maximum length of _description_ is 1000 bytes. The maximum length of the other metadata (_name_, _tags_, _type_, _channel_ and _filename_) is 100 bytes each.
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Upload Tagged Data](API_Examples.md#upload-tagged-data "The Blue0x API Examples") example.
 

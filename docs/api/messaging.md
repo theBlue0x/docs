@@ -188,7 +188,7 @@ Get a message given a transaction ID.
 
 Create an Arbitrary Message transaction. POST only.
 
-**Request:** Refer to [Create Transaction Request](index.md#create-transaction-request "The Blue0x API") for common parameters.
+**Request:** Refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API") for common parameters.
 
 *   _requestType_ is _sendMessage_
 *   _recipient_ is the account ID of the recipient (optional)
@@ -212,7 +212,7 @@ Create an Arbitrary Message transaction. POST only.
 
 **Note:** The _encryptedMessageData-encryptedMessageNonce_ pair or the _encryptToSelfMessageData-encryptToSelfMessageNonce_ pair can be the output of [Encrypt To](#encrypt-to "The Blue0x API")
 
-**Response:** Refer to [Create Transaction Response](index.md#create-transaction-response "The Blue0x API").
+**Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
 **Example:** Refer to [Send Message](API_Examples.md#send-message "The Blue0x API Examples") example.
 
