@@ -24,7 +24,7 @@ Decrypt an AES-encrypted message.
 
 ### Download Prunable Message
 
-Downloadins a prunable message attachments directly as binary data. An optional secretPhrase parameter is supported, to allow decryption and downloading of the encrypted part of the message instead of the plain text part.
+Download prunable message attachments directly as binary data. An optional _secretPhrase_ parameter is supported, to allow decryption and downloading of the encrypted part of the message instead of the plain text part.
 
 **Request:**
 
