@@ -24,7 +24,9 @@ nav:
 
   - Setup:
     - Setup a Desktop Node: setup/local.md
-    - Setup a VPS Node: setup/vps.md
+    - Setup a Public VPS Node: setup/vps.md
+    - Configuring HTTPs: setup/https.md
+    - Hallmark Your Node: setup/hallmark.md
 
   - API:
     - OVERVIEW: api/index.md
