@@ -1,4 +1,4 @@
-## **Blue0x is crypto. Reimagined.** ##
+## **Blue0x is Crypto. Reimagined.** ##
 
 The Blue0x Network bridges the gap between real goods and services and a decentralized global financial system.  
 
