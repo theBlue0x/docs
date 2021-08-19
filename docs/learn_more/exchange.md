@@ -4,7 +4,7 @@ All Blue0x Currencies are exchangeable for BLX, and vice-versa, via the Blue0x E
 
 **Exchange Rate:**
 
-The exchange rate of each Blue0x Currency is in relation to BLX.  This rate ultimately determines the 'cost' of each transaction on the Blue0x Network.  At this time, exchanges between two different Blue0x Currencies have to go through BLX.  (i.e USDX -> BLX -> EURX)  Direct exchange eoperations between Blue0x Currencies, without the need to buy/sell BLX, will be developed in the future.
+The exchange rate of each Blue0x Currency is in relation to BLX.  This rate ultimately determines the 'cost' of each transaction on the Blue0x Network.  At this time, exchanges between two different Blue0x Currencies have to go through BLX.  (i.e USDX -> BLX -> EURX)  Direct exchange between Blue0x Currencies, without the need to buy/sell BLX, will be developed in the future.
 
 **Forex Trading:**
 
