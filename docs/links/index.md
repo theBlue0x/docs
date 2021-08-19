@@ -10,4 +10,4 @@
 
 * [Blue0x | DEV](https://github.com/theBlue0x/BLXDevKit) - Javascript Dev Framework
 
-* [Blue0x | DISCORD](https://discord.gg/8db6CRqM4H) - Chat with us in Discord
+* [Blue0x | DISCORD](https://discord.gg/8db6CRqM4H) - Chat with us on Discord
