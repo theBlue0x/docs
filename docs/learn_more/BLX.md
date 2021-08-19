@@ -16,7 +16,7 @@ The 'price' of each BLX is determined by Blue0x users from within the Blue0x Exc
 
 There are 1 billion BLX in total, all of which are in circulation.  These BLX were created in the Genesis Block, or 1st block, of the Blue0x Network.  Additional units of BLX cannot be created.
 
-_*It is recommended to have atleast 2 BLX in your Blue0x wallet at all times to ensure that you are able to cover the fees of future transactions._
+_*It is recommended to have at least 2 BLX in your Blue0x wallet at all times to ensure that you are able to cover the fees of future transactions._
 
 
 
