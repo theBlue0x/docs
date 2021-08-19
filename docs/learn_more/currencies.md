@@ -4,7 +4,7 @@ _Published August 19th, 2021_
 
 Blue0x Currencies are a medium of exchange for real-world goods and services. In short, they are money accepted as a method of payment in their respective regions.  Each currency is issued with a total supply and no additional units can be created beyond that total supply.  
 
-Blue0x Currencies are exchangeable with each other, which facilitates an international payment system.
+All Blue0x Currencies are exchangeable with one another, which facilitates an international payment system.
 
 _Blue0x Currency transactions require a 1 BLX fee to be executed._
 
