@@ -7633,7 +7633,7 @@ https://localhost:2022/nxt?
   {
    "minRangeValue": 0,
    "votingModel": 3,
-   "description": "Should we start fully backing Credits with something tangible?",
+   "description": "Should we start fully backing credits with something tangible?",
    "finished": false,
    "poll": "10307833923604182368",
    "minNumberOfOptions": 1,

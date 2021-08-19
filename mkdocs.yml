@@ -13,13 +13,18 @@ nav:
     - Setup: setup/index.md
     - API: api/index.md
     - Node Rewards: node_rewards/index.md
-    - Resources: resources/index.md
+    - Quick Links: links/index.md
 
   - Learn More:
     - What is Blue0x?: learn_more/index.md
+    - What is BLX?: learn_more/BLX.md
+    - Blue0x Currencies: learn_more/currencies.md
+    - Blue0x Marketplace: learn_more/marketplace.md
+    - Blue0x Exchange: learn_more/exchange.md
 
   - Setup:
-    - Setup: setup/index.md
+    - Setup a Desktop Node: setup/local.md
+    - Setup a VPS Node: setup/vps.md
 
   - API:
     - OVERVIEW: api/index.md
@@ -47,7 +52,10 @@ nav:
     - API Examples: api/API_Examples.md
 
   - Node Rewards:
-    - How-To: node_rewards/index.md
+    - Node Rewards: node_rewards/index.md
+
+  - Quick Links:
+    - Blue0x Network: links/index.md
 
 theme:
     name: material
