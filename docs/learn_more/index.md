@@ -11,7 +11,7 @@ The Blue0x Network bridges the gap between real goods and services and a decentr
 
 * Blue0x [EXCHANGE](exchange.md) | exchange your native Blue0x currency with other Blue0x currencies around the world (i.e. USDX <-> EURX)
 
-This facilitates a REAL USE CASE for cryptocurrency, not simply speculation of price in relation to fiat currency.  Blue0x does not plan on having any fiat currency on/off ramps and is not intended to be traded on crypto exchanges.ₐ   Blue0x strives to have a fully self-contained ecosystem, independent of fiat or other cryptocurrencies, that can then evolve into a well-trusted replacement of current financial systems.
+This facilitates a REAL USE CASE for cryptocurrency, not simply speculation of price in relation to fiat currency.  Blue0x does not plan on having any fiat currency on/off ramps and is not intended to be traded on crypto exchanges.ₐ   Blue0x strives to have a self-contained ecosystem, fully independent of fiat or other cryptocurrencies, that can then evolve into a well-trusted platform to replace the current financial system.
 
 *ₐWith the nature of a decentralized network, the Blue0x Dev team cannot maintain any amount of control over BLX or Blue0x currencies.  However, we hope to foster a mindset and a culture within the user community that will enable this vision to become a reality* 
 
