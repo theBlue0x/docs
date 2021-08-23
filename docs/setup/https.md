@@ -1,7 +1,7 @@
 ## **Configuring HTTPS on a Standalone Blue0x Installation** ##
 
-This tutorial uses [Certbot](https://certbot.eff.org/) to issue certificates.
-Follow the official documentation to [install Certbot](https://certbot.eff.org/instructions) before beginning this tutorial.
+_**Note:**This tutorial uses [Certbot](https://certbot.eff.org/) to issue certificates.
+Follow the official documentation to [install Certbot](https://certbot.eff.org/instructions) before beginning this tutorial._
 
 **1. Add the following lines to your _nxt.properties_ file.**
 
