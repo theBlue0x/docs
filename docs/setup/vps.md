@@ -37,7 +37,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 
 **4. Connect to your new Droplet.**
 
->If you are on *Windows*, download [Putty.](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html )  Once installed, fill in the IP Address of your VPS into the 'Host Name' field. Confirm that the 'Port' is set to '22' and that the 'Connection type' is 'SSH'.  In the 'Connection' subheading, under 'SSH' ensure '2' is selected under 'SSH protocol version'. Under 'Data' subheading, enter 'root' as 'Auto-login username'.  You may then connect by clicking 'Open'.  Once started, you will then need to enter the password you specified in the last step.
+>If you are on *Windows*, download [Putty.](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html )  Once installed, fill in the IP Address of your VPS into the 'Host Name' field. Confirm that the 'Port' is set to '22' and that the 'Connection type' is 'SSH'.  In the 'Connection' subheading, under 'SSH' ensure '2' is selected under 'SSH protocol version'. Under 'Data' subheading, enter 'root' as 'Auto-login username'.  You may then connect by clicking 'Open'.  Once started, you will then need to enter the password you specified in the last step.
 
 >If you are on a *Mac*, you can use Terminal, which is built into MacOS.
 
@@ -82,7 +82,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 
 **8. Ensure Your Node is Available.**
 
->In your browser, open 'http://IP_ADDRESS_OF_VPS:2022/index.html'
+>In your browser, open 'IP_ADDRESS_OF_VPS:2022/index.html'
 
 >You should see the Blue0x Login Screen.
 

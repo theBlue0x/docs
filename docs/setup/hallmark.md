@@ -6,7 +6,7 @@ To qualify for [Node Rewards](../node_rewards/index.md), you will need to hallma
 
 **To Create a Hallmark:**
 
-**1. Navigate to http://localhost:2022/test or https://IP_ADDRESS OR DOMAIN/test.**
+**1. In a browser, navigate to localhost:2022/test or https://IP_ADDRESS OR DOMAIN/test.**
 
 >Under ALL, navigate to the markHost tab. You will need to complete fields:
 
