@@ -1,5 +1,5 @@
-site_name: Learn about the Blue0x Network
-site_description: Learn about the Blue0x Network
+site_name: Learn About the Blue0x Network
+site_description: Learn About the Blue0x Network
 site_author: Blue0x Devs
 repo_name: github.com/theBlue0x
 repo_url: https://github.com/theBlue0x/
@@ -25,8 +25,9 @@ nav:
   - Setup:
     - Setup Desktop Wallet: setup/local.md
     - Setup a Public VPS Node: setup/vps.md
-    - Configuring HTTPs: setup/https.md
+    - Configuring HTTPS: setup/https.md
     - Hallmark Your Node: setup/hallmark.md
+    - Renewal Script: setup/renewal_script.md
 
   - API:
     - OVERVIEW: api/index.md

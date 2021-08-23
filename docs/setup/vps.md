@@ -1,4 +1,4 @@
-## **Set up a public Blue0x node on a VPS or dedicated server** ##
+## **Setup a Public Blue0x Node on a VPS or Dedicated Server** ##
 
 _**NOTE:** This is an advanced operation, and is not a suitable activity for people who are uncomfortable with Linux, networking concepts, or command-line interfaces. Following these steps implies that you are willing to pay a monthly fee to a service provider who will host your Blue0x node. If you do not know what an IP address is or do not know how to use a command-line text editor, this is probably not for you. Read all of these instructions and make sure you understand them before you decide to proceed. You can still contribute to the network by running Blue0x on your local computer._
 
@@ -46,6 +46,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 >_NOTE: The following steps will set up your Blue0x node to run as 'root'. This is risky, since it can give full access to your VPS if it is compromised. It is advised to set up a separate user account to run your BLX node. Setting up a user account is outside the scope of this tutorial and should be researched further to run as a user other than 'root'._
 
 **5. After logged in to your VPS, install Java.**
+
 >Run the following commands in your terminal
 
 >$ sudo apt-get update
@@ -59,7 +60,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 
 >$ cd Blue0x
 
->$ nano nxt/conf/nxt.properties
+>$ nano conf/nxt.properties
 
 >add the following entries, where X.X.X.X is the IP address of your VPS
 
@@ -85,7 +86,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 
 >You should see the Blue0x Login Screen.
 
->Congratulations, you are now running a public Blue0x Node!
+Congratulations, you are now running a public Blue0x Node!
 
 You should now [secure your node over HTTPS](https.md).
 

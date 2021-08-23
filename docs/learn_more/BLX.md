@@ -8,11 +8,11 @@ The Blue0x token, referred to as BLX, is used to quantify value within the Blue0
 **Note:** Most transactions on the Blue0x Network have a fee of 1 BLX. (2 BLX to list an item on the Marketplace)
 For a full schedule of fees, refer to [Create Transaction](../api/create_transaction.md)
 
-**Price**
+**Price:**
 
 The price of BLX is determined within the Blue0x Exchange.  This price, in return, sets the cost of each transaction on the Blue0x Network.  For example, if the last trade on the USDX exchange was 0.01 USDX per 1 BLX, then a transaction requiring 1 BLX would cost 0.01 USDX.  This would also imply that 1 USDX is exchangeable for 100 BLX. 
 
-**Total Supply**
+**Total Supply:**
 
 There are 1 billion BLX in total, all of which are in circulation.  These BLX were created in the Genesis Block, or 1st block, of the Blue0x Network.  Additional units of BLX cannot be created.
 

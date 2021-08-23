@@ -22,7 +22,7 @@ Decode a node hallmark.
 
 **Example:** Refer to [Decode Hallmark](API_Examples.md#decode-hallmark "The Blue0x API Examples") example.
 
-### Mark Host
+### Generate Hallmark
 
 Generates a node hallmark. POST only.
 
@@ -34,17 +34,11 @@ Generates a node hallmark. POST only.
 *   _weight_ is the weight to assign to the node
 *   _date_ is the current date in YYYY-MM-DD format
 
-**Note:** Refer to [Create Hallmark](https://nxtwiki.org/wiki/How-To:CreateHallmark "How-To:CreateHallmark") for details.
-
 **Response:**
 
 *   _hallmark_ (S) is the hallmark hex string
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
-**Note:** Refer to [Create Hallmark](https://nxtwiki.org/wiki/How-To:CreateHallmark "How-To:CreateHallmark") for instructions for applying the hallmark to a public node.
+**Example:** Refer to [Generate Hallmark](API_Examples.md#generate-hallmark "The Blue0x API Examples") example.
 
-**Example:** Refer to [Mark Host](API_Examples.md#mark-host "The Blue0x API Examples") example.
 
-#### Generate Hallmark
-
-Refer to [Mark Host](#mark-host "The Blue0x API").

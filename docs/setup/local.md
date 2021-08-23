@@ -1,3 +1,3 @@
-## **Run Blue0x On Your Desktop** ##
+## **Setup Your Blue0x Wallet** ##
 
 /// TODO

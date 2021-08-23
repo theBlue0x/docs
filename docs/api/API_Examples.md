@@ -1,8 +1,6 @@
 Blue0x API Examples
 ===================
 
-
-
 Account Operations
 --------------------
 
@@ -3624,7 +3622,7 @@ https://localhost:2022/nxt?
 }
 ```
 
-### Mark Host
+### Generate Hallmark
 
 **Request:**
 ```
@@ -5481,7 +5479,7 @@ https://localhost:2022/nxt?
      "083eba49bb481c38752a14493f0d40b3c60635935f13dd1fb33f6831fb997079"
     ],
     "phasingMinBalance": "0",
-    "message": "I givef Nxt",
+    "message": "Hello",
     "phasingMinBalanceModel": 0,
     "version.OrdinaryPayment": 0,
     "phasingVotingModel": 4
