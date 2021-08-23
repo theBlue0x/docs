@@ -51,3 +51,11 @@ Follow the official documentation to [install Certbot](https://certbot.eff.org/i
 
 >$ ./run.sh --daemon --authbind
 
+**6. Test Your Installation.**
+
+>In your favorite browser, navigate to the domain name of your node and you should see the 'lock' icon next to the address field.  You should not have to specify port number as it is now served over SSL port 443.
+
+Congratulations, your Blue0x node is now secured over HTTPS!
+
+
+
