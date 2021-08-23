@@ -48,6 +48,6 @@ To qualify for [Node Rewards](../node_rewards/index.md), you will need to hallma
 
 **3. Restart Blue0x to activate the Hallmark.**
 
-Congratulations, your Blue0x node is now Hallmarked!
+Congratulations, your Blue0x node is now hallmarked!
 
 If you wish, you may now enter your node in the Blue0x [Node Rewards](../node_rewards/index.md) program.
