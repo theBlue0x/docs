@@ -1,6 +1,6 @@
 ## **Blue0x is Crypto. Reimagined.** ##
 
-The Blue0x Network bridges the gap between tangible goods and services and a sustainable, decentralized, global financial system. The Blue0x Netwok uses a pure [proof-of-stake](https://en.wikipedia.org/wiki/Proof_of_stake) consensus protocol which has proven to be secure, reliable, and energy-efficient. 
+The Blue0x Network bridges the gap between tangible goods and services and a sustainable, decentralized, global financial system. The Blue0x Network uses a pure [proof-of-stake](https://en.wikipedia.org/wiki/Proof_of_stake) consensus protocol which has proven to be secure, reliable, and energy-efficient. 
 
 
 **Within the Blue0x Network :**
