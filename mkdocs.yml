@@ -23,7 +23,7 @@ nav:
     - Blue0x Exchange: learn_more/exchange.md
 
   - Setup:
-    - Setup a Desktop Node: setup/local.md
+    - Setup Desktop Wallet: setup/local.md
     - Setup a Public VPS Node: setup/vps.md
     - Configuring HTTPs: setup/https.md
     - Hallmark Your Node: setup/hallmark.md
