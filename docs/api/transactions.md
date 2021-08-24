@@ -47,9 +47,6 @@ Returns the non-phased unconfirmed transactions expected to be included in the n
 *   _requestType_ is _getExpectedTransactions_
 *   _account_ is one account ID (optional)
 *   _account_ is one account ID (optional)
-
-⋮
-
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 

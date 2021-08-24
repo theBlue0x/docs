@@ -10,7 +10,7 @@ Deletes an account property. POST only.
 *   _requestType_ is _deleteAccountProperty_
 *   _property_ is the name of the property
 *   _recipient_ is the account where a property should be removed (optional)
-*   _setter_ is the account who did set the property (optional)
+*   _setter_ is the account who set the property (optional)
 
 **Response:** Refer to [Create Transaction Response](create_transaction.md#create-transaction-response "The Blue0x API").
 
@@ -406,9 +406,6 @@ Get a list of unconfirmed transactions associated with an account.
 *   _requestType_ is _getUnconfirmedTransactions_
 *   _account_ is one account ID (optional)
 *   _account_ is one account ID (optional)
-
-⋮
-
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 *   _firstIndex_ is a zero-based index to the first unconfirmed transaction to retrieve (optional)

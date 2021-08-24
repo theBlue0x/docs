@@ -235,9 +235,6 @@ Get phasing poll details given multiple phased transaction IDs.
 *   _requestType_ is _getPhasingPolls_
 *   _transaction_ is one of the multiple phased transaction IDs
 *   _transaction_ is one of the multiple phased transaction IDs
-
-⋮
-
 *   _countVotes_ is _true_ to compute the poll _result_ while the votes are still available (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)

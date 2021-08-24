@@ -67,11 +67,11 @@ Expired prunable data remains stored in the blockchain until removed at the same
 
 Prunable data can be preserved on a node beyond the predetermined minimum lifetime by setting the _nxt.maxPrunableLifetime_ property to a larger value than two weeks or to _-1_ to preserve it indefinitely. To force the node to include such preserved prunable data when transactions and blocks are transmitted to peer nodes, set the _nxt.includeExpiredPrunables_ property to _true_, thus making it an archival node.
 
-Currently, there are two varieties of prunable data in the Blue0x system: prunable [Arbitrary Messages](messaging.md "The Blue0x API") and [Tagged Data](tagged_data.md "The Blue0x API"). Both varities have a maximum prunable data length of 42 kilobytes.
+Currently, there are two varieties of prunable data in the Blue0x system: prunable [Arbitrary Messages](messaging.md "The Blue0x API") and [Tagged Data](tagged_data.md "The Blue0x API"). Both varieties have a maximum prunable data length of 42 kilobytes.
 
 ### Properties Files
 
-The behavior of some API calls is affected by property settings loaded from files in the _blx/conf_ directory during Blue0x server intialization. This directory contains the _nxt-default.properties_ and _logging-default.properties_ files, both of which contain default property settings along with documentation. 
+The behavior of some API calls is affected by property settings loaded from files in the _conf_ directory during Blue0x server intialization. This directory contains the _nxt-default.properties_ and _logging-default.properties_ files, both of which contain default property settings along with documentation. 
 
 It is recommended not to modify default properties files because they can be overwritten during software updates. Instead, properties in the default files can be overridden by including them in optional _nxt.properties_ and _logging.properties_ files in the same directory. For example, a _nxt.properties_ file can be created with the contents:
 

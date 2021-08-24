@@ -18,8 +18,8 @@ The following HTTP POST parameters are common to all API calls that create trans
     *   2 BLX for the first 32 bytes of an encrypted non-prunable [message](messaging.md#send-message "The Blue0x API"), 1 BLX for each additional 32 bytes. The length is measured excluding the nonce and the 16 byte AES initialization vector.
     *   1 BLX for the first 1024 bytes of a prunable [message](messaging.md#send-message "The Blue0x API"), 0.1 BLX for each additional 1024 prunable bytes
     *   1 BLX for [Set Account Info](account.md#set-account-info "The Blue0x API"), including 32 chars, with 2 BLX additional fee for each 32 chars
-    *   2 BLX for [DGS Listing](marketplace.md#dgs-listing "The Blue0x API"), including 32 chars of name plus description. With 2 BLX additional fee for each 32 chars.
-    *   1 BLX for [DGS Delivery](marketplace.md#dgs-delivery "The Blue0x API"), including 32 bytes of encrypted goods data (AES initialization bytes and nonce excluded). With 2 BLX additional fee for each 32 bytes.
+    *   2 BLX for [Marketplace Listing](marketplace.md#dgs-listing "The Blue0x API"), including 32 chars of name plus description. With 2 BLX additional fee for each 32 chars.
+    *   1 BLX for [Marketplace Delivery](marketplace.md#dgs-delivery "The Blue0x API"), including 32 bytes of encrypted goods data (AES initialization bytes and nonce excluded). With 2 BLX additional fee for each 32 bytes.
     *   2 BLX for transactions that make use of _referencedTransactionFullHash_ property when creating a new transaction.
     *   1 BLX otherwise, where 1 BLX = 100000000 NQT
 *   _deadline_ is the deadline (in minutes) for the transaction to be confirmed, 32767 minutes maximum
