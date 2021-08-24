@@ -357,9 +357,6 @@ Get currencies given multiple currency IDs.
 *   _requestType_ is _getCurrencies_
 *   _currencies_ is one of multiple currency IDs
 *   _currencies_ is one of multiple currency IDs
-
-⋮
-
 *   _includeCounts_ is _true_ to include _numberOf..._ fields (optional)
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
@@ -677,9 +674,6 @@ Get the last exchange of each of multiple currencies.
 *   _requestType_ is _getLastExchanges_
 *   _currencies_ is one of multiple currency IDs
 *   _currencies_ is one of multiple currency IDs
-
-⋮
-
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
