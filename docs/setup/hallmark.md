@@ -1,14 +1,14 @@
 ### **Creating a Hallmark for Your Node** ###
 
-A hallmark is a "stamp of approval" for a Blue0x node and is intended for users running a [dedicated node on a VPS or dedicated server](vps.md).  By creating a digital signature based on your IP address and secret passphrase (private key), you are verifying that your account "owns" a node and is accountable for it.  This helps protect the network from attack, and increases the network's trust in your node.   Hallmarking has no impact on forging operations.  
+A hallmark is a "stamp of approval" for a Blue0x node and is intended for users running a [dedicated node on a VPS or dedicated server](vps.md).  By creating a digital signature based on your IP address, or domain name, and secret passphrase (private key), you are verifying that your account "owns" a node and is accountable for it.  This helps protect the network from attack, and increases the network's trust in your node.   Hallmarking has no impact on forging operations.  
 
 To qualify for [Node Rewards](../node_rewards/index.md), you will need to hallmark your node.
 
 **To Create a Hallmark:**
 
-**1. In a browser, navigate to localhost:2022/test or IP_ADDRESS OR DOMAIN/test.**
+**1. In a browser, navigate to 'localhost:2022/test' or 'IP_ADDRESS_OR_DOMAIN/test'.**
 
->Under ALL, navigate to the markHost tab. You will need to complete fields:
+>Under ALL, navigate to the markHost tab. You will need to complete the following fields:
 
 >**Public IP:** The IP Address of your Blue0x node, or, if you are advertising a DNS name in your properties file for the setting of: nxt.myAddress= then use this DNS name here as well instead of the IP address. If using non-default port, the hallmark must also include that port, otherwise the hallmark is ignored.
 
