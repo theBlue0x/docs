@@ -29,10 +29,3 @@ _Blue0x Currency transactions require a 1 BLX fee to be executed._
 * To Be Determined
 
 
-
-
-
-.
-
-
-

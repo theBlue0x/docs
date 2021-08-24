@@ -78,7 +78,6 @@ theme:
     features:
     - navigation.tabs
     - navigation.instant
-    - header.autohide
     icon:
       repo: fontawesome/brands/github
 

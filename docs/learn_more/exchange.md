@@ -9,9 +9,3 @@ The exchange rate of each Blue0x Currency is in relation to BLX.  This rate ulti
 **Forex Trading:**
 
 As the Blue0x Network matures, arbitration opportunities between Blue0x Currencies will become available.  This will ultimately create a FOREX-type trading environment within the Blue0x Network. 
-
-
-
-
-
-.

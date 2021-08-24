@@ -16,11 +16,3 @@ This facilitates a REAL USE CASE for cryptocurrency, not simply speculation of p
 
 *ₐWith the nature of a decentralized network, the Blue0x Dev team cannot maintain any amount of control over BLX or Blue0x currencies.  However, we hope to foster a mindset and a culture within the user community that will enable this vision to become a reality.* 
 
-
-
-
-
-
-
-.
-
