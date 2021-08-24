@@ -6,9 +6,11 @@ To qualify for [Node Rewards](../node_rewards/index.md), you will need to hallma
 
 **To Create a Hallmark:**
 
-**1. In a browser, navigate to 'localhost:2022/test' or 'IP_ADDRESS_OR_DOMAIN/test'.**
+**1. In a browser, navigate to the test API page of your Blue0x installation.**
 
->Under ALL, navigate to the markHost tab. You will need to complete the following fields:
+>"localhost:2022/test" or "IP_ADDRESS_OR_DOMAIN/test"
+
+>Under ALL, navigate to the "markHost" tab. You will need to complete the following fields:
 
 >**Public IP:** The IP Address of your Blue0x node, or, if you are advertising a DNS name in your properties file for the setting of: nxt.myAddress= then use this DNS name here as well instead of the IP address. If using non-default port, the hallmark must also include that port, otherwise the hallmark is ignored.
 
@@ -24,13 +26,9 @@ To qualify for [Node Rewards](../node_rewards/index.md), you will need to hallma
 
 >The server will generate a hallmark value for you, in the form of a long string of text.  The response from the server will look something like this:
 
->{
-
  >"hallmark": "57fb6f3a958e320bb49c4e81b4c2cf28b9f25d086c143b473beec228f79ff93c...",
 
  >"requestProcessingTime": 2
-
->}
 
 **2. Edit the _nxt.properties_ file for your node:**
 

@@ -59,7 +59,7 @@ Follow the official documentation to [install Certbot](https://certbot.eff.org/i
 
 Congratulations, your Blue0x node is now secured over HTTPS!
 
-If you have not already, you may be interested in joining the [Node Rewards](../node_reward/index.md) program.
+If you have not already, you may be interested in joining the [Node Rewards](../node_rewards/index.md) program.
 
 
 

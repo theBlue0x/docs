@@ -3,7 +3,7 @@
 
 #######################################################################
 ## This script takes the pem files from a Let's Encrypt / Certbot
-## directory and bundles them together for use by the current NRS
+## directory and bundles them together for use by the current Blue0x
 ## installation, reading the corresponding properties from the
 ## nxt.properties file.
 ##
