@@ -68,6 +68,8 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 
 >nxt.allowedBotHosts=*
 
+>nxt.apiServerHost=0.0.0.0
+
 >press CTRL+X and then Y to save the file.
 
 **7. Compile and Run Blue0x.**

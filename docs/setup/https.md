@@ -7,6 +7,8 @@ Follow the official documentation to [install Certbot](https://certbot.eff.org/i
 
 >nxt.apiSSL=true
 
+>nxt.apiServerSSLPort=443
+
 >nxt.keyStorePath=keystore
 
 >nxt.keyStorePassword='PutYourLongPasswordHere'

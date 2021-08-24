@@ -11,7 +11,7 @@ Each API call is documented below, with definitions given for HTTP request param
 *   The JSON response fields are each followed by one of _s_ for string, _a_ for array, _o_ for object, _N_ for number or _b_ for boolean.
 *   In the examples, the Blue0x node is represented as _localhost_ and requests and responses are formatted for easy reading; line breaks and spaces are not actually used except in some parameter values. All requests are in URL format which implies the HTTP GET method. When GET is allowed, the URL can be entered into a browser URL field but proper URL encoding is usually required (e.g., spaces in a parameter value must be replaced by _+_ or _%20_). Otherwise, the URL should be used as a guide to preparing an HTTP POST request using cURL, for example.
 
-All API calls can be viewed and tested at [https://localhost:2022/test](https://localhost:2022/test) while a local BLX node is running. For specific API calls, use [https://localhost:2022/test?requestType=](https://localhost:2022/test?requestType=)_specificRequestType_.
+All API calls can be viewed and tested at http://localhost:2022/test while a local BLX node is running. For specific API calls, use http://localhost:2022/test?requestType=_specificRequestType_.
 
 This document is adapted for Blue0x from the [NXT API Documentation](https://nxtdocs.jelurida.com/API "Nxt API").
 
@@ -20,7 +20,7 @@ General Notes
 
 ### Genesis Block
 
-Many API requests make reference to the genesis block. FYI, the genesis block's ID is [4777664216118977193](https://localhost:2022/nxt?=%2Fnxt&requestType=getBlock&height=0). Sending messages, selling aliases, and leasing balances to the Genesis account are not allowed.
+Many API requests make reference to the genesis block. FYI, the genesis block's ID is 4777664216118977193. Sending messages, selling aliases, and leasing balances to the Genesis account are not allowed.
 
 ### Flexible Account IDs
 

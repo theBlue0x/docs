@@ -8,7 +8,7 @@ Account Operations
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=deleteAccountProperty&
   recipient=BLX-7A48-47JL-T7LD-D5FS3&
   property=testkey1&
@@ -59,7 +59,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccount&
   account=BLX-4VNQ-RWZC-4WWQ-GVM8S
 ```
@@ -110,7 +110,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountBlockCount&
   account=7114946486381367146
 ```
@@ -126,7 +126,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountBlockIds&
   account=7114946486381367146&
   lastIndex=5
@@ -150,7 +150,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountBlocks&
   account=7114946486381367146&
   lastIndex=0
@@ -191,7 +191,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountId&
   secretPhrase=IWontTellYou
 ```
@@ -209,7 +209,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountLedger&
   account=BLX-7A48-47JL-T7LD-D5FS3
 ```
@@ -241,7 +241,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountLedgerEntry&
   ledgerId=532246
 ```
@@ -269,7 +269,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountLessors&
   account=7114946486381367146&
   height=282497
@@ -295,7 +295,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountProperties&
   recipient=BLX-7A48-47JL-T7LD-D5FS3
 ```
@@ -320,7 +320,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountPublicKey&
   account=BLX-L6FM-89WK-VK8P-FCRBB
 ```
@@ -336,7 +336,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountTransactionIds&
   account=BLX-L6FM-89WK-VK8P-FCRBB
 ```
@@ -355,7 +355,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBalance&
   account=7114946486381367146
 ```
@@ -375,7 +375,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBlockchainTransactions&
   account=BLX-4VDY-LNVT-LMAY-FMCKA&
   lastIndex=0
@@ -422,7 +422,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getGuaranteedBalance&
   account=7114946486381367146&
   numberOfConfirmations=1440
@@ -439,7 +439,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getUnconfirmedTransactionIds&
   account=BLX-L6FM-89WK-VK8P-FCRBB
 ```
@@ -455,7 +455,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getUnconfirmedTransactions&
   account=BLX-L6FM-89WK-VK8P-FCRBB
 ```
@@ -471,7 +471,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=searchAccounts&
   query=testnet AND tyler
 ```
@@ -494,7 +494,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=sendMoney&
   secretPhrase=IWontTellYou&
   recipient=BLX-4VNQ-RWZC-4WWQ-GVM8S&
@@ -540,7 +540,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=setAccountInfo&
   secretPhrase=IWontTellYou&
   name=iwonttellyou
@@ -589,7 +589,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
 requestType=setAccountProperty&
 secretPhrase=iwonttellyou&
 property=country&
@@ -642,7 +642,7 @@ deadline=60
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=startFundingMonitor&
  property=funding&
  amount=1000000000&
@@ -662,7 +662,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=stopFundingMonitor&
  property=funding&
  secretPhrase=IWontTellYou
@@ -682,7 +682,7 @@ Account Control Operations
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllPhasingOnlyControls&
   firstIndex=0&
   lastIndex=1
@@ -746,7 +746,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPhasingOnlyControl&
   account=BLX-AVGK-SKJZ-583G-A689A
 ```
@@ -784,7 +784,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=setPhasingOnlyControl&
  controlVotingModel=0&
  controlQuorum=1&
@@ -849,7 +849,7 @@ Alias Operations
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=sellAlias&
   secretPhrase=IWontTellYou&
   aliasName=nextus&
@@ -901,7 +901,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=setAlias&
   secretPhrase=IWontTellYou&
   aliasName=iwonttellyou&
@@ -950,7 +950,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=deleteAlias&
   aliasName=mystical
 ```
@@ -993,7 +993,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAlias&
   alias=15515279700680480368
 ```
@@ -1014,7 +1014,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAliasCount&
   account=BLX-FLVS-VRBV-LDPD-6DZ9W
 ```
@@ -1030,7 +1030,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAliases&
   account=5629477397208681336&
   lastIndex=1
@@ -1056,7 +1056,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAliasesLike&
   aliasPrefix=mysteri
 ```
@@ -1092,7 +1092,7 @@ Arbitrary Message System Operations
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=decryptFrom&
   secretPhrase=IWontTellYou&
   account=BLX-L6FM-89WK-VK8P-FCRBB&
@@ -1111,7 +1111,7 @@ https://localhost:2022/nxt?
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=downloadPrunableMessage&
   transaction=264609232955144528&
   retrieve=true
@@ -1124,7 +1124,7 @@ The file in binary format.
 
 **Request:**
 ```
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=encryptTo&
   secretPhrase=IWontTellYou&
   recipient=BLX-L6FM-89WK-VK8P-FCRBB&
@@ -1145,7 +1145,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllPrunableMessages&
   lastIndex=0
 
@@ -1176,7 +1176,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPrunableMessage&
   transaction=16832262845403902696&
   secretPhrase=secretPhrase
@@ -1209,7 +1209,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPrunableMessages&
   account=BLX-4VDY-LNVT-LMAY-FMCKA&
   lastIndex=0
@@ -1245,7 +1245,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getSharedKey&
  account=BLX-5MYN-AP7M-NKMH-CRQJZ&
  secretPhrase=IWontTellYou&
@@ -1266,7 +1266,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=readMessage&
   transaction=9908575668289607167&
   secretPhrase=IWontTellYou&
@@ -1288,7 +1288,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=sendMessage&
   secretPhrase=IWontTellYou&
   recipient=BLX-4VNQ-RWZC-4WWQ-GVM8S&
@@ -1341,7 +1341,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=verifyPrunableMessage&
   message=This is a test prunable plain message.
 
@@ -1367,7 +1367,7 @@ Asset Exchange Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=cancelBidOrder&
   secretPhrase=IWontTellYou&
   order=17185236428295897167&
@@ -1417,7 +1417,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=deleteAssetShares&
   asset=5920455660623529270&
   quantityQNT=100&
@@ -1471,7 +1471,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dividendPayment&
   asset=3517042713515967694&
   height=161157&
@@ -1522,7 +1522,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountAssetCount&
   account=BLX-8N9W-TN4F-YA2S-H5B7R
 
@@ -1541,7 +1541,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountAssets&
   account=BLX-4VNQ-RWZC-4WWQ-GVM8S
 
@@ -1568,7 +1568,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountCurrentBidOrderIds&
   account=BLX-L6FM-89WK-VK8P-FCRBB&
   asset=17554243582654188572
@@ -1590,7 +1590,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountCurrentBidOrders&
   account=BLX-L6FM-89WK-VK8P-FCRBB
 
@@ -1620,7 +1620,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllAssets&
   firstIndex=13&
   lastIndex=13
@@ -1653,7 +1653,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllOpenBidOrders&
   firstIndex=123&
   lastIndex=123
@@ -1684,7 +1684,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllTrades&
   lastIndex=0
 
@@ -1723,7 +1723,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAsset&
   asset=17554243582654188572
 
@@ -1751,7 +1751,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetAccountCount&
   asset=17554243582654188572
 
@@ -1770,7 +1770,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetAccounts&
   asset=5539238107226883203
 
@@ -1797,7 +1797,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetDeletes&
   asset=5920455660623529270
 
@@ -1844,7 +1844,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetDividends&
   asset=4348103880042995903&
   timestamp=105414366
@@ -1895,7 +1895,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetIds&
   firstIndex=15&
   lastIndex=15
@@ -1917,7 +1917,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetTransfers&
   asset=17554243582654188572&
   lastIndex=0
@@ -1951,7 +1951,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssets&
   assets=17554243582654188572
 
@@ -1983,7 +1983,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetsByIssuer&
   account=BLX-DE2F-W76R-GL25-HMFPR&
   lastIndex=0
@@ -2018,7 +2018,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getExpectedAssetDeletes
 
 ```
@@ -2044,7 +2044,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAskOrder&
   order=6044046093672850641
 
@@ -2072,7 +2072,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBidOrderIds&
   asset=17554243582654188572
 
@@ -2097,7 +2097,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBidOrders&
   asset=17554243582654188572&
   firstIndex=3&
@@ -2129,7 +2129,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getExpectedOrderCancellations
 
 ```
@@ -2155,7 +2155,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getLastTrades&
   assets=17091401215301664836
 
@@ -2192,7 +2192,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getOrderTrades&
   askOrder=2769987326979385551&
   includeAssetInfo=true
@@ -2232,7 +2232,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getTrades&
   asset=17554243582654188572&
   lastIndex=0
@@ -2272,7 +2272,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=issueAsset&
   publicKey=57fb6f3a958e320bb49c4e81b4c2cf28b9f25d086c143b473beec228f79ff93c&
   name=SecretCoin&
@@ -2320,7 +2320,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=placeBidOrder&
   secretPhrase=IWontTellYou&
   asset=17554243582654188572&
@@ -2374,7 +2374,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=searchAssets&
   query=assets AND production
 
@@ -2406,7 +2406,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=transferAsset&
   secretPhrase=IWontTellYou&
   recipient=BLX-4VNQ-RWZC-4WWQ-GVM8S&
@@ -2464,7 +2464,7 @@ Block Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBlock&
   block=8455642159445842600
 
@@ -2509,7 +2509,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBlockId&
   height=12
 
@@ -2528,7 +2528,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBlocks&
   lastIndex=1
 
@@ -2595,7 +2595,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getECBlock
 
 ```
@@ -2618,7 +2618,7 @@ Digital Goods Store Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsDelisting&
   goods=11813734897437346473
   secretPhrase=IWontTellYou&
@@ -2668,7 +2668,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsDelivery&
   purchase=3723760852542296589&
   goodsToEncrypt=Download Code.&
@@ -2725,7 +2725,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsFeedback&
   purchase=10234639413366748292&
   secretPhrase=IWontTellYou&
@@ -2780,7 +2780,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsListing&
   secretPhrase=IWontTellYou&
   name=Test Product&
@@ -2838,7 +2838,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsPriceChange&
   goods=11813734897437346473&
   priceNQT=200000000&
@@ -2890,7 +2890,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsPurchase&
   goods=1587116104511359906&
   quantity=1&
@@ -2947,7 +2947,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsQuantityChange&
   goods=11813734897437346473&
   deltaQuantity=-1&
@@ -2999,7 +2999,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dgsRefund&
   purchase=3723760852542296589&
   refundNQT=100000000&
@@ -3053,7 +3053,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSExpiredPurchases&
   seller=BLX-XK4R-7VJU-6EQG-7R335
 
@@ -3087,7 +3087,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSGood&
   goods=11813734897437346473
 
@@ -3122,7 +3122,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSGoods&
   seller=BLX-L6FM-89WK-VK8P-FCRBB
 
@@ -3161,7 +3161,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSGoodsCount&
   seller=BLX-L6FM-89WK-VK8P-FCRBB
 
@@ -3180,7 +3180,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSGoodsPurchaseCount&
   goods=11813734897437346473
 
@@ -3199,7 +3199,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSGoodsPurchases&
   goods=11813734897437346473
 
@@ -3238,7 +3238,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSPendingPurchases&
   seller=BLX-L6FM-89WK-VK8P-FCRBB
 
@@ -3272,7 +3272,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSPurchase&
   purchase=10234639413366748292
 
@@ -3318,7 +3318,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSPurchaseCount&
   seller=BLX-L6FM-89WK-VK8P-FCRBB
 
@@ -3337,7 +3337,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSPurchases&
   seller=BLX-L6FM-89WK-VK8P-FCRBB&
   lastIndex=0
@@ -3372,7 +3372,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSTagCount
 
 ```
@@ -3390,7 +3390,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSTags&
   lastIndex=0
 
@@ -3415,7 +3415,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDGSTagsLike&
   tagPrefix=item
 
@@ -3440,7 +3440,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=searchDGSGoods&
   tag=te?t AND prod\*
 
@@ -3482,7 +3482,7 @@ Forging Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=startForging&
   secretPhrase=IWontTellYou
 
@@ -3502,7 +3502,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=leaseBalance&
   period=1440&
   recipient=BLX-4VNQ-RWZC-4WWQ-GVM8S&
@@ -3555,7 +3555,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getNextBlockGenerators&
   limit=3
 
@@ -3603,7 +3603,7 @@ Hallmark Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=decodeHallmark&
   hallmark=827ed8cf83bbd36419002759d960a1bec952f2209db8ed3be958...
 
@@ -3627,7 +3627,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=markHost&
   secretPhrase=IWontTellYou&
   host=iwonttellyou.com&
@@ -3652,7 +3652,7 @@ Monetary System Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=canDeleteCurrency&
   account=BLX-2HCZ-6GCJ-2XGV-EDRPH&
   currency=4923907272718555444
@@ -3672,7 +3672,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=currencyBuy&
   currency=6520756875632314476&
   rateNQT=1500000000&
@@ -3726,7 +3726,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=currencyMint&
   currency=9207767346829573996&
   nonce=-6757092571753666960&
@@ -3782,7 +3782,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=currencyReserveClaim&
   currency=15992040603642022742&
   units=36
@@ -3831,7 +3831,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=currencyReserveIncrease&
   currency=11847174313362984527
   amountPerUnitNQT=40000000
@@ -3880,7 +3880,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=deleteCurrency&
   currency=7103310507724273660&
   secretPhrase=SECRETPHRASE&
@@ -3930,7 +3930,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountCurrencies&
   account=BLX-4VDY-LNVT-LMAY-FMCKA
 
@@ -3962,7 +3962,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountCurrencyCount&
   account=BLX-4VDY-LNVT-LMAY-FMCKA
 
@@ -3981,7 +3981,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountExchangeRequests&
   account=BLX-4VDY-LNVT-LMAY-FMCKA&
   currency=6520756875632314476
@@ -4016,7 +4016,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getFundingMonitor&
  property=funding&
  secretPhrase=IWontTellYou&
@@ -4064,7 +4064,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllCurrencies&
   firstIndex=2&
   lastIndex=2
@@ -4111,7 +4111,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllExchanges&
   firstIndex=7&
   lastIndex=7
@@ -4153,7 +4153,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAvailableToBuy&
   currency=4855695375693311301&
   units=1
@@ -4175,7 +4175,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getSellOffers&
   currency=6520756875632314476
 
@@ -4206,7 +4206,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrencies&
   currencies=6520756875632314476
 
@@ -4252,7 +4252,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrenciesByIssuer&
   account=BLX-4VDY-LNVT-LMAY-FMCKA
 
@@ -4300,7 +4300,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrency&
   code=MYSTX
 
@@ -4342,7 +4342,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrencyAccountCount&
   currency=6520756875632314476
 
@@ -4361,7 +4361,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrencyAccounts&
   currency=6520756875632314476
 
@@ -4395,7 +4395,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrencyFounders&
   currency=16165836410580103964
 
@@ -4421,7 +4421,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrencyIds&
   lastIndex=2
 
@@ -4444,7 +4444,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrencyTransfers&
   currency=9387514940677621191
 
@@ -4482,7 +4482,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getExchanges&
   currency=6520756875632314476
 
@@ -4523,7 +4523,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getExchangesByExchangeRequest&
   transaction=12589829502215822061
 
@@ -4564,7 +4564,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getExchangesByOffer&
   offer=7762792906174207279
 
@@ -4605,7 +4605,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getLastExchanges&
   currencies=12366259387060174981
 
@@ -4639,7 +4639,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getMintingTarget&
   currency=9207767346829573996&
   account=BLX-4VDY-LNVT-LMAY-FMCKA&
@@ -4663,7 +4663,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getOffer&
   offer=4813417617929273983
 
@@ -4703,7 +4703,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=issueCurrency&
   name=MystcoinX&
   code=MYSTX&
@@ -4772,7 +4772,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=publishExchangeOffer&
   currency=6520756875632314476&
   buyRateNQT=10000000&
@@ -4835,7 +4835,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=searchCurrencies&
   query=MYST?
 
@@ -4881,7 +4881,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=transferCurrency&
   recipient=BLX-BMUV-8QQR-47VK-CR7F3&
   currency=9387514940677621191&
@@ -4936,7 +4936,7 @@ Networking Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=addPeer&
   peer=nxt9.webice.ru
 
@@ -4967,7 +4967,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=blacklistAPIProxyPeer&
   peer=52.0.72.67
 
@@ -4986,7 +4986,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=blacklistPeer&
   peer=nxt9.webice.ru
 
@@ -5005,7 +5005,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getInboundPeers
 
 ```
@@ -5023,7 +5023,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getMyInfo
 
 ```
@@ -5042,7 +5042,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPeer&
   peer=nxtx.ru
 
@@ -5078,7 +5078,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPeers&
   state=DISCONNECTED
 
@@ -5100,7 +5100,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=setAPIProxyPeer&
   peer=163.172.154.74
 
@@ -5144,7 +5144,7 @@ Phasing Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=approveTransaction&
   transactionFullHash=5016cc59b0665675f00513e8c647288e0a668a78c4964c84d0de8f768b89060a&
   revealedSecretText=secret&
@@ -5199,7 +5199,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=sendMoney&
   recipient=BLX-BMUV-8QQR-47VK-CR7F3&
   secretPhrase=secretPhrase&
@@ -5262,7 +5262,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountPhasedTransactionCount&
   account=15295723609781267838
 
@@ -5281,7 +5281,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountPhasedTransactions&
   account=15295723609781267838&
   lastIndex=0
@@ -5338,7 +5338,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAssetPhasedTransactions&
   asset=17091401215301664836
 
@@ -5394,7 +5394,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getCurrencyPhasedTransactions&
   currency=12366259387060174981
 
@@ -5450,7 +5450,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getLinkedPhasedTransactions&
   linkedFullHash=083eba49bb481c38752a14493f0d40b3c60635935f13dd1fb33f6831fb997079
 
@@ -5512,7 +5512,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPhasingPoll&
   transaction=15402897900571339064
 
@@ -5553,7 +5553,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPhasingPollVote&
   transaction=12580288379938056583&
   account=15295723609781267838
@@ -5575,7 +5575,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPhasingPollVotes&
   account=12580288379938056583
 
@@ -5600,7 +5600,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPhasingPolls&
   transaction=12580288379938056583&
   transaction=13688769565509711077&
@@ -5655,7 +5655,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getVoterPhasedTransactions&
   account=15295723609781267838
 
@@ -5718,7 +5718,7 @@ Server Information Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=eventRegister
 
 ```
@@ -5736,7 +5736,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=eventWait
 
 ```
@@ -5771,7 +5771,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getBlockchainStatus
 
 ```
@@ -5803,7 +5803,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPlugins
 
 ```
@@ -5823,7 +5823,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getState
 
 ```
@@ -5889,7 +5889,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getTime
 
 ```
@@ -5910,7 +5910,7 @@ Shuffling Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  getAccountShufflings&
  account=BLX-UZNP-6LBA-YQ38-3TEY8
 
@@ -5946,7 +5946,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getAllShufflings
 
 ```
@@ -5981,7 +5981,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getAssignedShufflings&
  account=BLX-V4WY-U928-GRN8-CKPL9
 
@@ -6013,7 +6013,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getHoldingShufflings&
  holding=15344649963748848799&
  includeFinished=true
@@ -6048,7 +6048,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getShufflers&
  adminPassword=IWontTellYou
 
@@ -6076,7 +6076,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getShuffling&
  shuffling=3347171811359602131
 
@@ -6108,7 +6108,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=getShufflingParticipants&
  shuffling=16292433427943984172
 
@@ -6160,7 +6160,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=shufflingCreate&
  amount=10000000000000&
  participantCount=7&
@@ -6213,7 +6213,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=shufflingProcess&
  shuffling=12144660700617510957&
  recipientSecretPhrase=IWontTellYou&
@@ -6265,7 +6265,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=shufflingVerify&
  shuffling=12144660700617510957&
  shufflingStateHash=90832470918374087102938470198234&
@@ -6315,7 +6315,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=shufflingRegister&
  shufflingFullHash=2d10f4e18f808aa8d0de06d5cddcd77828eb6e7548f62e48de83f58fdf0629d5&
  secretPhrase=IWontTellYou&
@@ -6362,7 +6362,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=startShuffler&
  shufflingFullHash=2d10f4e18f808aa8d0de06d5cddcd77828eb6e7548f62e48de83f58fdf0629d5&
  secretPhrase=IWontTellYou&
@@ -6388,7 +6388,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
  requestType=stopShuffler&
  shufflingFullHash=2d10f4e18f808aa8d0de06d5cddcd77828eb6e7548f62e48de83f58fdf0629d5&
  secretPhrase=IWontTellYou
@@ -6411,7 +6411,7 @@ Tagged Data Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=downloadTaggedData&
   transaction=9169681701986886056
 
@@ -6427,7 +6427,7 @@ d4f167249340d6d746f49441b8ccdb1bd3521feb
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=extendTaggedData&
   transaction=9086193976300572942&
   secretPhrase=secretPhrase&
@@ -6486,7 +6486,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAccountTaggedData&
   account=BLX-4VDY-LNVT-LMAY-FMCKA&
   lastIndex=0
@@ -6527,7 +6527,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllTaggedData&
   lastIndex=0
 
@@ -6567,7 +6567,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getChannelTaggedData&
   channel=torrent&
   lastIndex=0
@@ -6608,7 +6608,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDataTagCount
 
 ```
@@ -6626,7 +6626,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDataTags
 
 ```
@@ -6657,7 +6657,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getDataTagsLike&
   tagPrefix=sci
 
@@ -6681,7 +6681,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getTaggedData&
   transaction=9086193976300572942
 
@@ -6717,7 +6717,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getTaggedDataExtendTransactions&
   transaction=4344513120863790923
 
@@ -6761,7 +6761,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=searchTaggedData&
   query=SG?&
   lastIndex=0
@@ -6802,7 +6802,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=uploadTaggedData&
   data=d4f167249340d6d746f49441b8ccdb1bd3521feb&
   name=Stargate SG1 full series&
@@ -6865,7 +6865,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=verifyTaggedData&
   transaction=9086193976300572942&
   data=d4f167249340d6d746f49441b8ccdb1bd3521feb&
@@ -6894,7 +6894,7 @@ Token Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=decodeFileToken&
   file=test.txt&
   token=u8q9ps0gdoo2bl158p4llpar583ld0cgejat9qnrgrgde4l5uscgan7fu25hi...
@@ -6917,7 +6917,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=decodeToken&
   website=test&
   token=u8q9ps0gdoo2bl158p4llpar583ld0cgejat9qnrgrgde4l5ut8bgn...
@@ -6940,7 +6940,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=generateFileToken&
   secretPhrase=secretPhrase&
   file=test.txt
@@ -6964,7 +6964,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=generateToken&
   secretPhrase=secretPhrase&
   website=test
@@ -6991,7 +6991,7 @@ Transaction Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=broadcastTransaction&
   transactionBytes=001046aac6013c0057fb6f3a958e320bb49c4e81b4c2cf28b9f25d086c143...
 
@@ -7013,7 +7013,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=calculateFullHash&
   unsignedTransactionBytes=001046aac6013c0057fb6f3a958e320bb49c4e81b4c2cf28b9f2...&
   signatureHash=b35eae7d2f01639810d37694138aa0a86fbbf8a9bf58c2be4f2a5b8f0f30b3f7
@@ -7033,7 +7033,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getExpectedTransactions&
   account=BLX-X5A4-FTMJ-J97M-F3ANH
 
@@ -7079,7 +7079,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getReferencingTransactions&
   transaction=9132239833429154693
 
@@ -7130,7 +7130,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getTransaction&
   transaction=15200507403046301754
 
@@ -7171,7 +7171,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getTransactionBytes&
   transaction=15200507403046301754
 
@@ -7192,7 +7192,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=parseTransaction&
   transactionBytes=001046aac6013c0057fb6f3a958e320bb49c4e81b4c2cf28b9f25d086c143...
 
@@ -7230,7 +7230,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=retrievePrunedTransaction&
   transaction=9343032000583494722
 
@@ -7282,7 +7282,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=sendTransaction&
   transactionBytes=00109e61b606a0052bdd59320496b133052f58c82e8...
 
@@ -7302,7 +7302,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=signTransaction&
   unsignedTransactionBytes=00100cfb3c03a00510f09c34f225d425306e5be55a494690...&
   secretPhrase=SecretPhrase
@@ -7354,7 +7354,7 @@ Voting System Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=castVote&
   poll=5916389507928675673&
   vote02=1&
@@ -7411,7 +7411,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=createPoll&
   name=Gender Poll&
   description=What is your gender?&
@@ -7485,7 +7485,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPoll&
   poll=9096010195498999548
 
@@ -7521,7 +7521,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPollResult&
   poll=16742897359122764363
 
@@ -7563,7 +7563,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPollVote&
   account=9096010195498999548
 
@@ -7588,7 +7588,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPollVotes&
   poll=9096010195498999548&
   lastIndex=0
@@ -7618,7 +7618,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getPolls&
   lastIndex=0
 
@@ -7660,7 +7660,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=searchPolls&
   query=hello&
   includeFinished=true
@@ -7704,7 +7704,7 @@ Utilities
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=decodeQRCode&
   qrCodeBase64=/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRo...
 
@@ -7723,7 +7723,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=detectMimeType&
   data=/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRo...&
   isText=false
@@ -7743,7 +7743,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=encodeQRCode&
   qrCodeData=BLX-7A48-47JL-T7LD-D5FS3&
   width=100&
@@ -7764,7 +7764,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=fullHashToId&
   fullHash=c34af8f1509e3be79c4562e24125ff2a8f026871fdd1a0366ad315bf8fab76b9
 
@@ -7784,7 +7784,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=hash&
   hashAlgorithm=2&
   secret=74657374
@@ -7806,7 +7806,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=hexConvert&
   string=616263
 
@@ -7826,7 +7826,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=longConvert&
   id=15323192282528158131
 
@@ -7846,7 +7846,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=rsConvert&
   account=BLX-L6FM-89WK-VK8P-FCRBB
 
@@ -7869,7 +7869,7 @@ Debug Operations
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=clearUnconfirmedTransactions
 
 ```
@@ -7887,7 +7887,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=dumpPeers&
   version=1.5.11&
   connect=true
@@ -7908,7 +7908,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=fullReset
 
 ```
@@ -7926,7 +7926,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=GetAllBroadcastedTransactions
 
 ```
@@ -7944,7 +7944,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getAllWaitingTransactions
 
 ```
@@ -7962,7 +7962,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getLog&
   count=3
 
@@ -7985,7 +7985,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=getStackTrace
 
 ```
@@ -8016,7 +8016,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=luceneReindex
 
 ```
@@ -8034,7 +8034,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=popOff&
   numBlocks=1
 
@@ -8075,7 +8075,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=RebroadcastUnconfirmedTransactions
 
 ```
@@ -8093,7 +8093,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=requeueUnconfirmedTransactions
 
 ```
@@ -8111,7 +8111,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=retrievePrunedData
 
 ```
@@ -8130,7 +8130,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=scan
 
 ```
@@ -8149,7 +8149,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=setLogging
 
 ```
@@ -8166,7 +8166,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=shutdown
 
 ```
@@ -8183,7 +8183,7 @@ https://localhost:2022/nxt?
 **Request:**
 ```
 
-https://localhost:2022/nxt?
+http://localhost:2022/nxt?
   requestType=trimDerivedTables
 
 ```
