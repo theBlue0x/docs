@@ -2,7 +2,7 @@
 
 _Published August 19th, 2021_
 
-The Blue0x Marketplace is where Blue0x users can buy and sell physical or digital goods and services.  The Blue0x Marketplace is available at [https://market.blue0x.com](https://market.blue0x.com) or additionally, you may host the Blue0x Marketplace on your local machine.  At this time, the Blue0x Marketplace will only specify payments in USDX - United States Dollar.  As the Blue0x Network progresses, each Blue0x Currency will host its own respective marketplace.  
+The Blue0x Marketplace is where Blue0x users can buy and sell physical or digital goods and services in exchange for their native [Blue0x Currency](currencies.md).  The Blue0x Marketplace is available at [https://market.blue0x.com](https://market.blue0x.com) or additionally, you may host the Blue0x Marketplace on your local machine.  At this time, the Blue0x Marketplace will only specify payments in USDX - United States Dollar.  As the Blue0x Network progresses, each Blue0x Currency will host its own respective marketplace.  
 
 **Shipping:**
 
