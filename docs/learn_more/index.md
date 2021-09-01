@@ -7,7 +7,7 @@ Blue0x is focused on overhauling the current financial system by identifying and
 
 * Blue0x [CURRENCIES](currencies.md) | currencies modeled after real-world fiat currencies (i.e. USD -> USDX)
 
-* Blue0x [MARKETPLACE](marketplace.md) | buy and sell physical goods and services in your native Blue0x currency
+* Blue0x [MARKET](marketplace.md) | buy and sell physical goods and services in your native Blue0x currency
 
 * Blue0x [EXCHANGE](exchange.md) | exchange your native Blue0x currency with other Blue0x currencies around the world (i.e. USDX <-> EURX)
 
