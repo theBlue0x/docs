@@ -19,7 +19,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 
 **3. Create your first Droplet.**
 
->Click "Create" and then "Droplet" from the dropdow menu.
+>Click "Create" and then "Droplet" from the dropdown menu.
 
 >Select "Ubuntu 20.04(LTS) x64".
 
