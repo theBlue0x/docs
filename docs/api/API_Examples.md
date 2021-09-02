@@ -4885,7 +4885,10 @@ http://localhost:2022/nxt?
   requestType=transferCurrency&
   recipient=BLX-BMUV-8QQR-47VK-CR7F3&
   currency=9387514940677621191&
-  units=10
+  units=10&
+  secretPhrase=SECRETPHRASE&
+  feeNQT=100000000&
+  deadline=60
 
 ```
 **Response:**
