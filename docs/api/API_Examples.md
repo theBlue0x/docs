@@ -2775,7 +2775,7 @@ http://localhost:2022/nxt?
  "transaction": "8825396122598251849"
 }
 ```
-### 11.4 DGS Listing
+### DGS Listing
 
 **Request:**
 ```
