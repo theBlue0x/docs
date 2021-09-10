@@ -24,19 +24,19 @@ Create a phased transaction with conditional deferred execution based on the res
 
 **Request:** Refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API") for common parameters.
 
-*   _requestType_ is any type from the [Create Transaction](create_transaction.md#create-transaction "The Blue0x API") list which is phasing-safe, indicated with italics such as -send Money_
+*   _requestType_ is any type from the [Create Transaction](create_transaction.md#create-transaction "The Blue0x API") list which is phasing-safe, indicated with italics such as _send Money_
 *   _phased_ is _true_ to create a phased transaction (optional but required for all of the following parameters, which are all optional for unphased transactions)
 *   _phasingFinishHeight_ is the block height at which the poll will finish; the transaction will be executed at this block height only if all conditions (if any) have been met, otherwise the transaction will never be executed
 *   _phasingVotingModel_ is an integer code for the method of approval:
-    *   _\-1_ for _None_
+    *   _-1_ for _None_
     *   _0_ for _Vote By Account_
     *   _1_ for _Vote By Account Balance_
     *   _2_ for _Vote By Asset Balance_
     *   _3_ for _Vote By Currency Balance_
-    *   _4_ for -by Linked Transactions_
-    *   _5_ for -by Secret_
+    *   _4_ for _by Linked Transactions_
+    *   _5_ for _by Secret_
 *   _phasingQuorum_ is the number of "votes" needed for transaction approval (required if _phasingVotingModel_ >= _0_, default _0_):
-    *   _0_ for voting model _\-1_
+    *   _0_ for voting model _-1_
     *   the number of accounts for model _0_
     *   total NQT for model _1_
     *   total QNT for models _2_ and _3_
@@ -135,12 +135,12 @@ Get pending phased transactions based on a currency in reverse chronological cre
 
 ### Get Linked Phased Transactions
 
-Gets the phased transactions with by-transaction voting model for a given linkedFullHash, regardless of their phasing status (pending, approved or rejected). Since the corresponding table is trimmed after finish height however, the result will not include those transactions that finished before the last trimming height.
+Gets the phased transactions with by-transaction voting model for a given _linkedFullHash_, regardless of their phasing status (pending, approved or rejected). Since the corresponding table is trimmed after finish height however, the result will not include those transactions that finished before the last trimming height.
 
 **Request:**
 
 *   _requestType_ is _getLinkedPhasedTransactions_
-*   -linkedFullHash_ is the full hash of the transaction transaction
+*   _linkedFullHash_ is the full hash of the transaction transaction
 *   _requireBlock_ is the block ID of a block that must be present in the blockchain during execution (optional)
 *   _requireLastBlock_ is the block ID of a block that must be last in the blockchain during execution (optional)
 
@@ -178,7 +178,7 @@ Get the details of a phasing poll.
 *   _minBalance_ (S) is the required minimum balance of voting accounts to be eligible to vote
 *   _minBalanceModel_ (N) is the minimum balance model (refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API"))
 *   _hashedSecret_ (S) is the hash of a secret that must be included in each approval (vote) transaction for the approval to be accepted (refer to [Create Transaction Request](create_transaction.md#create-transaction-request "The Blue0x API"))
-*   -linkedFullHashes_ (A) is an array of full hashes of linked transactions (omitted if _votingModel_ != _4_)
+*   _linkedFullHashes_ (A) is an array of full hashes of linked transactions (omitted if _votingModel_ != _4_)
 *   _whitelist_ (A) is an array of whitelist objects containing the following two fields (omitted if _votingModel_ != _5_):
     *   _whitelisted_ (S) is the number of the whitelisted account
     *   _whitelistedRS_ (S) is the Reed-Solomon address of the whitelisted account
