@@ -1,5 +1,5 @@
 <h2><span class="mw-headline" id="Create_Transaction">Create Transaction</span></h2>
-<p>The following API calls create BLX transactions using HTTP POST requests. Follow the links for examples and HTTP POST request parameters specific to each call. Calls in <i>italics</i> are phasing-safe (refer to <a href="/api/api/phasing/#create-phasing-poll">Create Phasing Poll</a>)
+<p>The following API calls create BLX transactions using HTTP POST requests. Follow the links for examples and HTTP POST request parameters specific to each call. Calls in <i>italics</i> are phasing-safe (refer to <a href="/api/phasing/#create-phasing-poll">Create Phasing Poll</a>)
 </p>
 <ul><li><i><a href="/api/account#send-money">Send Money</a></i></li>
 <li><i><a href="/api/account#set-account-info" title="Accounts">Set Account Information</a></i></li>
