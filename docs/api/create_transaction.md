@@ -1,8 +1,43 @@
-Create Transaction
---------------------
+<h2><span class="mw-headline" id="Create_Transaction">Create Transaction</span></h2>
+<p>The following API calls create BLX transactions using HTTP POST requests. Follow the links for examples and HTTP POST request parameters specific to each call. Calls in <i>italics</i> are phasing-safe (refer to <a href="/api/api/phasing/#create-phasing-poll">Create Phasing Poll</a>)
+</p>
+<ul><li><i><a href="/api/account#send-money">Send Money</a></i></li>
+<li><i><a href="/api/account#set-account-info" title="Accounts">Set Account Information</a></i></li>
+<li><i><a href="/api/account#set-account-property" title="Accounts">Set Account Property</a></i></li>
+<li><a href="/api/alias#buy-sell-alias" title="Aliases">Buy / Sell Alias</a></li>
+<li><a href="/api/alias#delete-alias" title="Aliases">Delete Alias</a></li>
+<li><a href="/api/alias#set-alias" title="Aliases">Set Alias</a></li>
+<li><a href="/api/messaging#send-message" title="Messages">Send Message</a></li>
+<li><i><a href="/api/assets#cancel-order" title="Asset Exchange">Cancel Order</a></i></li>
+<li><i><a href="/api/assets#dividend-payment" title="Asset Exchange">Dividend Payment</a></i></li>
+<li><i><a href="/api/assets#issue-asset" title="Asset Exchange">Issue Asset</a></i></li>
+<li><i><a href="/api/assets#place-order" title="Asset Exchange">Place Order</a></i></li>
+<li><i><a href="/api/assets#transfer-asset" title="Asset Exchange">Transfer Asset</a></i></li>
+<li><i><a href="/api/marketplace#dgs-delisting" title="Digital Goods Store">DGS Delisting</a></i></li>
+<li><a href="/api/marketplace#dgs-delivery" title="Digital Goods Store">DGS Delivery</a></li>
+<li><a href="/api/marketplace#dgs-feedback" title="Digital Goods Store">DGS Feedback</a></li>
+<li><i><a href="/api/marketplace#dgs-listing" title="Digital Goods Store">DGS Listing</a></i></li>
+<li><a href="/api/marketplace#dgs-price-change" title="Digital Goods Store">DGS PriceChange</a></li>
+<li><a href="/api/marketplace#dgs-purchase" title="Digital Goods Store">DGS Purchase</a></li>
+<li><a href="/api/marketplace#dgs-quantity-change" title="Digital Goods Store">DGS Quantity Change</a></li>
+<li><a href="/api/marketplace#dgs-refund" title="Digital Goods Store">DGS Refund</a></li>
+<li><i><a href="/api/forging#lease-balance" title="Forging">Lease Balance</a></i></li>
+<li><a href="/api/monetary_system#currency-buy-sell" title="Monetary System">Currency Buy / Sell</a></li>
+<li><a href="/api/monetary_system#currency-mint" title="Monetary System">Currency Mint</a></li>
+<li><a href="/api/monetary_system#currency-reserve-claim" title="Monetary System">Currency Reserve Claim</a></li>
+<li><a href="/api/monetary_system#currency-reserve-increase" title="Monetary System">Currency Reserve Increase</a></li>
+<li><a href="/api/monetary_system#delete-currency" title="Monetary System">Delete Currency</a></li>
+<li><a href="/api/monetary_system#issue-currency" title="Monetary System">Issue Currency</a></li>
+<li><a href="/api/monetary_system#publish-exchange-offer" title="Monetary System">Publish Exchange Offer</a></li>
+<li><a href="/api/monetary_system#transfer-currency" title="Monetary System">Transfer Currency</a></li>
+<li><a href="/api/voting#create-poll" title="Voting System">Create Poll</a></li>
+<li><a href="/api/voting#cast-vote" title="Voting System">Cast Vote</a></li>
+<li><i><a href="/api/phasing#approve-transaction" title="Phasing">Approve Transaction</a></i></li>
+<li><a href="/api/tagged_data#extend-tagged-data" title="Tagged Data">Extend Tagged Data</a></li>
+<li><a href="/api/tagged_data#upload-tagged-data" title="Tagged Data">Upload Tagged Data</a></li></ul>
+
 
 ### Create Transaction Request
-
 The following HTTP POST parameters are common to all API calls that create transactions:
 
 *   _secretPhrase_ is the secret passphrase of the account (optional, but transaction neither signed nor broadcast if omitted)
