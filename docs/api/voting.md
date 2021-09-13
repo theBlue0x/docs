@@ -29,7 +29,7 @@ Create a new poll. POST only.
 *   _name_ is the name of the poll
 *   _description_ is the description of the poll, or the question to be answered
 *   _finishHeight_ is the block height when the poll is completed
-*   _votingModel_ is _0_ for -one Vote Per Account_, _1_ for _Vote By BLX Balance_, _2_ for _Vote By Asset Balance_ and _3_ for _Vote By Currency Balance_
+*   _votingModel_ is _0_ for _One Vote Per Account_, _1_ for _Vote By BLX Balance_, _2_ for _Vote By Asset Balance_ and _3_ for _Vote By Currency Balance_
 *   _minNumberOfOptions_ is the minimum number of options (answers) that must be voted for
 *   _maxNumberOfOptions_ is the maximum number of options (answers) that can be voted for
 *   _minRangeValue_ is the minimum integer value for an option (answer) (>= _0_)
