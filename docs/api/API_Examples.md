@@ -3442,7 +3442,7 @@ http://localhost:2022/nxt?
 
 http://localhost:2022/nxt?
   requestType=searchDGSGoods&
-  tag=te?t AND prod\*
+  tag=test 
 
 ```
 **Response:**
