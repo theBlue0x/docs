@@ -1,3 +1,3 @@
 ## **Setup Your Blue0x Wallet** ##
 
-/// TODO
+/// Currently In 'Node Deployment' Stage.  To find out more, [click here.](../vps.md)
