@@ -1,6 +1,6 @@
 ## **Setup a Public Blue0x Node on a VPS or Dedicated Server** ##
 
-_**NOTE:** This is an advanced operation, and is not a suitable activity for people who are uncomfortable with Linux, networking concepts, or command-line interfaces. Following these steps implies that you are willing to pay a monthly fee to a service provider who will host your Blue0x node. If you do not know what an IP address is or do not know how to use a command-line text editor, this is probably not for you. Read all of these instructions and make sure you understand them before you decide to proceed. You can still contribute to the network by running Blue0x on your local computer._
+_**NOTE:** This is an advanced operation, and is not a suitable activity for people who are uncomfortable with Linux, networking concepts, or command-line interfaces. Following these steps implies that you are willing to pay a monthly fee to a service provider who will host your Blue0x node. If you do not know what an IP address is or do not know how to use a command-line text editor, this is probably not for you. Read all of these instructions and make sure you understand them before you decide to proceed._
 
 **1. Sign up for a VPS (Virtual Private Server) with a provider like [DigitalOcean.com](https://m.do.co/c/97a921447f80).**
 >These instructions assume you are using DigitalOcean, but other VPS providers are similar.  
@@ -65,9 +65,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 >add the following entries, where X.X.X.X is the IP address of your VPS
 
 >nxt.myAddress=X.X.X.X
-
 >nxt.allowedBotHosts=*
-
 >nxt.apiServerHost=0.0.0.0
 
 >press CTRL+X and then Y to save the file.
@@ -89,6 +87,4 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 Congratulations, you are now running a public Blue0x Node!
 
 You should now [secure your node over HTTPS](https.md).
-
-You should also [create a hallmark for your node](hallmark.md).
 
