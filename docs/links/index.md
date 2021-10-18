@@ -2,7 +2,7 @@
 
 * [Blue0x.com](https://blue0x.com) - Homepage
 
-* [Blue0x Marketplace](https://market.blue0x.com) - Marketplace
+* [Blue0x | MARKET](https://market.blue0x.com) - Marketplace
 
 * [Blue0x | LITE](https://lite.blue0x.com) - Web Wallet
 
