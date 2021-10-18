@@ -18,9 +18,9 @@ nav:
   - Learn More:
     - What is Blue0x?: learn_more/index.md
     - What is BLX?: learn_more/BLX.md
-    - Blue0x|CURRENCIES: learn_more/currencies.md
-    - Blue0x|MARKET: learn_more/marketplace.md
-    - Blue0x|EXCHANGE: learn_more/exchange.md
+    - Blue0x| CURRENCIES: learn_more/currencies.md
+    - Blue0x| MARKET: learn_more/marketplace.md
+    - Blue0x| EXCHANGE: learn_more/exchange.md
 
   - Setup:
     - Setup Desktop Wallet: setup/local.md
