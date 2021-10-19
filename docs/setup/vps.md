@@ -65,7 +65,9 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 >add the following entries, where X.X.X.X is the IP address of your VPS
 
 >nxt.myAddress=X.X.X.X
+
 >nxt.allowedBotHosts=*
+
 >nxt.apiServerHost=0.0.0.0
 
 >press CTRL+X and then Y to save the file.
