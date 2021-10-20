@@ -6,5 +6,5 @@ Blue0x|MARKET is where Blue0x users may buy and sell physical or digital goods a
 
 **Shipping:**
 
-Being that Blue0x is a new endeavor, there currently is no method of payment with a Blue0x Currency for shipping costs.  For this reason, it is encouraged for new users to buy/sell goods and services locally, within their community.  Shipping options ARE currently available when posting an item for sale.  However, you are responsible for payment of shipping costs in your respective fiat currency.  Payment for shipping costs with a Blue0x Currency is a goal that can be achieved as the Blue0x Network evolves.
+Being that Blue0x is a new endeavor, there currently is no method of payment with a Blue0x Currency for shipping costs.  For this reason, it is encouraged for new users to buy/sell goods and services locally, within their community.  You are free to work out shipping with a buyer/seller.  However, you will be responsible for payment of shipping costs in your respective fiat currency.  Payment for shipping with a Blue0x Currency is a goal that can be realized as the Blue0x Network evolves and the demand for the service increases.
 
