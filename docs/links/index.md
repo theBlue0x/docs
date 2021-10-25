@@ -2,11 +2,11 @@
 
 * [Blue0x.com](https://blue0x.com)
 
-* [Blue0x | MARKET](https://market.blue0x.com) - Marketplace
+* [Blue0x | MARKET](https://market.blue0x.com)
 
-* [Blue0x | LITE](https://lite.blue0x.com) - Web Wallet
+* [Blue0x | LITE](https://lite.blue0x.com)
 
-* [Blue0x | GitHub](https://github.com/theBlue0x) - GitHub
+* [Blue0x | GitHub](https://github.com/theBlue0x)
 
 * [Blue0x | Discord](https://discord.gg/8db6CRqM4H) - Chat with us on Discord!
 
