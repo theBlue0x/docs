@@ -8,6 +8,6 @@
 
 * [Blue0x | GitHub](https://github.com/theBlue0x)
 
-* [Blue0x | Discord](https://discord.gg/8db6CRqM4H) - Chat with us on Discord!
+* [Blue0x | Discord](https://discord.gg/8db6CRqM4H) 
 
-* [Blue0x | Telegram](https://t.me/blue0xcom) - Chat with us on Telegram!
+* [Blue0x | Telegram](https://t.me/blue0xcom)
