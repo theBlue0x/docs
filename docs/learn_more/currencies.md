@@ -14,15 +14,15 @@ _Blue0x Currency transactions require a 1 BLX fee to be executed._
 
 **Currencies To Be Issued:**
 
-* AUDX - _Australian Dollar - 15 trillion total supply_
-* CADX - _Canadian Dollar - 15 trillion total supply_
-* CHFX - _Swiss Franc - 15 trillion total supply_
-* CNYX - _Chinese Yuan - 15 trillion total supply_
-* EURX - _Euro - 15 trillion total supply_
-* GBPX - _British Pound  - 15 trillion total supply_
-* IRRX - _Iranian Rial - 15 trillion total supply_
-* JPYX - _Japanese Yen - 15 trillion total supply_
-* NZDX - _New Zealand Dollar - 15 trillion total supply_
+* AUDX - _Australian Dollar_
+* CADX - _Canadian Dollar_
+* CHFX - _Swiss Franc_
+* CNYX - _Chinese Yuan_
+* EURX - _Euro_
+* GBPX - _British Pound_
+* IRRX - _Iranian Rial_
+* JPYX - _Japanese Yen_
+* NZDX - _New Zealand Dollar_
 
 **Prospective Currencies:**
 
