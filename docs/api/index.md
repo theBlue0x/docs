@@ -22,6 +22,10 @@ General Notes
 
 Many API requests make reference to the genesis block. FYI, the genesis block's ID is 4777664216118977193. Sending messages, selling aliases, and leasing balances to the Genesis account are not allowed.
 
+One billion BLX were created in the Genesis Block, and 100,000 BLX were then distributed to NXT owners as per the Jelurida license agreement.  
+
+The Blue0x (BLX) blockchain was created on May 7, 2021 at 12:34:00.
+
 ### Flexible Account IDs
 
 All API requests that require an account ID accept either an account number or the corresponding [Reed-Solomon address](https://nxtdocs.jelurida.com/RS_Address_Format "RS Address Format").
@@ -29,10 +33,6 @@ All API requests that require an account ID accept either an account number or t
 ### Quantity Units BLX, NQT and QNT
 
 The Blue0x token, BLX, is used to quantify value within the network and a certain amount of BLX is required, as a fee, for each transaction within the network. This fee goes to the node that forges (generates) the new block containing the transaction that is then accepted into the blockchain.
-
-One billion BLX were created in the [Genesis Block](#genesis-block "The Blue0x API"), and 100,000 BLX were then distributed to NXT owners as per the Jelurida license agreement.  
-
-The Blue0x (BLX) blockchain was created on May 7, 2021 at 12:34:00.
 
 The Blue0x system can be thought of as a network owned by all who posses BLX. In this sense, BLX quantifies ownership of or stake in the system. Stakeholders are entitled to forge blocks and collect transaction fees in proportion to the amount of BLX they possess.
 
