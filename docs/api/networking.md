@@ -105,7 +105,7 @@ Get information about a given peer.
 *   _blacklistingCause_ (S) is the cause of blacklisting (if _blacklisted_ is _true_)
 *   _announcedAddress_ (S) is the name that the peer announced to the network (could be a DNS name, IP address, or any other string)
 *   _application_ (S) is the name of the software application, typically _NRS_
-*   _state_ (N) defines the state of the peer: 0 for NON\-cONNECTED, 1 for CONNECTED, or 2 for DISCONNECTED
+*   _state_ (N) defines the state of the peer: 0 for NON-CONNECTED, 1 for CONNECTED, or 2 for DISCONNECTED
 *   _shareAddress_ (B) is _true_ if the address is allowed to be shared with other peers
 *   _inbound_ (B) is _true_ if the peer has made a request to this node
 *   _inboundWebSocket_ (B) is _true_ if an inbound websocket has been established from this node
@@ -122,8 +122,8 @@ Get a list of peer IP addresses.
 **Request:**
 
 *   _requestType_ is _getPeers_
-*   _active_ is _true_ for active (not NON\-cONNECTED) peers only (optional, if _true_ overrides _state_)
-*   _state_ is the state of the peers, one of _NON\-cONNECTED_, -cONNECTED_, or -dISCONNECTED_ (optional)
+*   _active_ is _true_ for active (not NON-CONNECTED) peers only (optional, if _true_ overrides _state_)
+*   _state_ is the state of the peers, _NON-CONNECTED_, _CONNECTED_, or _DISCONNECTED_ (optional)
 *   _includePeerInfo_ is _true_ to include peer detail as in [Get Peer](#get-peer "The Blue0x API")
 *   _service_ to filter on a specific service
 
