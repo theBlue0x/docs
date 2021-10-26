@@ -11,7 +11,7 @@ Follow the official documentation to [install Certbot](https://certbot.eff.org/i
 
 >nxt.keyStorePath=keystore
 
->nxt.keyStorePassword='PutYourLongPasswordHere'
+>nxt.keyStorePassword='PutYourLongPasswordHere' 
 
 >nxt.keyStoreType=PKCS12
 
@@ -31,7 +31,7 @@ Follow the official documentation to [install Certbot](https://certbot.eff.org/i
 
 >Certificates are issued with a relatively short expiry date. The recommended approach to renewal is to automate it and the Certbot software provides support for automatic renewal. However, the Blue0x software does not use the certificate directly so we need to update the keystore with each renewal.
 
->$ sudo certbot certonly --standalone -d DOMAIN -n --deploy-hook "/PATH/TO/BLUE0X_INSTALLATION/pem.to.pkcs12.keystore.certbot.hook.sh" --force-renewal
+>$ sudo certbot certonly --standalone -d DOMAIN -n --deploy-hook /PATH/TO/BLUE0X_INSTALLATION/pem.to.pkcs12.keystore.certbot.hook.sh --force-renewal
 
 >Again, replace DOMAIN with your domain name. This will force the renewal, execute the script, and also update the Certbot configuration to use the script with every certificate renewal for that domain.  The script pem.to.pkcs12.keystore.certbot.hook.sh is included with the Blue0x software.  You may check the script [here](renewal_script.md).
 
