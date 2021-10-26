@@ -1,6 +1,6 @@
 ## **Blue0x Currencies** ##
 
-_Published August 19th, 2021_
+_Published October 19th, 2021_
 
 Blue0x Currencies are a medium of exchange for real-world goods and services. In short, they are money accepted as a method of payment in their respective regions.  Each currency is issued with a total supply and no additional units can be created beyond that total supply.  
 
