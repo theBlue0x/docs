@@ -56,7 +56,7 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 >$ sudo apt install default-jdk
 
 **6. Download the Blue0x Software.**
->$ git clone [TODO]
+>$ git clone (The wallet repo is private at this time.  Please join our [Discord](https://discord.com/invite/8db6CRqM4H) or [Telegram](https://t.me/blue0xcom) to learn more)
 
 >$ cd Blue0x
 
