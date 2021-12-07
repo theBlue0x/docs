@@ -20,7 +20,7 @@ _Blue0x Currency transactions require a 0.01 BLX fee to be executed._
 * CNYX - _Chinese Yuan_
 * EURX - _Euro_
 * GBPX - _British Pound_
-* IQDX - _Iraqi_Dinar_
+* IQDX - _Iraqi Dinar_
 * IRRX - _Iranian Rial_
 * JPYX - _Japanese Yen_
 * NZDX - _New Zealand Dollar_
