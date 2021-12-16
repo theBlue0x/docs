@@ -2,11 +2,9 @@
 
 * [Blue0x.com](https://blue0x.com)
 
-* [Blue0x | LEARN](https://learn.blue0x.com/)
-
 * [Blue0x | MARKET](https://market.blue0x.com)
 
-* [Blue0x | LITE](https://lite.blue0x.com)
+* [Blue0x | EXCHANGE](https://exchange.blue0x.com)
 
 * [Blue0x | GitHub](https://github.com/theBlue0x)
 
