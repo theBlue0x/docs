@@ -10,21 +10,21 @@ _Blue0x Currency transactions require a 0.01 BLX fee to be executed._
 
 **Currencies Currently In Circulation:**
 
-* USDX - _United States Dollar - 20 trillion total supply_ 
+* USDX - United States Dollar - 20 trillion total supply
 
 **Currencies To Be Issued:**
 
-* AUDX - _Australian Dollar - 2.5 trillion total supply_
-* CADX - _Canadian Dollar - 2.3 trillion total supply_
-* CHFX - _Swiss Franc - 1 trillion total supply_
-* CNYX - _Chinese Yuan - 230 trillion total supply_
-* EURX - _Euro - 15 trillion total supply_
-* GBPX - _British Pound - 3 trillion total supply_
-* IQDX - _Iraqi Dinar - 80 trillion total supply_
-* IRRX - _Iranian Rial - 120 trillion total supply_
-* JPYX - _Japanese Yen - 100 trillion total supply_
-* NZDX - _New Zealand Dollar - 380 billion total supply_
-* RUBX - _Russian Ruble - 60 trillion total supply_
+* AUDX - Australian Dollar - 2.5 trillion total supply
+* CADX - Canadian Dollar - 2.3 trillion total supply
+* CHFX - Swiss Franc - 1 trillion total supply
+* CNYX - Chinese Yuan - 230 trillion total supply
+* EURX - Euro - 15 trillion total supply
+* GBPX - British Pound - 3 trillion total supply
+* IQDX - Iraqi Dinar - 80 trillion total supply
+* IRRX - Iranian Rial - 120 trillion total supply
+* JPYX - Japanese Yen - 100 trillion total supply
+* NZDX - New Zealand Dollar - 380 billion total supply
+* RUBX - Russian Ruble - 60 trillion total supply
 
 **Prospective Currencies:**
 
