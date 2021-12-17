@@ -5,11 +5,11 @@ Blue0x is focused on overhauling the current financial system by identifying and
 
 **Within the Blue0x Network :**
 
-* Blue0x | [CURRENCIES](currencies.md) | currencies modeled after real-world fiat currencies (i.e. USD -> USDX)
+* Blue0x | [CURRENCIES](currencies.md) - currencies modeled after real-world fiat currencies (i.e. USD -> USDX)
 
-* Blue0x | [MARKET](marketplace.md) | buy and sell physical goods and services in your native Blue0x currency
+* Blue0x | [MARKET](marketplace.md) - buy and sell physical goods and services in your native Blue0x currency
 
-* Blue0x | [EXCHANGE](exchange.md) | exchange your native Blue0x currency with other Blue0x currencies around the world (i.e. USDX <-> EURX)
+* Blue0x | [EXCHANGE](exchange.md) - exchange your native Blue0x currency with other Blue0x currencies around the world (i.e. USDX <-> EURX)
 
 This facilitates a REAL USE CASE for crypto-currency, not simply speculation of price in relation to fiat currency.  Blue0x does not plan to have any fiat currency on/off ramps and is not intended to be traded on crypto exchanges.ₐ   Blue0x strives to have a fully self-contained ecosystem, independent of fiat and other crypto-currencies, that will evolve into a well-trusted platform to ultimately replace the current financial system.
 
