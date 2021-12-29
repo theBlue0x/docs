@@ -118,13 +118,13 @@ Get the stack traces of the currently running threads in reverse _id_ order.
 **Response:**
 
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
-*   -locks_ (A) is an array of lock objects
+*   _locks_ (A) is an array of lock objects
 *   _threads_ (A) is an array of thread objects with the following fields:
     *   _trace_ (A) is an array of traces (S)
     *   _name_ (S) is the thread name
     *   _id_ (N) is the thread ID
-    *   _state_ (S) is the thread state, one of _WAITING_, -tIMED\_WAITING_ and -rUNNABLE_
-    *   -locks_ (A) is an array of lock objects with the following fields, if not empty:
+    *   _state_ (S) is the thread state, one of _WAITING_, _TIMED\_WAITING_ and _RUNNABLE_
+    *   _locks_ (A) is an array of lock objects with the following fields, if not empty:
         *   _trace_ (S)
         *   _depth_ (N)
         *   _name_ (S)
@@ -138,7 +138,7 @@ Forces a rebuild of the Lucene search index. POST only.
 
 **Request:**
 
-*   _requestType_ is -luceneReindex_
+*   _requestType_ is _luceneReindex_
 
 **Response:**
 
@@ -240,17 +240,17 @@ Sets the log level and optionally specifies communication events to be logged, w
 **Request:**
 
 *   _requestType_ is _setLogging_
-*   -logLevel_ is one of -eRROR_, _WARN_, -iNFO_ or -dEBUG_ with each level in the list including all of the previous levels (optional, default is -iNFO_)
-*   _communicationEvent_ is one of multiple communication (HTTP) events to be logged, from the list: -eXCEPTION_, _HTTP-eRROR_, _HTTP-OK_ (optional)
+*   _logLevel_ is one of _ERROR_, _WARN_, _INFO_ or _DEBUG_ with each level in the list including all of the previous levels (optional, default is -iNFO_)
+*   _communicationEvent_ is one of multiple communication (HTTP) events to be logged, from the list: _EXCEPTION_, _HTTP-ERROR_, _HTTP-OK_ (optional)
 *   _communicationEvent_ is one of multiple communication events (optional)
 
 ⋮
 
-**Note:** The initial log level is set by the _nxt.level_ logging property, currently -fINE_ (equivalent to -dEBUG_).
+**Note:** The initial log level is set by the _nxt.level_ logging property, currently _FINE_ (equivalent to _DEBUG_).
 
 **Response:**
 
-*   -loggingUpdated_ (B) is _true_ if the operation completed successfully
+*   _loggingUpdated_ (B) is _true_ if the operation completed successfully
 
 **Example:** Refer to [Set Logging](API_Examples.md#set-logging "The Blue0x API Examples") example.
 

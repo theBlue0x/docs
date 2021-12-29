@@ -729,7 +729,7 @@ Get offer details given an offer ID.
     *   _offer_ (S) is the offer ID
     *   _expirationHeight_ (N) is the blockchain height of offer expiration
     *   _accountRS_ (S) is the Reed-Solomon address of the offering account
-    *   -limit_ (S) is the cumulative limit of currency buys or sells
+    *   _limit_ (S) is the cumulative limit of currency buys or sells
     *   _currency_ (S) is the currency ID
     *   _supply_ (S) is the current currency supply
     *   _account_ (S) is the offering account number

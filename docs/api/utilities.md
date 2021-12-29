@@ -66,7 +66,7 @@ Converts a full hash to an ID.
 **Response:**
 
 *   _stringId_ (S) is the ID corresponding to the hash, in the form of an decimal string
-*   -longId_ (S) is the signed long integer (8-bytes) representation of the ID used internally, returned as a string
+*   _longId_ (S) is the signed long integer (8-bytes) representation of the ID used internally, returned as a string
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 **Example:** Refer to [Full Hash To Id](API_Examples.md#full-hash-to-id "The Blue0x API Examples") example.
@@ -114,13 +114,13 @@ Converts an ID to the signed long integer representation used internally.
 
 **Request:**
 
-*   _requestType_ is -longConvert_
+*   _requestType_ is _longConvert_
 *   _id_ is a numerical ID, in decimal form but equivalent to an 8-byte unsigned integer as produced by SHA-256 hashing
 
 **Response:**
 
 *   _stringId_ (S) is the numerical ID
-*   -longId_ (S) is the signed long integer (8-bytes) representation of the ID used internally, returned as a string
+*   _longId_ (S) is the signed long integer (8-bytes) representation of the ID used internally, returned as a string
 *   _requestProcessingTime_ (N) is the API request processing time (in millisec)
 
 

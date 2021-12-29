@@ -58,7 +58,7 @@ Returns the next block generators ordered by hit time. The list of currently act
 **Request:**
 
 *   _requestType_ is _getNextBlockGenerators_
-*   -limit_ (N) is the number of next block generators to display.
+*   _limit_ (N) is the number of next block generators to display.
 
 **Response:**
 
