@@ -17,8 +17,8 @@ _Blue0x Currency transactions require a 0.01 BLX fee to be executed._
 * CNYX - Chinese Yuan - 230 trillion total supply
 * EURX - Euro - 15 trillion total supply
 * GBPX - British Pound - 3 trillion total supply
-* IQDX - Iraqi Dinar - 80 trillion total supply
-* IRRX - Iranian Rial - 120 trillion total supply
+* IQDX - Iraqi Dinar - 60 trillion total supply
+* IRRX - Iranian Rial - 100 trillion total supply
 * JPYX - Japanese Yen - 100 trillion total supply
 * NZDX - New Zealand Dollar - 380 billion total supply
 * RUBX - Russian Ruble - 60 trillion total supply
