@@ -87,6 +87,3 @@ _**NOTE:** This is an advanced operation, and is not a suitable activity for peo
 >You should see the Blue0x Login Screen.
 
 Congratulations, you are now running a public Blue0x Node!
-
-You should now [secure your node over HTTPS](https.md).
-
