@@ -10,7 +10,7 @@ _Blue0x Currency transactions require a 0.01 BLX fee to be executed._
 
 **Currencies Currently In Circulation:**
 
-* USDX - United States Dollar - 20 trillion total supply
+* USDX - United States Dollar - 25 trillion total supply
 * AUDX - Australian Dollar - 2.5 trillion total supply
 * CADX - Canadian Dollar - 2.3 trillion total supply
 * CHFX - Swiss Franc - 1 trillion total supply
