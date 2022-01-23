@@ -56,13 +56,11 @@
 **6. Download the Blue0x Software.**
 >$ git clone (The wallet repo is private at this time.  Please join our [Discord](https://discord.com/invite/8db6CRqM4H) or [Telegram](https://t.me/blue0xcom) to learn more)
 
->$ cd Blue0x
+>$ cd BLX
 
 >$ nano conf/nxt.properties
 
 >add the following entries, where X.X.X.X is the IP address of your VPS
-
->nxt.myAddress=X.X.X.X
 
 >nxt.allowedBotHosts=*
 
