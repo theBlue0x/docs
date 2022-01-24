@@ -11,5 +11,3 @@
 * [Blue0x | GITHUB](https://github.com/theBlue0x)
 
 * [Blue0x | DISCORD](https://discord.gg/EbBWRSPW63) 
-
-* [Blue0x | TELEGRAM](https://t.me/blue0xcom)
