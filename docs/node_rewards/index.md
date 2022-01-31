@@ -6,7 +6,7 @@ The Node Reward Program is an initiative to incentivize Blue0x users to setup op
 
 Details coming soon!
 
-Join us on [Discord](https://discord.gg/8db6CRqM4H) to get started early!
+Join us on [Discord](https://discord.com/invite/EbBWRSPW63) to get started early!
 
 
 
