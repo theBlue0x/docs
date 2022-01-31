@@ -1,5 +1,3 @@
-![](https://dcbadge.vercel.app/api/shield/224936648322842624)
-
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/theBlue0x/docs/issues)
 
 
