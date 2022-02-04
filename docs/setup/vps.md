@@ -54,7 +54,7 @@
 >$ sudo apt install default-jdk
 
 **6. Download the Blue0x Software.**
->$ git clone (The wallet repo is private at this time.  Please join our [Discord](https://discord.gg/EbBWRSPW63) or [Telegram](https://t.me/blue0xcom) to learn more)
+>$ git clone https://github.com/theBlue0x/BLX.git
 
 >$ cd BLX
 
