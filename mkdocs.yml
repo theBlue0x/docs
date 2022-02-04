@@ -26,7 +26,6 @@ nav:
     - Setup a Public VPS Node: setup/vps.md
     - Setup Desktop Wallet: setup/local.md
     - Configuring HTTPS: setup/https.md
-    - Hallmark Your Node: setup/hallmark.md
     - Renewal Script: setup/renewal_script.md
 
   - API:
