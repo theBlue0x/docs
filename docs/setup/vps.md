@@ -66,6 +66,8 @@
 
 >nxt.apiServerHost=0.0.0.0
 
+>nxt.wellKnownPeers=34.125.147.82;34.159.187.1;
+
 >press CTRL+X and then Y to save the file.
 
 **7. Compile and Run Blue0x.**
