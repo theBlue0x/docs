@@ -1,6 +1,6 @@
 ## **Blue0x is Crypto. Reimagined.** ##
 
-Blue0x is focused on overhauling the current financial system by identifying and rectifying its weaknesses and inequalities.  It provides a network to bridge the gap between tangible goods and services and a sustainable, decentralized, cryptocurrency. Blue0x transactions are processed using a lightweight, energy-efficient [proof-of-stake](https://en.wikipedia.org/wiki/Proof_of_stake) consensus protocol which has proven to be secure and reliable. 
+Blue0x is focused on overhauling the current financial system by identifying and rectifying its weaknesses and inequalities.  It provides a network to bridge the gap between tangible goods and services and a sustainable, decentralized cryptocurrency. Blue0x transactions are processed using a lightweight, energy-efficient [proof-of-stake](https://en.wikipedia.org/wiki/Proof_of_stake) consensus protocol which has proven to be secure and reliable. The Blue0x Network is designed to be fully decentralized with no central point of failure.  The wallet, the marketplace and the exchange are all modular sections of the entire network that interact with each other and operate fully on-chain and in real-time. When the wallet, market and exchange are hosted locally on your machine, transactions are signed only within your local environment and your private keys are never exposed to the outside world.  
 
 
 **Within the Blue0x Network :**
