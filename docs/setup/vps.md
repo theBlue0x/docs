@@ -76,7 +76,7 @@
 
 >$ ./compile.sh
 
->$ ./run.sh 
+>$ ./run.sh (./run.sh --daemon to run in the background)
 
 >You should see a final message indicating that the node is running at "localhost:2022"
 
