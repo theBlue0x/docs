@@ -62,6 +62,8 @@
 
 >add the following entries, where X.X.X.X is the IP address of your VPS
 
+>nxt.myAddress= X.X.X.X
+
 >nxt.allowedBotHosts=*
 
 >nxt.apiServerHost=0.0.0.0
