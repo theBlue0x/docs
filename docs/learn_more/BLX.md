@@ -5,7 +5,7 @@ _Published December 7th, 2021_
 The Blue0x token, referred to as BLX, is used to quantify value within the Blue0x Network. A specific amount of BLX is required, as a fee, for each transaction to be successfully executed on the Blue0x Network.  This fee is given to the node that forges (generates) a new block containing the transaction that is then accepted into the blockchain.  You may think of it as a reward given to the node for offering it's computational power to secure the Blue0x Network.  This fee also discourages 'bad actors' from abusing the Blue0x Network. (i.e. spamming)
 
 
-**Note:** Most transactions on the Blue0x Network have a fee of 0.01 BLX. (1 BLX to list an item on the Marketplace)
+**Note:** Most transactions on the Blue0x Network have a fee of 0.01 BLX. (0.1 BLX to list an item on the Marketplace)
 For a full schedule of fees, refer to [Create Transaction](../api/create_transaction.md)
 
 **Price:**
