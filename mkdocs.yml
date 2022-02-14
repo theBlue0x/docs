@@ -23,7 +23,7 @@ nav:
     - Blue0x | EXCHANGE: learn_more/exchange.md
 
   - Setup:
-    - Setup a Public VPS Node: setup/vps.md
+    - Deploy a Public Node: setup/vps.md
     - Setup Desktop Wallet: setup/local.md
     - Configuring HTTPS: setup/https.md
     - Renewal Script: setup/renewal_script.md
