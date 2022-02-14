@@ -12,6 +12,8 @@
 
 * [Blue0x | DISCORD](https://discord.gg/EbBWRSPW63) 
 
+* [Blue0x | BITCOINTALK](https://bitcointalk.org/index.php?topic=5384371.0)
+
 * [Blue0x | TELEGRAM](https://t.me/blue0xcom)
 
 * [Blue0x | TWITTER](https://twitter.com/blue0x_com)
