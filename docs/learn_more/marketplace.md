@@ -1,8 +1,10 @@
-## **The Blue0x Marketplace** ##
+## **The Blue0x Decentralized Global Marketplace** ##
 
 _Published January 31, 2021_
 
-Blue0x Market is where Blue0x users may buy and sell physical or digital goods and services in exchange for their native [Blue0x Currency](currencies.md).  It is available at [market.blue0x.com](https://market.blue0x.com) or, additionally, you may host the software on your local machine.  
+[Preview](https://market.blue0x.com)
+
+Blue0x Market is where Blue0x users may buy and sell physical or digital goods and services in exchange for their native [Blue0x Currency](currencies.md).  Blue0x Market is designed to be run from your local machine and to interact with your locally hosted wallet.  This increases overall network decentralization and security.
 
 **Shipping:**
 
