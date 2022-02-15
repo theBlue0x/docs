@@ -1,5 +1,6 @@
 ## **Setup Your Blue0x Desktop Wallet** ##
 
+
 [Linux](#Linux)               [Windows](#Windows)                    [Mac](#Mac)
 
 
@@ -35,7 +36,6 @@ Run the following commands in your terminal
 >You should now see the Blue0x Wallet homepage.
 
 >You may now follow the prompts to create a Blue0x Wallet!
-
 
 
 
