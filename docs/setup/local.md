@@ -1,13 +1,9 @@
 ## **Setup Your Blue0x Desktop Wallet** ##
 
-[Linux](local.md#Linux)
-
-[Windows](local.md#Windows)
-
-[Mac](local.md#Mac)
+[Linux](local.md#Linux)               [Windows](local.md#Windows)                    [Mac](local.md#Mac)
 
 
-### Linux
+## Linux
 **1. Install Java**
 
 Run the following commands in your terminal
@@ -42,7 +38,9 @@ Run the following commands in your terminal
 
 
 
-### Windows
+
+
+## Windows
 **1. Download and Install Java**
 
 >[Download Java for Windows](https://www.java.com/en/download/manual.jsp)
@@ -78,6 +76,8 @@ Run the following commands in your terminal
 >You may now follow the prompts to create a Blue0x Wallet!
 
 
-### Mac
+
+
+## Mac
 
 Coming Soon!
