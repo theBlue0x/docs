@@ -1,6 +1,6 @@
 ## **Setup Your Blue0x Desktop Wallet** ##
 
-[Linux](local.md#Linux)               [Windows](local.md#Windows)                    [Mac](local.md#Mac)
+[Linux](#Linux)               [Windows](#Windows)                    [Mac](#Mac)
 
 
 ## Linux
