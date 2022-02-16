@@ -51,7 +51,9 @@ Run the following commands in your terminal
 
 >[Download the Blue0x Wallet](https://github.com/theBlue0x/wallet/archive/refs/heads/master.zip)
 
->Once the download is complete, navigate to the 'wallet' folder.
+>Once the download is complete, extract the folder.
+
+>After extracting the folder, navigate to the wallet folder.
 
 **3. Connect to the Blue0x Network**
 
