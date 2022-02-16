@@ -43,7 +43,7 @@ Run the following commands in your terminal
 ## Windows
 **1. Download and Install Java**
 
->[Download Java for Windows](https://www.java.com/en/download/manual.jsp)
+>[Download Java for Windows](https://www.oracle.com/java/technologies/downloads/#jre8-windows)
 
 >Once your download is complete, follow the instructions to install Java on your machine.
 
