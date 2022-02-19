@@ -39,6 +39,4 @@ Next, you will need to download and connect to the Blue0x Network.
 
 	a.  From the same downloaded folder, you may now double-click Blue0x-Wallet-Setup-v1.12.2. Once installation is complete, the app will open.  
   
-	b. You will now see the prompt for Creating a New Account or Returning Users.   Once you have completed all of the steps and you are on the Dashboard page, send us a message via [Discord](https://discord.gg/EbBWRSPW63) and we will send you your first transaction!
-  
-  Welcome to Blue0x!
+	b. You will now see the prompt for Creating a New Account or Returning Users.   Once you are on the Dashboard page, send us a message via [Discord](https://discord.gg/EbBWRSPW63).  Welcome to Blue0x!
