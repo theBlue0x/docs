@@ -1,4 +1,4 @@
-## **Configuring HTTPS on a Standalone Blue0x Installation** ##
+## Configuring HTTPS on a Standalone Blue0x Installation
 
 _**Note:**This tutorial uses [Certbot](https://certbot.eff.org/) to issue certificates.
 Follow the official documentation to [install Certbot](https://certbot.eff.org/instructions) before beginning this tutorial._
