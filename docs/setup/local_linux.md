@@ -22,6 +22,4 @@ You will need the latest Java JDK installed on your computer
 
 	a.  From the same downloaded folder, you may now double-click Blue0x-Wallet-v1.12.2.AppImage.
   
-	b. You will now see the prompt for Creating a New Account or Returning Users.   Once you have completed all of the steps and you are on the Dashboard page, send us a message via [Discord](https://discord.gg/EbBWRSPW63) and we will send you your first transaction! 
-  
-  Welcome to Blue0x!
+	b. You will now see the prompt for Creating a New Account or Returning Users.   Once you are on the Dashboard page, send us a message via [Discord](https://discord.gg/EbBWRSPW63). Welcome to Blue0x!
