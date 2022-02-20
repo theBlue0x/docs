@@ -1,4 +1,4 @@
-## Deploy a Public Blue0x Node on a VPS or Dedicated Server 
+## **Deploy a Public Blue0x Node on a VPS or Dedicated Server** ##
 
 **1. Sign up for a VPS (Virtual Private Server) with a provider like [DigitalOcean.com](https://m.do.co/c/97a921447f80).**
 >These instructions assume you are using DigitalOcean, but other VPS providers are similar.  
