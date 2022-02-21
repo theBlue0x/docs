@@ -36,7 +36,7 @@ You will need the latest Java JDK installed on your computer and you will need t
 
 	-  From the same downloaded folder, you may now double-click Blue0x-Wallet-Setup-1.12.2. Once installation is complete, the app will open.  
   
-	- You will now see the prompt for Creating a New Account.  Make sure to save and securely store your new account passphrase.  This is very important.
+	- You will now see the prompt for Creating a New Account.  Make sure to save and securely store your new account passphrase.
 	
 	- Once account setup is completed, send us your address via [Discord](https://discord.gg/EbBWRSPW63). 
 	
