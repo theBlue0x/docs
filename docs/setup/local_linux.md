@@ -19,7 +19,7 @@ You will need the latest Java JDK installed on your computer
 	
 3. Install the Blue0x Wallet and create a new account or login to an existing account.
 
-	- From the same downloaded folder, you may now double-click Blue0x-Wallet-v1.12.2.AppImage.
+	- From the same downloaded folder, you may now double-click Blue0x-Wallet-1.12.2.AppImage.
   
 	- You will now see the prompt for Creating a New Account.  Make sure to save and securely store your new account passphrase.  This is very important.
 	
