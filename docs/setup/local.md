@@ -18,8 +18,6 @@ You will need the latest Java JDK installed on your computer and you will need t
         
     -  On the Advanced tab, select Environment Variables, and then edit JAVA_HOME to point to where the JDK software is located; for example,  *C:\Program Files\Java\jdk1.6.0*.
 
-Next, you will need to download and connect to the Blue0x Network.
-
 ## Download and Connect to the Blue0x Network
 
 1. [Download](https://github.com/theBlue0x/desktop-wallet/releases/download/v1.12.2/Blue0x-Desktop-v1.12.2.zip) the latest release from the official Blue0x GitHub repository.
