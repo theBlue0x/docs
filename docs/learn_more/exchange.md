@@ -10,4 +10,4 @@ The exchange rate of each Blue0x Currency is in relation to BLX.  This rate ulti
 
 **Cross-Border Payment and Remittances:**
 
-The Blue0x Network, through the Blue0x Market and the Blue0x Exchange, will enable users, businesses, and various other entities to buy and sell goods and services outside of their respective regions and to settle payments into their respective Blue0x currency.  This will facilitate global, immutable payment remittances that are 100% on-chain, resistant to censorship, and available at all times.
+The Blue0x Network, through the Blue0x Market and the Blue0x Exchange, enables users, businesses, and various other entities to buy and sell goods and services outside of their respective regions and to settle payments into their respective Blue0x currency.  This facilitates global, immutable payment remittances that are 100% on-chain, resistant to censorship, and always available.
