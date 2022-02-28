@@ -18,7 +18,7 @@ You will need the latest Java JDK installed on your computer and you will need t
 
 ## Download and Connect to the Blue0x Network
 
-1. [Download](https://github.com/theBlue0x/desktop-wallet/releases/download/v1.12.2/Blue0x-Desktop-v1.12.2.zip) the latest release from the official Blue0x GitHub repository.
+1. [Download](https://github.com/theBlue0x/desktop-wallet/releases/download/Blue0x-Desktop-Wallet-v1.12.2/Blue0x-Desktop-Wallet-v1.12.2.zip) the latest release from the official Blue0x GitHub repository.
 
 	- Once the download has finished, extract the folder to a desired location.
   
