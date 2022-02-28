@@ -1,16 +1,20 @@
 ## **Setup your Blue0x Mac Desktop Wallet** ##
 
 1. Install Homebrew (if you haven’t done it already)
-  - `$ /bin/bash -c “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)”`
+
+  	- `$ /bin/bash -c “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)”`
 
 2. Update (if you haven’t done it already)
-  - `$ brew update`
+
+  	- `$ brew update`
 
 3. Install Java
-  - `$ brew install openjdk`
+
+  	- `$ brew install openjdk`
 
 4. Symlink your Java installation
-  - `sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
+
+  	- `sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
 
 ## Download and Connect to the Blue0x Network
 
