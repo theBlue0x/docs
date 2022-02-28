@@ -32,7 +32,7 @@ You will need the latest Java JDK installed on your computer and you will need t
 	
 3. Create a new account.
 
-	-  From your favorite browser, navigate to http://localhost:2022  
+	-  From your favorite browser, navigate to [http://localhost:2022](http://localhost:2022).  
   
 	- You will see the prompt for Creating a New Account.  Make sure to save and securely store your new account passphrase.
 	
