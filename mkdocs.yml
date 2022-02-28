@@ -23,6 +23,7 @@ nav:
     - Blue0x | EXCHANGE: learn_more/exchange.md
 
   - Connect:
+    - Connect: connect/index.md
     - Connect via Windows: connect/local.md
     - Connect via MacOS: connect/local_mac.md
     - Connect via Linux: connect/local_linux.md
