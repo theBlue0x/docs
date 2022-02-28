@@ -1,4 +1,4 @@
-## **Setup your Blue0x Mac Desktop Wallet** ##
+## **Connect via MacOS** ##
 
 1. Install Homebrew (if you haven’t done it already)
 

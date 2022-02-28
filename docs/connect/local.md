@@ -1,4 +1,4 @@
-## **Setup your Blue0x Windows Desktop Wallet** ##
+## **Connect via Windows** ##
 
 You will need the latest Java JDK installed on your computer and you will need to set your JAVA_HOME PATH.
 

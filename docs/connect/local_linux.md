@@ -1,4 +1,4 @@
-## **Setup your Blue0x Linux Desktop Wallet** ##
+## **Connect via Linux** ##
 
 You will need the latest Java JDK installed on your computer
 
