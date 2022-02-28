@@ -14,7 +14,7 @@
 
 4. Symlink your Java installation
 
-  	- `sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
+  	- `$ sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
 
 ## Download and Connect to the Blue0x Network
 
