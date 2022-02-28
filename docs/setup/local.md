@@ -2,17 +2,15 @@
 
 You will need the latest Java JDK installed on your computer and you will need to set your JAVA_HOME PATH.
 
-## Procedure To Install the JDK Software and Set JAVA_HOME on a Windows System
-
 1. To install the JDK software, do the following:
     
     -  Go to  [http://java.sun.com/javase/downloads/index.jsp](http://java.sun.com/javase/downloads/index.jsp).
         
-    -  Select the appropriate JDK software and click Download.
-        
-      The JDK software is installed on your computer in the default location; for example, *C:\Program Files\Java\jdk1.6.0*.
-        
-2.  To set  JAVA_HOME, do the following:
+    -  Select "Windows" ⇒ Download the "x64 Installer" (e.g., "jdk-17_windows-x64_bin.exe" - about 152MB) and click Download.
+
+    -  Run the downloaded installer. Accept the defaults and follow the on screen instructions to complete the installation.
+                
+2.  To set JAVA_HOME, do the following:
     
     -  Right click My Computer and select Properties.
         
@@ -28,7 +26,7 @@ You will need the latest Java JDK installed on your computer and you will need t
 
 	- Navigate to the Blue0x Desktop Wallet folder (the folder you just extracted) and while holding down the SHIFT key, right click and select *Open a command line from here*.
 	
-	- From the command line, type: `java -jar Blue0x.jar`
+	- From this command line, type: `java -jar Blue0x.jar`
 	
 	- You will now see your computer begin to sync with the Blue0x Network. When you see "Finished Blockchain Download" , you may proceed.
 	
