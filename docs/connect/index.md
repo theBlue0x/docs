@@ -9,3 +9,6 @@ Please choose the appropriate Operating System to learn how to connect to the Bl
 [MacOS](local_mac.md)
 
 [Linux](local_linux.md)
+
+![Wallet](https://i.imgur.com/YbNxm4A.png)
+
