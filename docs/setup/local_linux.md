@@ -17,11 +17,11 @@ You will need the latest Java JDK installed on your computer
 	
 	You will now see your computer begin to sync with the Blue0x Network. When you see "Finished Blockchain Download" , you may proceed.
 	
-3. Install the Blue0x Wallet and create a new account.
+3. Create a new account.
 
-	- From the same downloaded folder, you may now double-click Blue0x-Wallet-1.12.2.AppImage.
+	- From your favorite browser, navigate to http://localhost:2022.
   
-	- You will now see the prompt for Creating a New Account.  Make sure to save and securely store your new account passphrase.
+	- You will see the prompt for Creating a New Account.  Make sure to save and securely store your new account passphrase.
 	
 	- Once account setup is completed, send us your address via [Discord](https://discord.gg/EbBWRSPW63). 
 	
