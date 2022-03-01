@@ -1,6 +1,8 @@
 ## **Connect to the Blue0x Network** ##
 
-Blue0x operates in a fully decentralized and distributed manner.  For this reason, you are required to run a full node in order to utilize your Wallet, the Marketplace, and/or the Exchange.  This ensures that the network has no central point-of-failure, remains resistant to censorship, and that it is always available. 
+The Blue0x Network operates in a fully open-sourced, decentralized, and distributed manner.  For this reason, you are required to run a full node to ensure system redundancy and eliminate any single point-of-failure.  This allows the Blue0x Network to remain resistant to censorship, secure against bad actors, and consitently available.  By connecting to the Blue0x Network, you not only gain access, but you help others to securely do the same.
+
+"Together. We Are The Bank."
 
 Please choose the appropriate Operating System to learn how to connect to the Blue0x Network:
 
