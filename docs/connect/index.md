@@ -1,6 +1,6 @@
 ## **Connect to the Blue0x Network** ##
 
-The Blue0x Network operates in a fully open-sourced, decentralized, and distributed manner.  For this reason, you are required to run a full node to ensure system redundancy and eliminate any single point-of-failure.  This allows the Blue0x Network to remain resistant to censorship, secure against bad actors, and consitently available.  By connecting to the Blue0x Network, you not only gain access to the network, but you help others to securely do the same.
+The Blue0x Network operates in a fully open-sourced, decentralized, and distributed manner.  For this reason, you are required to run a full node to ensure system redundancy and eliminate any single point-of-failure.  This allows the Blue0x Network to remain resistant to censorship, secure against bad actors, and consitently available.  By connecting to the Blue0x Network, you not only become a part of it, but you help others to securely do the same.
 
 "Together. We Are The Bank."
 
