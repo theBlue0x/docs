@@ -47,7 +47,7 @@
 
 >Run the following commands in your terminal
 
->$ sudo apt-get update
+>$ sudo apt update
 
 >$ sudo apt install default-jre
 
