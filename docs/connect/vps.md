@@ -56,7 +56,7 @@
 **6. Download the Blue0x Software.**
 >$ git clone https://github.com/theBlue0x/node.git
 
->$ cd BLX
+>$ cd node
 
 >$ nano conf/nxt.properties
 
