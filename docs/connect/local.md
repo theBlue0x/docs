@@ -11,10 +11,12 @@ You will need the latest Java JDK installed on your computer and you will need t
     -  Run the downloaded installer. Accept the defaults and follow the on screen instructions to complete the installation.
                 
 2.  To set JAVA_HOME, do the following:
-    
-    -  Right click My Computer and select Properties.
-        
-    -  On the Advanced tab, select Environment Variables, and then edit JAVA_HOME to point to where the JDK software is located; for example,  *C:\Program Files\Java\jdk1.6.0*.
+
+    -  This PC -> Right click -> Properties -> Scroll down to Advanced System Settings
+
+    -  On the new Window -> Advanced Tab -> Environment Variables
+            
+    -  Edit JAVA_HOME to point to where the JDK software is located; for example,  *C:\Program Files\Java\jdk1.6.0*.
 
 ## Download and Connect to the Blue0x Network
 
