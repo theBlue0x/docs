@@ -6,7 +6,7 @@ You will need the latest Java JDK installed on your computer.
 
      - Go to  [http://java.sun.com/javase/downloads/index.jsp](http://java.sun.com/javase/downloads/index.jsp).
 
-     - Select "MacOs" ⇒ Download the "x64 DMG Installer" (e.g., "jdk-17_windows-x64_bin.dmg" - about 152MB) and click Download.
+     - Select "MacOs" ⇒ Download the "x64 DMG Installer" (e.g., "jdk-17_windows-x64_bin.dmg" - about 169MB) and click Download.
 
      - Double-click the JDK 17.pkg icon to start the installation application
 
