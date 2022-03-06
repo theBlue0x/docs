@@ -10,15 +10,23 @@ You will need the latest Java JDK installed on your computer and you will need t
 
     -  Run the downloaded installer. Accept the defaults and follow the on screen instructions to complete the installation.
                 
-2.  To set JAVA_HOME, do the following:
+2.  Now we will set the PATH environment Variable:
 
-    -  In Search, search for and then select: System (Control Panel)
+    -  Right click on My Computer or This PC(in Windows 10+) and select the option Properties
 
-    -  Click the Advanced system settings link
+    -  A new window with System properties will open. From the left sidebar, click on the option Advanced system settings.
+
+    -  Then click on Environment Variables button on the bottom right corner.
+
+    -  Add the location of the bin folder of the JDK installation (for example, C:\Program Files\Java\jdk-17\bin) to the PATH variable in User Variables.
     
-    -  Click Environment Variables. In the section System Variables find the PATH environment variable and select it. Click Edit. If the PATH environment variable does not exist, click New.
+3.  Setting the JAVA_HOME environment variable:
             
-    -  In the Edit System Variable, edit JAVA_HOME to point to where the JDK software is located; for example,  *C:\Program Files\Java\jdk1.6.0*.
+    -  Under System variable, click new to add a new variable with name JAVA_HOME or if the JAVA_HOME variable exists, select it and click on Edit to edit it.
+
+    -  Now enter the path of JDK installation as value for it (without the bin folder, for example, C:\Program Files\Java\jdk-17)
+
+    -  Click OK and then click on Apply changes.
 
 ## Download and Connect to the Blue0x Network
 
