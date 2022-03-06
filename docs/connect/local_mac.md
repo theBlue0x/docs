@@ -36,6 +36,6 @@
   
 	- You will see the prompt for Creating a New Account.  Make sure to save and securely store your new account passphrase.
 	
-	- Once account setup is completed, send us your address via [Discord](https://discord.gg/EbBWRSPW63). 
+	- Once account setup is completed, send us your address via [Discord](https://discord.gg/EbBWRSPW63) to receive your first Airdrop!
 	
-Welcome to Blue0x!
+### Welcome to Blue0x! ###
