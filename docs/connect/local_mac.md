@@ -1,7 +1,8 @@
 ## **Connect via MacOS** ##
 
-1. To install the JDK software, do the following:
+You will need the latest Java JDK installed on your computer.
 
+1. To install the JDK software, do the following:
 
      - Go to http://java.sun.com/javase/downloads/index.jsp
 
