@@ -1,21 +1,17 @@
 ## **Connect via MacOS** ##
 
-1. Install Homebrew (if you haven’t done it already)
+1. To install the JDK software, do the following:
 
-  	- `/bin/bash -c “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)”`
 
-2. Update (if you haven’t done it already)
+     - Go to http://java.sun.com/javase/downloads/index.jsp
 
-  	- `brew update`
+     - Select "MacOs" ⇒ Download the "x64 DMG Installer" (e.g., "jdk-17_windows-x64_bin.dmg" - about 152MB) and click Download.
 
-3. Install Java
+     - Double-click the JDK 17.pkg icon to start the installation application
 
-  	- `brew install openjdk`
-
-4. Symlink your Java installation
-
-  	- `sudo ln -sfn $(brew --prefix)/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk`
-
+     - Accept the defaults and follow the on screen instructions to complete the installation.
+     
+     
 ## Download and Connect to the Blue0x Network
 
 1. [Download](https://github.com/theBlue0x/desktop-wallet/releases/download/Blue0x-Desktop-Wallet-v1.12.2/Blue0x-Desktop-Wallet-v1.12.2.zip) the latest release from the official Blue0x GitHub repository.
