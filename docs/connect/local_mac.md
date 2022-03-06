@@ -4,7 +4,7 @@ You will need the latest Java JDK installed on your computer.
 
 1. To install the JDK software, do the following:
 
-     - Go to http://java.sun.com/javase/downloads/index.jsp
+     - Go to  [http://java.sun.com/javase/downloads/index.jsp](http://java.sun.com/javase/downloads/index.jsp).
 
      - Select "MacOs" ⇒ Download the "x64 DMG Installer" (e.g., "jdk-17_windows-x64_bin.dmg" - about 152MB) and click Download.
 
