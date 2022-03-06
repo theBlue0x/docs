@@ -1,6 +1,6 @@
 ## **Connect via Windows** ##
 
-You will need the latest Java JDK installed on your computer and you will need to set your JAVA_HOME PATH.
+You will need the latest Java JDK installed on your computer.
 
 1. To install the JDK software, do the following:
     
