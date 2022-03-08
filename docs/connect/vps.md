@@ -1,16 +1,5 @@
 ## **Deploy a Public Blue0x Node** ##
 
-## **Deploy to Heroku**
-
-You will need a Heroku account.
-
- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-getting-started)
- 
- 
- 
-
-## **Deploy via VPS**
-
 **1. Sign up for a VPS (Virtual Private Server) with a provider like [DigitalOcean.com](https://m.do.co/c/97a921447f80).**
 >These instructions assume you are using DigitalOcean, but other VPS providers are similar.  
 
