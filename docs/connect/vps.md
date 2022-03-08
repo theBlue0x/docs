@@ -60,30 +60,13 @@ You will need a Heroku account.
 
 >$ sudo apt update
 
->$ sudo apt install default-jre
-
 >$ sudo apt install default-jdk
 
 **6. Download the Blue0x Software.**
 >$ git clone https://github.com/theBlue0x/node.git
 
->$ cd node
-
->$ nano conf/nxt.properties
-
->add the following entries, where X.X.X.X is the IP address of your VPS
-
->nxt.myAddress= X.X.X.X
-
->nxt.allowedBotHosts=*
-
->nxt.apiServerHost=0.0.0.0
-
->nxt.wellKnownPeers=34.125.147.82;34.159.187.1;
-
->press CTRL+X and then Y to save the file.
-
 **7. Compile and Run Blue0x.**
+>$ cd node
 
 >$ ./compile.sh
 
