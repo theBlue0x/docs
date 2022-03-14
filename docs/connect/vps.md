@@ -59,7 +59,7 @@
 
 >$ ./compile.sh
 
->$ ./run.sh (./run.sh --daemon to run in the background)
+>$ ./run.sh 
 
 >You should see a final message indicating that the node is running at "localhost:2022"
 
@@ -69,4 +69,22 @@
 
 >You should see the Blue0x Login Screen.
 
-Congratulations, you are now running a public Blue0x Node!
+**9. Create A New Account and Register Your Node for Node Rewards.**
+
+>Click New User.
+
+>Be sure to save and securely store your new account passphrase.
+
+>Once you are complete with setting up your account, stop your node by pressing CTRL+C.
+
+>You will need to add your new account address to your nxt.properties file.
+
+>$ nano conf/nxt.properties
+
+>Add nxt.myPlatform=BLX-XXXX-XXXX-XXXX-XXXX where BLX-XXXX-XXXX-XXXX-XXXX is your new account address.
+
+>CTRL+X, ENTER to save the file.
+
+>Restart your node as a background service by running ./run.sh --daemon.
+
+>Check to make sure your node is properly configured [here](https://blue0x.com/node.html).
