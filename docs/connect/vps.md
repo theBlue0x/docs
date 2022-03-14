@@ -89,4 +89,4 @@
 
 >You can check to make sure your node is properly configured [here](https://blue0x.com/node.html).
 
-COngratulations!  You are now running a public Blue0x Node!  Your rewards will arrive soon!
+Congratulations!  You are now running a public Blue0x Node!  Your rewards will arrive soon!
