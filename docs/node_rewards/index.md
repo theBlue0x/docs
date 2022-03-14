@@ -1,18 +1,14 @@
 ## **Blue0x Node Rewards Program** ##
 
-The Node Reward Program is an initiative to incentivize Blue0x users to setup open nodes to increase the overall decentralization of the Blue0x Network.
+The Node Reward Program is an initiative to incentivize Blue0x users to host Blue0x nodes to increase the overall security and decentralization of the Blue0x Network.
 
-**Current Node Reward Package**
+**Current Node Reward Package as of March 14th, 2022:**
 
-March 8th, 2022 - Node Rewards Compensation
+An initial BLX Currency payout of 2,000 for USDX, CHFX, EURX, GBPX (4,000 otherwise) & 2 BLX/day/node for as long as the node is connected.
 
-All node operators will receive:
-50 BLX /node/month + 2,000 of any BLX currency/node/month (4,000 if CNYX, IRRX, IQDX, or JPYX)
-Payouts will be (1) immediately after node deployment and (1) every consecutive month that the node is operational.
+Heroku Nodes are not eligible.
 
-1 NODE/PERSON LIMIT
-
-Join us on [Discord](https://discord.com/invite/EbBWRSPW63) to get started!
+Questions? Join us on [Discord](https://discord.com/invite/EbBWRSPW63)!
 
 
 
