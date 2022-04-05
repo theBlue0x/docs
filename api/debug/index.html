@@ -1,0 +1,1769 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn About the Blue0x Network">
+      
+      
+        <meta name="author" content="Blue0x Devs">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
+    
+    
+      
+        <title>Debug - Learn About the Blue0x Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9d5733d3.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#debug-operations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learn About the Blue0x Network" class="md-header__button md-logo" aria-label="Learn About the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn About the Blue0x Network
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Debug
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/theBlue0x/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github.com/theBlue0x
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learn_more/" class="md-tabs__link">
+        Learn More
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../connect/" class="md-tabs__link">
+        Connect
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../node_rewards/" class="md-tabs__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../links/" class="md-tabs__link">
+        Quick Links
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learn About the Blue0x Network" class="md-nav__button md-logo" aria-label="Learn About the Blue0x Network" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Learn About the Blue0x Network
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/theBlue0x/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github.com/theBlue0x
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        Learn More
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/" class="md-nav__link">
+        Connect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/" class="md-nav__link">
+        Quick Links
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Learn More
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Learn More" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Learn More
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/" class="md-nav__link">
+        What is Blue0x?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/BLX/" class="md-nav__link">
+        What is BLX?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/currencies/" class="md-nav__link">
+        Blue0x | CURRENCIES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/marketplace/" class="md-nav__link">
+        Blue0x | MARKET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn_more/exchange/" class="md-nav__link">
+        Blue0x | EXCHANGE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Connect
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Connect" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Connect
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/" class="md-nav__link">
+        Connect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/local/" class="md-nav__link">
+        Connect via Windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/local_mac/" class="md-nav__link">
+        Connect via MacOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/local_linux/" class="md-nav__link">
+        Connect via Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/vps/" class="md-nav__link">
+        Deploy a Public Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/https/" class="md-nav__link">
+        Configuring HTTPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../connect/renewal_script/" class="md-nav__link">
+        Renewal Script
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        OVERVIEW
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        TABLE OF CONTENTS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_transaction/" class="md-nav__link">
+        CREATE TRANSACTION
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alias/" class="md-nav__link">
+        Alias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocks/" class="md-nav__link">
+        Blocks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Debug
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Debug
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#debug-operations" class="md-nav__link">
+    Debug Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Debug Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear-unconfirmed-transactions" class="md-nav__link">
+    Clear Unconfirmed Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump-peers" class="md-nav__link">
+    Dump Peers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-reset" class="md-nav__link">
+    Full Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-broadcasted-transactions" class="md-nav__link">
+    Get All Broadcasted Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-waiting-transactions" class="md-nav__link">
+    Get All Waiting Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-log" class="md-nav__link">
+    Get Log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-stack-traces" class="md-nav__link">
+    Get Stack Traces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lucene-reindex" class="md-nav__link">
+    Lucene Reindex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pop-off" class="md-nav__link">
+    Pop Off
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebroadcast-unconfirmed-transactions" class="md-nav__link">
+    Rebroadcast Unconfirmed Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeue-unconfirmed-transactions" class="md-nav__link">
+    Requeue Unconfirmed Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-pruned-data" class="md-nav__link">
+    Retrieve Pruned Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan" class="md-nav__link">
+    Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-logging" class="md-nav__link">
+    Set Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim-derived-tables" class="md-nav__link">
+    Trim Derived Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forging/" class="md-nav__link">
+        Forging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hallmark/" class="md-nav__link">
+        Hallmark
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../marketplace/" class="md-nav__link">
+        Marketplace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaging/" class="md-nav__link">
+        Messaging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monetary_system/" class="md-nav__link">
+        Monetary System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        Networking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phasing/" class="md-nav__link">
+        Phasing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shuffling/" class="md-nav__link">
+        Shuffling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tagged_data/" class="md-nav__link">
+        Tagged Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../token/" class="md-nav__link">
+        Token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voting/" class="md-nav__link">
+        Voting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API_Examples/" class="md-nav__link">
+        API Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Node Rewards
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node Rewards" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Node Rewards
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../node_rewards/" class="md-nav__link">
+        Node Rewards
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Quick Links
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quick Links" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Quick Links
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/" class="md-nav__link">
+        Blue0x Network
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#debug-operations" class="md-nav__link">
+    Debug Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Debug Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear-unconfirmed-transactions" class="md-nav__link">
+    Clear Unconfirmed Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump-peers" class="md-nav__link">
+    Dump Peers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-reset" class="md-nav__link">
+    Full Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-broadcasted-transactions" class="md-nav__link">
+    Get All Broadcasted Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-all-waiting-transactions" class="md-nav__link">
+    Get All Waiting Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-log" class="md-nav__link">
+    Get Log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-stack-traces" class="md-nav__link">
+    Get Stack Traces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lucene-reindex" class="md-nav__link">
+    Lucene Reindex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pop-off" class="md-nav__link">
+    Pop Off
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebroadcast-unconfirmed-transactions" class="md-nav__link">
+    Rebroadcast Unconfirmed Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeue-unconfirmed-transactions" class="md-nav__link">
+    Requeue Unconfirmed Transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-pruned-data" class="md-nav__link">
+    Retrieve Pruned Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan" class="md-nav__link">
+    Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-logging" class="md-nav__link">
+    Set Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trim-derived-tables" class="md-nav__link">
+    Trim Derived Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Debug</h1>
+
+<h2 id="debug-operations">Debug Operations</h2>
+<p>All debug utilities require an <em>adminPassword</em> request parameter. See <a href="../#admin-password" title="The Blue0x API">Admin Password</a> for more info.</p>
+<h3 id="clear-unconfirmed-transactions">Clear Unconfirmed Transactions</h3>
+<p>Empties the unconfirmed transaction pool. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>clearUnconfirmedTransactions</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#clear-unconfirmed-transactions" title="The Blue0x API Examples">Clear Unconfirmed Transactions</a> example.</p>
+<h3 id="dump-peers">Dump Peers</h3>
+<p>Get all active peers, optionally of a certain version or a minimum weight.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>dumpPeers</em></li>
+<li><em>version</em> is a version filter such as <em>1.5.11</em> (optional)</li>
+<li><em>weight</em> is a minimum weight filter such as 1000 (optional)</li>
+<li><em>connect</em> is <em>true</em> to force a connection attempt to each known peer first (optional); password protected like the <a href="./" title="The Blue0x API">Debug Operations</a> if <em>true</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>peers</em> (S) is a string of peer IP addresses or DNS names, separated by semicolons</li>
+<li><em>count</em> (N) is the number of peers in the <em>peers</em> string.</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#dump-peers" title="The Blue0x API Examples">Dump Peers</a> example.</p>
+<h3 id="full-reset">Full Reset</h3>
+<p>Deletes the entire blockchain. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>fullReset</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Note:</strong> After successful completion of the reset, a new blockchain will automatically begin downloading.</p>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#full-reset" title="The Blue0x API Examples">Full Reset</a> example.</p>
+<h3 id="get-all-broadcasted-transactions">Get All Broadcasted Transactions</h3>
+<p>Get unconfirmed transactions broadcasted from this node but not yet received back from a peer, if transaction rebroadcasting is enabled.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is -getAllBroadcastedTransactions_</li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>transactions</em> (A) is an array of broadcasted unconfirmed transactions not yet received back from a peer (S)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-all-broadcasted-transactions" title="The Blue0x API Examples">Get All Broadcasted Transactions</a> example.</p>
+<h3 id="get-all-waiting-transactions">Get All Waiting Transactions</h3>
+<p>Get unconfirmed transactions temporarily kept in memory during transaction processing.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getAllWaitingTransactions</em></li>
+<li><em>requireBlock</em> is the block ID of a block that must be present in the blockchain during execution (optional)</li>
+<li><em>requireLastBlock</em> is the block ID of a block that must be last in the blockchain during execution (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>transactions</em> (A) is an array of unconfirmed transactions temporarily kept in memory (S)</li>
+<li><em>lastBlock</em> (S) is the last block ID on the blockchain (applies if <em>requireBlock</em> is provided but not <em>requireLastBlock</em>)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-all-waiting-transactions" title="The Blue0x API Examples">Get All Waiting Transactions</a> example.</p>
+<h3 id="get-log">Get Log</h3>
+<p>Get up to 100 of the most recent log messages from a memory buffer.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getLog</em></li>
+<li><em>count</em> is the number of messages to return (optional, default 100)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>messages</em> (A) is an array of log messages (S)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-log" title="The Blue0x API Examples">Get Log</a> example.</p>
+<h3 id="get-stack-traces">Get Stack Traces</h3>
+<p>Get the stack traces of the currently running threads in reverse <em>id</em> order.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>getStackTraces</em></li>
+<li><em>depth</em> is the maximum trace depth to retrieve (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+<li><em>locks</em> (A) is an array of lock objects</li>
+<li><em>threads</em> (A) is an array of thread objects with the following fields:<ul>
+<li><em>trace</em> (A) is an array of traces (S)</li>
+<li><em>name</em> (S) is the thread name</li>
+<li><em>id</em> (N) is the thread ID</li>
+<li><em>state</em> (S) is the thread state, one of <em>WAITING</em>, <em>TIMED_WAITING</em> and <em>RUNNABLE</em></li>
+<li><em>locks</em> (A) is an array of lock objects with the following fields, if not empty:<ul>
+<li><em>trace</em> (S)</li>
+<li><em>depth</em> (N)</li>
+<li><em>name</em> (S)</li>
+<li><em>hash</em> (N)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#get-stack-traces" title="The Blue0x API Examples">Get Stack Traces</a> example.</p>
+<h3 id="lucene-reindex">Lucene Reindex</h3>
+<p>Forces a rebuild of the Lucene search index. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>luceneReindex</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#lucene-reindex" title="The Blue0x API Examples">Lucene Reindex</a> example.</p>
+<h3 id="pop-off">Pop Off</h3>
+<p>Removes specified number of blocks (and associated transactions) from the top of the blockchain. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>popOff</em></li>
+<li><em>numBlocks</em> is the number of blocks to pop off the blockchain (optional)</li>
+<li><em>height</em> is the new height of the blockchain after popping (optional if <em>numBlocks</em> provided)</li>
+</ul>
+<p><strong>Note:</strong> If table trimming is enabled (default), at most 1440 blocks can be popped off without triggering a full rescan.</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>blocks</em> (A) is an array of the blocks popped off (refer to <a href="../blocks/#get-block" title="The Blue0x API">Get Block</a> for details)</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#pop-off" title="The Blue0x API Examples">Pop Off</a> example.</p>
+<h3 id="rebroadcast-unconfirmed-transactions">Rebroadcast Unconfirmed Transactions</h3>
+<p>Rebroadcast transactions in the unconfirmed pool to peers, until received back or found in the blockchain. Rebroadcasting can be disabled by setting the <em>nxt.enableTransactionRebroadcasting</em> property to <em>false</em>. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is -rebroadcastUnconfirmedTransactions_</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#rebroadcast-unconfirmed-transactions" title="The Blue0x API Examples">Rebroadcast Unconfirmed Transactions</a> example.</p>
+<h3 id="requeue-unconfirmed-transactions">Requeue Unconfirmed Transactions</h3>
+<p>Requeue unconfirmed transactions. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>requeueUnconfirmedTransactions</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#requeue-unconfirmed-transactions" title="The Blue0x API Examples">Requeue Unconfirmed Transactions</a> example.</p>
+<h3 id="retrieve-pruned-data">Retrieve Pruned Data</h3>
+<p>Initiates a task of requesting and restoring missing prunable data. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>retrievePrunedData</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>numberOfPrunedData</em> (N) is the number of pruned data available pruned data transactions</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#retrieve-pruned-data" title="The Blue0x API Examples">Retrieve Pruned Data</a> example.</p>
+<h3 id="scan">Scan</h3>
+<p>Scans the top of the blockchain. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>scan</em></li>
+<li><em>numBlocks</em> is the number of blocks to scan at the top of the blockchain (optional)</li>
+<li><em>height</em> is the height above which blockchain is to be scanned (optional if <em>numBlocks</em> provided)</li>
+<li><em>validate</em> is <em>true</em> if signatures are to be re-verified and blocks and transactions re-validated (optional)</li>
+</ul>
+<p><strong>Note:</strong> The derived object tables are rolled back and rebuilt by rescanning the existing blockchain. A request to rescan more than 1440 blocks when table trimming is enabled will do a full rescan starting from height 0. Rescan status is saved in the database, so that if a rescan is interrupted or fails it will resume on restart.</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>scanTime</em> (N) is the scan time</li>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#scan" title="The Blue0x API Examples">Scan</a> example.</p>
+<h3 id="set-logging">Set Logging</h3>
+<p>Sets the log level and optionally specifies communication events to be logged, without restarting the server. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>setLogging</em></li>
+<li><em>logLevel</em> is one of <em>ERROR</em>, <em>WARN</em>, <em>INFO</em> or <em>DEBUG</em> with each level in the list including all of the previous levels (optional, default is -iNFO_)</li>
+<li><em>communicationEvent</em> is one of multiple communication (HTTP) events to be logged, from the list: <em>EXCEPTION</em>, <em>HTTP-ERROR</em>, <em>HTTP-OK</em> (optional)</li>
+<li><em>communicationEvent</em> is one of multiple communication events (optional)</li>
+</ul>
+<p>⋮</p>
+<p><strong>Note:</strong> The initial log level is set by the <em>nxt.level</em> logging property, currently <em>FINE</em> (equivalent to <em>DEBUG</em>).</p>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>loggingUpdated</em> (B) is <em>true</em> if the operation completed successfully</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#set-logging" title="The Blue0x API Examples">Set Logging</a> example.</p>
+<h3 id="shutdown">Shutdown</h3>
+<p>Shutdown the server. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>shutdown</em></li>
+<li><em>scan</em> is <em>true</em> to truncate the derived tables and schedule a full rescan with validation on the next start (optional)</li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>shutdown</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#shutdown" title="The Blue0x API Examples">Shutdown</a> example.</p>
+<h3 id="trim-derived-tables">Trim Derived Tables</h3>
+<p>Trigger a derived tables trim, and a prunable tables pruning. POST only.</p>
+<p><strong>Request:</strong></p>
+<ul>
+<li><em>requestType</em> is <em>trimDerivedTables</em></li>
+</ul>
+<p><strong>Response:</strong></p>
+<ul>
+<li><em>done</em> (B) is <em>true</em> if the operation completed successfully</li>
+<li><em>requestProcessingTime</em> (N) is the API request processing time (in millisec)</li>
+</ul>
+<p><strong>Example:</strong> Refer to <a href="../API_Examples/#trim-derived-tables" title="The Blue0x API Examples">Trim Derived Tables</a> example.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../blocks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blocks" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Blocks
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../forging/" class="md-footer__link md-footer__link--next" aria-label="Next: Forging" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Forging
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      
+    
+  </body>
+</html>
